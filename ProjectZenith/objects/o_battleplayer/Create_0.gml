@@ -1,0 +1,9 @@
+hp = 100;
+maxhp = hp;
+mp = 20;
+maxmp = mp;
+str = 2;
+def = 2;
+buff = status.none;
+debuff = status.none;
+portrait = s_testportrait;

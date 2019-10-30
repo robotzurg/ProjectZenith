@@ -9,4 +9,4 @@ y1[1] = room_height;
 x2[1] = 960
 y2[1] = room_height;
 
-room_switch_timer = 60;
+alarm[0] = 50;
