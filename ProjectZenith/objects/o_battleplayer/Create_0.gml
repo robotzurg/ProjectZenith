@@ -7,3 +7,5 @@ def = 2;
 buff = status.none;
 debuff = status.none;
 portrait = s_testportrait;
+textboxspr = s_9slice;
+name = "Test Player 1";

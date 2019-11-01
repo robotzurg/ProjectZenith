@@ -1,7 +1,3 @@
-global.transition = "battle1";
-global.state = "battle";
 if !(instance_exists(o_transition)) {
-	instance_create_layer(x,y,"UI",o_transition);	
+	trans_to_room(rm_battle,"battle1");	
 }
-
-instance_destroy();
