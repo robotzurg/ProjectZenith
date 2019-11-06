@@ -7,5 +7,6 @@ def = 2;
 buff = status.none;
 debuff = status.none;
 portrait = s_testportraitp2;
-textboxspr = s_9slicep2
+textboxspr = s_9slicep2;
+textboxsprhover = s_9slicep2select
 name = "Test Player 2";

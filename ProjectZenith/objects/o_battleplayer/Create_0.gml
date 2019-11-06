@@ -8,4 +8,5 @@ buff = status.none;
 debuff = status.none;
 portrait = s_testportrait;
 textboxspr = s_9slice;
+textboxsprhover = s_9sliceselect;
 name = "Test Player 1";

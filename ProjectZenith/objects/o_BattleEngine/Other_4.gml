@@ -1,3 +1,4 @@
+if room = rm_battle {
 show_debug_message(global.charfocus);
 atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;
@@ -19,4 +20,4 @@ itmx1 = 725
 itmy1 = 450
 itmx2 = 875
 itmy2 = 510
-
+}
