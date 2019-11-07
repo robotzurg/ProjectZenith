@@ -1,6 +1,3 @@
-// Inherit the parent event
-event_inherited();
-
 hp = 100;
 maxhp = hp;
 mp = 20;
@@ -17,3 +14,5 @@ selection = "none";
 target = "none";
 turndone = false;
 wepequipped = s_testwepicon;
+party[0] = o_battleplayer;
+party[1] = o_battleplayer2;

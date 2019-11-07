@@ -1,0 +1,1 @@
+user = o_battleplayer;

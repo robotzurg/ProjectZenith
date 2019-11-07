@@ -16,10 +16,16 @@ if menu_open = "none" {
 if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) {
 	atkselect = hoverover;
 	if (click) {
-		menu_open = "none";	
+		if global.charfocus.selection = "none" {
+			global.charfocus.selection = "attack";
+		} else {
+			global.charfocus.selection = "none";	
+		}
 	}
 } else {
-	atkselect = normboxspr;
+	if global.charfocus.selection != "attack" {
+		atkselect = normboxspr;
+	}
 }
 
 if point_in_rectangle(mouse_x,mouse_y,525,450,675,510) {
@@ -74,4 +80,22 @@ switch(menu_open) {
 	itmy1 = lerp(itmy1,450,0.4);
 	itmx2 = lerp(itmx2,875,0.4);
 	itmy2 = lerp(itmy2,510,0.4);
+}
+
+switch(global.charfocus) {
+	case o_battleplayer: 
+	if global.currentturn = "Players" {
+		global.charfocus.x = lerp(global.charfocus.x,200,0.3);
+		o_battleplayer2.x = lerp(o_battleplayer2.x,160,0.3);
+	} else {
+		global.charfocus.x = lerp(global.charfocus.x,160,0.3);
+		o_battleplayer2.x = lerp(o_battleplayer2.x,160,0.3);	
+	}
+	break;
+	
+	case o_battleplayer2: 
+	global.charfocus.x = lerp(global.charfocus.x,200,0.3);
+	o_battleplayer.x = lerp(o_battleplayer.x,160,0.3);
+	break;
+	
 }

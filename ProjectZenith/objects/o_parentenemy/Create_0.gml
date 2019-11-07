@@ -1,0 +1,10 @@
+hp = 10;
+maxhp = hp;
+str = 2;
+def = 2;
+buff = status.none;
+debuff = status.none;
+name = "Test Enemy 1";
+selection = "none";
+target = "none";
+turndone = false;
