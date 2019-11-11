@@ -6,7 +6,7 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self)
 	o_BattleEngine.menu_open = "none";
 }
 
-if position_meeting(mouse_x,mouse_y,self) {
+if position_meeting(mouse_x,mouse_y,object_index) {
 	image_index = 1;	
 } else {
 	image_index = 0;	

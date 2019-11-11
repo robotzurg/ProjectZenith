@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 if room = rm_battle {
 	
 global.currentturn = "Players";
@@ -6,7 +7,7 @@ instance_create_layer(160,128,"Instances",global.party[0]);
 instance_create_layer(160,256,"Instances",global.party[1]);
 
 for (var i=0;i<global.enemycount;i++) {
-	instance_create_layer(460,96*i,"Instances",global.enemytype);
+	instance_create_layer(760,150+(96*i),"Instances",global.enemytype);
 }
 
 atkselect = global.charfocus.textboxspr;
