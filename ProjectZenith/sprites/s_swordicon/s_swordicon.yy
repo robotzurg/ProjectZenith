@@ -2,7 +2,7 @@
     "id": "889b6ee7-2c25-4bb3-8a41-f547aea8bb64",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_testwepicon",
+    "name": "s_swordicon",
     "For3D": false,
     "HTile": false,
     "VTile": false,

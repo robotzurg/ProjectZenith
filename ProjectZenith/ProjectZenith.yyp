@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "33438de3-e029-46ba-8f5a-4f7be632f410",
+            "Value": {
+                "id": "957a3798-3e7a-4a65-ba55-1e475ba39a8c",
+                "resourcePath": "scripts\\battle_start\\battle_start.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "33634c94-b392-4387-9e8a-14a6330a1256",
             "Value": {
                 "id": "44bd8523-a153-40f5-8464-5179f1036204",
@@ -258,7 +266,15 @@
             "Key": "889b6ee7-2c25-4bb3-8a41-f547aea8bb64",
             "Value": {
                 "id": "12eb5438-02e4-439a-a33b-e9805ced579d",
-                "resourcePath": "sprites\\s_testwepicon\\s_testwepicon.yy",
+                "resourcePath": "sprites\\s_swordicon\\s_swordicon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "889ca4f4-6286-4348-ac78-7d2de6e72cc4",
+            "Value": {
+                "id": "80ea714e-5523-4baf-aadc-ab3ec16f0a25",
+                "resourcePath": "sprites\\s_bowicon\\s_bowicon.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -495,6 +511,14 @@
             }
         },
         {
+            "Key": "e68f8565-ad86-4ed5-9b32-a1a8d2ef80a0",
+            "Value": {
+                "id": "2d2cf670-dea9-4881-bc3b-2c69eb8ff3dd",
+                "resourcePath": "objects\\o_parentplayer\\o_parentplayer.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "e8d0f355-aa24-4e97-ac74-3abf62920696",
             "Value": {
                 "id": "2a67a9e9-6230-41dd-9cc2-1c6a0308f766",
@@ -555,7 +579,8 @@
         "b5806dfd-d39f-4915-b8be-acf281948999",
         "b20da0bc-1adf-4404-83d0-528c9cb3386d",
         "a6fcd190-fefd-4bd7-880e-e66ba6c8165e",
-        "6fa40082-a106-40a2-a4a3-9aa4ef140ea9"
+        "6fa40082-a106-40a2-a4a3-9aa4ef140ea9",
+        "33438de3-e029-46ba-8f5a-4f7be632f410"
     ],
     "tutorial": ""
 }

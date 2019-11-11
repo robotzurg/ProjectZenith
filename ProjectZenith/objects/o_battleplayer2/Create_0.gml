@@ -16,4 +16,4 @@ name = "Test Player 2";
 selection = "none";
 target = "none";
 turndone = false;
-wepequipped = s_testwepicon;
+wepequipped = s_bowicon;
