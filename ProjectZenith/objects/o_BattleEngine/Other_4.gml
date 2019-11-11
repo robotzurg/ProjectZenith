@@ -1,5 +1,4 @@
 if room = rm_battle {
-show_debug_message(global.charfocus);
 atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;
 itmselect = global.charfocus.textboxspr;

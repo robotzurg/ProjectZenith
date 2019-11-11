@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "1452ed4e-bb6c-4266-af00-ce394931d201",
+            "Value": {
+                "id": "da528f15-3e25-46c3-80e4-fe060d5def0e",
+                "resourcePath": "sprites\\s_targeticon\\s_targeticon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1e522f54-8f0b-4e19-a063-5f4f09346100",
             "Value": {
                 "id": "65159eb6-f92c-4b13-811e-ae66bb901174",
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "8be669e0-68bd-48eb-893f-de708a6dd8e6",
+            "Value": {
+                "id": "b8b66529-acdf-49a2-9d04-2ccdba1ceb93",
+                "resourcePath": "objects\\o_battletemplate\\o_battletemplate.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "90d0f93f-c96b-403f-9e91-d97fc696a22a",
             "Value": {
                 "id": "e047805d-ddf2-4657-b9cc-a80f45081652",
@@ -391,6 +407,14 @@
             }
         },
         {
+            "Key": "bd9aea82-ebaa-4ba0-aaae-d85ff5a2853e",
+            "Value": {
+                "id": "32c5ca88-97a1-4d60-a49e-deb8062e3c0e",
+                "resourcePath": "sprites\\s_swordswing\\s_swordswing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "be575cee-1177-4a90-b97d-a6ea32074047",
             "Value": {
                 "id": "12ce484d-8abb-4ef1-9c46-175bbfd10689",
@@ -487,6 +511,14 @@
             }
         },
         {
+            "Key": "ee3724c6-9dc9-4643-942d-34d2a2c5badc",
+            "Value": {
+                "id": "63497984-73f7-4f38-b536-0cdc7f6e8c77",
+                "resourcePath": "objects\\o_enemy\\o_enemy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "3f174f00-08a6-47c8-8880-ca1024d616e9",
@@ -508,6 +540,14 @@
                 "id": "467c3fdf-8c62-4ce0-b95b-196255d4d7ae",
                 "resourcePath": "sprites\\s_9slice\\s_9slice.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5",
+            "Value": {
+                "id": "51545e33-06bb-4cc0-a176-f0cb6ffcb154",
+                "resourcePath": "objects\\o_swordswing\\o_swordswing.yy",
+                "resourceType": "GMObject"
             }
         }
     ],

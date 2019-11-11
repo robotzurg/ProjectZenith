@@ -1,5 +1,6 @@
 if (live_call()) return live_result;
 
+///BATTLE UI
 nine_slice_box_stretch(global.charfocus.textboxspr,0,420,260,540);
 nine_slice_box_stretch(runselect,0,1,80,60);
 draw_text(18,15,"Run");
@@ -16,11 +17,15 @@ if menu_open = "none" or menu_open != "skills" {
 	nine_slice_box_stretch(itmselect,itmx1,itmy1,itmx2,itmy2);
 }
 draw_set_halign(fa_center);
-draw_text_transformed(room_width/2,15,"Player Turn",1.5,1.5,0);
+if global.currentturn = "Players" {
+	draw_text_transformed(room_width/2,15,"Player Turn",1.5,1.5,0);
+} else if global.currentturn = "Enemies" {
+	draw_text_transformed(room_width/2,15,"Enemy Turn",1.5,1.5,0);	
+}
 if menu_open = "none" {
 	draw_text(375,475-10,"Attack");
 	nine_slice_box_stretch(atkselect,415,450,475,510);
-	draw_sprite(s_testwepicon,0,430,462); 
+	draw_sprite(global.charfocus.wepequipped,0,430,462); 
 	draw_text(600,475-10,"Skills");
 	draw_text(800,475-10,"Items");
 } else {	

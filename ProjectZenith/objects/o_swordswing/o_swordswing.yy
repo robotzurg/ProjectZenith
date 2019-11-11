@@ -1,38 +1,38 @@
 {
-    "id": "9a3d3e3c-979c-41e1-b489-3afe06623d1d",
+    "id": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_parentenemy",
+    "name": "o_swordswing",
     "eventList": [
         {
-            "id": "45d4a5e3-fc61-4332-9653-64c3e1f265fd",
+            "id": "690acbeb-152c-4b6c-a35b-ea7e3c3f2948",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 0,
-            "eventtype": 0,
-            "m_owner": "9a3d3e3c-979c-41e1-b489-3afe06623d1d"
+            "enumb": 7,
+            "eventtype": 7,
+            "m_owner": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5"
         },
         {
-            "id": "56c74819-3d01-44aa-85cd-06bf0e7ab261",
+            "id": "6e92ed02-45c5-45e2-b35f-8651bc8eb7fb",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 3,
-            "m_owner": "9a3d3e3c-979c-41e1-b489-3afe06623d1d"
+            "m_owner": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5"
         },
         {
-            "id": "2e46046e-4baa-411d-9d47-7cdd5a762a7f",
+            "id": "ec96b17e-02ef-4a35-9d19-04b6f2346283",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
-            "eventtype": 8,
-            "m_owner": "9a3d3e3c-979c-41e1-b489-3afe06623d1d"
+            "eventtype": 0,
+            "m_owner": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -53,6 +53,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "a993b279-d428-4efc-9aff-7da298b543bb",
+    "spriteId": "bd9aea82-ebaa-4ba0-aaae-d85ff5a2853e",
     "visible": true
 }

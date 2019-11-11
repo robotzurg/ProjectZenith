@@ -1,3 +1,6 @@
+// Inherit the parent event
+event_inherited();
+
 hp = 50;
 maxhp = hp;
 mp = 30;
@@ -10,3 +13,7 @@ portrait = s_testportraitp2;
 textboxspr = s_9slicep2;
 textboxsprhover = s_9slicep2select
 name = "Test Player 2";
+selection = "none";
+target = "none";
+turndone = false;
+wepequipped = s_testwepicon;

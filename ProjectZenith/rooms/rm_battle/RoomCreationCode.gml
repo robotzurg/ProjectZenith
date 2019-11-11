@@ -1,1 +1,0 @@
-show_debug_message("In rm_battle");
