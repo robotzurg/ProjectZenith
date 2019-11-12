@@ -3,6 +3,7 @@ var click = mouse_check_button_pressed(mb_left);
 var hoverover = global.charfocus.textboxsprhover;
 var normboxspr  = global.charfocus.textboxspr;
 
+if global.currentturn = "Players" {
 if point_in_rectangle(mouse_x,mouse_y,0,1,80,60) {
 	runselect = hoverover;
 	if (click) {
@@ -54,6 +55,7 @@ if point_in_rectangle(mouse_x,mouse_y,270,425,305,460) {
 	if (click) {
 		menu_open = "none";
 	}
+}
 }
 }
 

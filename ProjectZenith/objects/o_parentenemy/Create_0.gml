@@ -1,10 +1,14 @@
-hp = 10;
+hp = 100;
 maxhp = hp;
+mp = 20;
+maxmp = mp;
 str = 2;
 def = 2;
 buff = status.none;
 debuff = status.none;
+portrait = s_testportrait;
+textboxspr = s_9sliceselect;
+textboxsprhover = s_9slice;
 name = "Test Enemy 1";
-selection = "none";
-target = "none";
 turndone = false;
+wepequipped = s_swordicon;

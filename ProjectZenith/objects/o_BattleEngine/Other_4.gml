@@ -6,8 +6,31 @@ global.currentturn = "Players";
 instance_create_layer(160,128,"Instances",global.party[0]);
 instance_create_layer(160,256,"Instances",global.party[1]);
 
+var xx = 0;
+var ex = 720;
+var ey = 175;
+
 for (var i=0;i<global.enemycount;i++) {
-	instance_create_layer(760,150+(96*i),"Instances",global.enemytype);
+	switch (global.enemycount) {
+		case 1:	global.enemyparty[i] = instance_create_layer(ex+40,ey+15+(96*i),"Instances",global.enemytype); break;
+		case 2:	global.enemyparty[i] = instance_create_layer(ex+40,ey-35+(111*i),"Instances",global.enemytype); break;
+		case 3:	global.enemyparty[i] = instance_create_layer(ex+40,ey-85+(111*i),"Instances",global.enemytype); break;
+		case 4:
+		if i = 0 {
+			global.enemyparty[i] = instance_create_layer(ex-2,ey-115+(100*i),"Instances",global.enemytype); 
+		} else if i = 1 or i = 2 {
+			global.enemyparty[i] = instance_create_layer(ex+30,ey-115+(100*i),"Instances",global.enemytype); 
+		} else if i = 3 {
+			global.enemyparty[i] = instance_create_layer(ex-2,ey-115+(100*i),"Instances",global.enemytype); 	
+		} break;
+		case 5:
+		if i < 3 {
+			global.enemyparty[i] = instance_create_layer(ex,ey-85+(111*i),"Instances",global.enemytype); 
+		} else {
+			global.enemyparty[i] = instance_create_layer(ex+100,ey-35+(115*xx),"Instances",global.enemytype); 	
+			xx++;
+		} break;
+	}
 }
 
 atkselect = global.charfocus.textboxspr;
@@ -30,24 +53,4 @@ itmx1 = 725
 itmy1 = 450
 itmx2 = 875
 itmy2 = 510
-//Get number of players and enemies and their IDs in an array
-
-/*for (var i=0;i<instplrcount;i++) {
-	partyinst[i] = instance_find(o_parentplayer,i);
-	show_debug_message(partyinst[i]);
-	show_debug_message(i);
-}
-
-for (var i=0;i<instenemycount;i++) {
-	enemyinst[i] = instance_find(o_parentenemy,i);
-	show_debug_message(enemyinst[i]);
-}
-
-partycount = array_length_1d(partyinst);
-enemycount = array_length_1d(enemyinst);
-show_debug_message("Party Count: " + string(partycount));
-show_debug_message("Enemy Count: " + string(enemycount));
-
-
-show_debug_message("Player 1: " + string(partyinst[0]))*/
 }

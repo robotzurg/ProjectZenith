@@ -19,20 +19,21 @@ switch (selection) {
 		turndone = true;
 		selection = "none";
 		target = "none";
-		if o_BattleEngine.partyinst[0].turndone = false {
-			global.charfocus = o_BattleEngine.partyinst[0]
-		} else if o_BattleEngine.partyinst[1].turndone = false {
-			global.charfocus = o_BattleEngine.partyinst[1];
+		if global.party[0].turndone = false {
+			global.charfocus = global.party[0]
+		} else if global.party[1].turndone = false {
+			global.charfocus = global.party[1];
 		} else {
-			global.charfocus = o_BattleEngine.partyinst[0];
+			global.charfocus = global.party[0];
 		}
 	}
 	break;
 }
 
-if o_BattleEngine.partyinst[0].turndone = true && o_BattleEngine.partyinst[1].turndone = true {
+if global.party[0].turndone = true && global.party[1].turndone = true {
 	global.currentturn = "Enemies";
-	var enemypick = irandom_range(1,o_BattleEngine.enemycount);
-	global.charfocus = enemypick;
+	var enemypick = irandom_range(1,global.enemycount-1);
+	show_debug_message(enemypick);
+	global.charfocus = global.enemyparty[enemypick];
 }
 }

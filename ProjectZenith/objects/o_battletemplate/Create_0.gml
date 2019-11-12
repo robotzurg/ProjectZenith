@@ -14,5 +14,3 @@ selection = "none";
 target = "none";
 turndone = false;
 wepequipped = s_swordicon;
-show_debug_message(string(id));
-show_debug_message("Hello?");
