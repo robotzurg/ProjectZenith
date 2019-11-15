@@ -31,7 +31,11 @@ for (var i=0;i<global.enemycount;i++) {
 			xx++;
 		} break;
 	}
+	global.enemiesleft[i] = true;
 }
+
+
+
 
 atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;

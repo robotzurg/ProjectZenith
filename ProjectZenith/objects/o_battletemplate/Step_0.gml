@@ -33,7 +33,7 @@ switch (selection) {
 if global.party[0].turndone = true && global.party[1].turndone = true {
 	global.currentturn = "Enemies";
 	var enemypick = irandom_range(1,global.enemycount-1);
-	show_debug_message(enemypick);
 	global.charfocus = global.enemyparty[enemypick];
+	global.currentturn[enemypick] = false;
 }
 }

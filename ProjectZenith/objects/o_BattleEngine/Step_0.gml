@@ -77,47 +77,26 @@ switch(menu_open) {
 	skly1 = lerp(skly1,450,0.4);
 	sklx2 = lerp(sklx2,675,0.4);
 	skly2 = lerp(skly2,510,0.4);
-	
 	itmx1 = lerp(itmx1,725,0.4);
 	itmy1 = lerp(itmy1,450,0.4);
 	itmx2 = lerp(itmx2,875,0.4);
 	itmy2 = lerp(itmy2,510,0.4);
 }
 
-//Character focus movement
-switch(global.charfocus) {
-	case o_battleplayer: 
-		global.charfocus.x = lerp(global.charfocus.x,200,0.3);
-		o_battleplayer2.x = lerp(o_battleplayer2.x,160,0.3); break;
-	
-	case o_battleplayer2: 
-		global.charfocus.x = lerp(global.charfocus.x,200,0.3);
-		o_battleplayer.x = lerp(o_battleplayer.x,160,0.3); break;
-	
-	default:
-		o_battleplayer.x = lerp(o_battleplayer.x,160,0.3);
-		o_battleplayer2.x = lerp(o_battleplayer2.x,160,0.3); break;
+//Player focus movement
+for (var plr = 0; plr < global.partycount; plr++) {
+	if global.charfocus = global.party[plr] {
+		global.charfocus.x = lerp(global.charfocus.x,200,0.3);	
+	} else {
+		global.party[plr].x = lerp(global.party[plr].x,160,0.3);
+	}
 }
 
 //Enemy focus movement
-/*for (var i=0;i<o_BattleEngine.enemycount;i++) {
-	var enemy;
-	enemy[i] = o_BattleEngine.enemyinst[i];
+for (var en = 0; en < global.enemycount; en++) {
+	if global.charfocus = global.enemyparty[en] {	
+		global.charfocus.x = lerp(global.charfocus.x,720,0.3);
+	} else {
+		global.enemyparty[en].x = lerp(global.enemyparty[en].x,760,0.3); 
+	}
 }
-	
-if global.charfocus = enemy[0] {
-		
-	global.charfocus.x = lerp(global.charfocus.x,200,0.3);
-	enemy[1].x = lerp(enemy[1].x,160,0.3); 
-		
-} else if global.charfocus = enemy[1] {
-		
-	global.charfocus.x = lerp(global.charfocus.x,200,0.3);
-	enemy[0].x = lerp(enemy[0].x,160,0.3); 
-		
-} else {
-		
-	enemy[0].x = lerp(enemy[0].x,160,0.3);
-	enemy[1].x = lerp(enemy[1].x,160,0.3); 
-		
-}*/

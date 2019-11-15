@@ -1,3 +1,4 @@
+randomize();
 global.transition = "none";
 global.state = "platformer";
 global.charfocus = o_battleplayer;

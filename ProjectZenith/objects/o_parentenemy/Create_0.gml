@@ -12,3 +12,4 @@ textboxsprhover = s_9slice;
 name = "Test Enemy 1";
 turndone = false;
 wepequipped = s_swordicon;
+target = global.party[0];
