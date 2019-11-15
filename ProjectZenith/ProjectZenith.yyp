@@ -135,6 +135,14 @@
             }
         },
         {
+            "Key": "3c52b948-ef6e-4572-8d4f-5ce6e85a3fd1",
+            "Value": {
+                "id": "d0c41bd0-71da-43e5-b690-e3c544ae7d58",
+                "resourcePath": "scripts\\pick_next_enemy\\pick_next_enemy.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "42939ce5-ab5f-4d8c-a3f0-fe3bad7713ea",
             "Value": {
                 "id": "e11a12bb-bca2-49c6-8064-281126683ac7",
