@@ -33,15 +33,13 @@ for (var i=0;i<global.enemycount;i++) {
 	}
 }
 
-
-
-
 atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;
 itmselect = global.charfocus.textboxspr;
 runselect = global.charfocus.textboxspr;
 menu_open = "none";
 turnsdone = 0;
+totaldead = 0;
 
 atkx1 = 325
 atky1 = 450

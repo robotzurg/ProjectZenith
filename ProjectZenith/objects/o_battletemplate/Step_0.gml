@@ -16,6 +16,12 @@ switch (selection) {
 	case "attack": 
 	if target != "none" {
 		target.hp -= str;
+		if target.hp <= 0 {
+			target.dead = true;
+			o_BattleEngine.totaldead += 1;
+			show_debug_message(o_BattleEngine.totaldead);
+			target.hp = 0;
+		}
 		turndone = true;
 		selection = "none";
 		target = "none";

@@ -112,5 +112,10 @@ for (var i = 0; i < global.enemycount; i++) {
 if turnsdone == global.enemycount && global.currentturn == "Enemies" {
 	global.currentturn = "Players";
 	global.charfocus = global.party[0];
-	turnsdone = 0;
+	turnsdone = totaldead;
+	
+}
+
+if totaldead == global.enemycount {
+	room_goto(testroom);	
 }

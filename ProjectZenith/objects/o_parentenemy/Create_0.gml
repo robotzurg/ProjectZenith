@@ -1,4 +1,4 @@
-hp = 100;
+hp = 2;
 maxhp = hp;
 mp = 20;
 maxmp = mp;
@@ -14,4 +14,4 @@ turndone = false;
 wepequipped = s_swordicon;
 delay = -1;
 selection = "none";
-tryagain = false;
+dead = false;
