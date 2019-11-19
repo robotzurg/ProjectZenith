@@ -1,7 +1,7 @@
 if (live_call()) return live_result;
 if room = rm_battle {
-	
 global.currentturn = "Players";
+image_speed = 0.5;
 
 instance_create_layer(160,128,"Instances",global.party[0]);
 instance_create_layer(160,256,"Instances",global.party[1]);
@@ -31,7 +31,6 @@ for (var i=0;i<global.enemycount;i++) {
 			xx++;
 		} break;
 	}
-	global.enemiesleft[i] = true;
 }
 
 
@@ -42,6 +41,7 @@ sklselect = global.charfocus.textboxspr;
 itmselect = global.charfocus.textboxspr;
 runselect = global.charfocus.textboxspr;
 menu_open = "none";
+turnsdone = 0;
 
 atkx1 = 325
 atky1 = 450

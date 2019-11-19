@@ -1,1 +1,3 @@
-user = o_battleplayer;
+user = global.charfocus;
+usertype = "Player";
+flipped = 1;

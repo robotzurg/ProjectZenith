@@ -25,7 +25,8 @@ if global.currentturn = "Players" {
 if menu_open = "none" {
 	draw_text(375,475-10,"Attack");
 	nine_slice_box_stretch(atkselect,415,450,475,510);
-	draw_sprite(global.charfocus.wepequipped,0,430,462); 
+	if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) { draw_sprite(global.charfocus.wepequipped,image_index,430,462) }
+	else { draw_sprite(global.charfocus.wepequipped,0,430,462) }
 	draw_text(600,475-10,"Skills");
 	draw_text(800,475-10,"Items");
 } else {	
