@@ -100,3 +100,17 @@ for (var en = 0; en < global.enemycount; en++) {
 		global.enemyparty[en].x = lerp(global.enemyparty[en].x,760,0.3); 
 	}
 }
+
+/*//Checking to advance turn back to players
+for (var i = 0; i < global.enemycount; i++) {
+	if global.enemyparty[i].turndone == true {
+		turnsdone += 1;	
+		show_debug_message(turnsdone);
+	}
+}*/
+
+if turnsdone == global.enemycount && global.currentturn == "Enemies" {
+	global.currentturn = "Players";
+	global.charfocus = global.party[0];
+	turnsdone = 0;
+}
