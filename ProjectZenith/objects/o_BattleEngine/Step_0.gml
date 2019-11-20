@@ -101,38 +101,18 @@ for (var en = 0; en < global.enemycount; en++) {
 	}
 }
 
-/*//Checking to advance turn back to players
-for (var i = 0; i < global.enemycount; i++) {
-	if global.enemyparty[i].turndone == true {
-		turnsdone += 1;	
-		show_debug_message(turnsdone);
-	}
-}*/
-
 if turnsdone == global.enemycount && global.currentturn == "Enemies" {
 	global.currentturn = "Players";
 	global.charfocus = global.party[0];
 	turnsdone = totaldead;
-	
 }
 
-if totaldead == global.enemycount {
-	global.currentturn = "Victory" //trans_to_room(testroom,"run1");
+if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" {
+	global.currentturn = "Victory";
 }
 
-/*if mouse_check_button_pressed(mb_left) {
-	switch_ = !switch_
-}*/
-
-
-if global.currentturn = "Victory" {
-	primy = lerp(primy,200,0.25);
-	vicy = lerp(vicy,30,0.25);
-	othery = lerp(othery,440,0.25);
-	backalpha = lerp(backalpha,0.9,0.25);
-} else {
-	primy = lerp(primy,0,0.25);
-	vicy = lerp(vicy,-100,0.25);
-	othery = lerp(othery,600,0.25);
-	backalpha = lerp(backalpha,0,0.25);
+if mouse_check_button_pressed(mb_left) {
+	if global.currentturn = "Victory" {
+		global.currentturn = "End";
+	}
 }

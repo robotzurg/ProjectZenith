@@ -10,3 +10,11 @@ global.enemycount = 1;
 global.enemytype = o_parentenemy;
 
 draw_set_font(fnt_battle);
+
+//Victory Screen Coords
+primx = 800;
+primy = 200;
+vicy = 30;
+othery = 440;
+backalpha = 0;
+finishtrans = false;

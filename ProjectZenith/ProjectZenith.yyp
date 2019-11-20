@@ -39,6 +39,14 @@
             }
         },
         {
+            "Key": "02b4b498-0015-4eec-8929-e1fa1a3de0e0",
+            "Value": {
+                "id": "fb69d251-6a0d-4af5-b27f-bc733dd30155",
+                "resourcePath": "views\\02b4b498-0015-4eec-8929-e1fa1a3de0e0.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "047aab40-ab90-441f-8567-e211f8440c39",
             "Value": {
                 "id": "733fd954-69f0-40e3-a78a-50b17d11fc25",
@@ -571,6 +579,14 @@
             "Value": {
                 "id": "467c3fdf-8c62-4ce0-b95b-196255d4d7ae",
                 "resourcePath": "sprites\\s_9slice\\s_9slice.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fba2670b-2e31-4bf8-8916-17d437f38d00",
+            "Value": {
+                "id": "c2b4fad5-8cbd-4c0f-8edb-7a0fdc436e5c",
+                "resourcePath": "sprites\\s_potionicon\\s_potionicon.yy",
                 "resourceType": "GMSprite"
             }
         },

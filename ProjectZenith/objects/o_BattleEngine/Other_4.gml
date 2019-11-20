@@ -56,12 +56,4 @@ itmy1 = 450
 itmx2 = 875
 itmy2 = 510
 
-//Victory Screen Coords
-primx = 800;
-primy = 200;
-vicy = 30;
-othery = 440;
-
-backalpha = 0.9;
-switch_ = false
 }

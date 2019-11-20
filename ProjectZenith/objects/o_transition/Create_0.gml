@@ -10,3 +10,11 @@ y2[1] = room_height;
 
 alarm[0] = 50;
 room_trans = testroom;
+
+//Victory Screen Coords
+primx = 800;
+primy = 200;
+vicy = 30;
+othery = 440;
+
+backalpha = 0.9;
