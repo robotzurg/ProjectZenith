@@ -117,5 +117,22 @@ if turnsdone == global.enemycount && global.currentturn == "Enemies" {
 }
 
 if totaldead == global.enemycount {
-	room_goto(testroom);	
+	global.currentturn = "Victory" //trans_to_room(testroom,"run1");
+}
+
+/*if mouse_check_button_pressed(mb_left) {
+	switch_ = !switch_
+}*/
+
+
+if global.currentturn = "Victory" {
+	primy = lerp(primy,200,0.25);
+	vicy = lerp(vicy,30,0.25);
+	othery = lerp(othery,440,0.25);
+	backalpha = lerp(backalpha,0.9,0.25);
+} else {
+	primy = lerp(primy,0,0.25);
+	vicy = lerp(vicy,-100,0.25);
+	othery = lerp(othery,600,0.25);
+	backalpha = lerp(backalpha,0,0.25);
 }
