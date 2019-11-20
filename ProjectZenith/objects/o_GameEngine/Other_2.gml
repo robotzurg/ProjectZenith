@@ -12,9 +12,8 @@ global.enemytype = o_parentenemy;
 draw_set_font(fnt_battle);
 
 //Victory Screen Coords
-primx = 800;
-primy = 200;
-vicy = 30;
-othery = 440;
+primy = 0;
+vicy = -100;
+othery = 600;
 backalpha = 0;
 finishtrans = false;

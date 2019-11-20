@@ -44,14 +44,15 @@ if delay > 0 {
 		selection = "wait";
 		delay = 60;
 		turndone = true;
-		o_BattleEngine.turnsdone = o_BattleEngine.totaldead;
 		o_BattleEngine.turnsdone += 1;
 		show_debug_message("Turns Done: " + string(o_BattleEngine.turnsdone))
 		show_debug_message(string(id) +" Attack Finished.");
 	} else if selection = "wait" {
 		show_debug_message(string(id)  + " Picking next enemy.");
 		selection = "none";
-		pick_next_enemy();
+		if o_BattleEngine.turnsdone != global.enemycount { 
+			pick_next_enemy();
+		}
 	}
 }
 } else {

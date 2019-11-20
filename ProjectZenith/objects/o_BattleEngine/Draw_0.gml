@@ -23,12 +23,14 @@ if global.currentturn = "Players" {
 	draw_text_transformed(room_width/2,15,"Enemy Turn",1.5,1.5,0);	
 }
 if menu_open = "none" {
-	draw_text(375,475-10,"Attack");
-	nine_slice_box_stretch(atkselect,415,450,475,510);
-	if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) { draw_sprite(global.charfocus.wepequipped,image_index,430,462) }
-	else { draw_sprite(global.charfocus.wepequipped,0,430,462) }
-	draw_text(600,475-10,"Skills");
-	draw_text(800,475-10,"Items");
+	draw_set_valign(fa_center);
+	draw_text(375,atky1+30,"Attack");
+	nine_slice_box_stretch(atkselect,415,atky1,475,atky2);
+	if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) { draw_sprite(global.charfocus.wepequipped,image_index,430,atky1+12) }
+	else { draw_sprite(global.charfocus.wepequipped,0,430,atky1+12) }
+	draw_text(600,skly1+30,"Skills");
+	draw_text(800,itmy1+30,"Items");
+	draw_set_valign(fa_top);
 } else {	
 	if menu_open = "skills" {draw_sprite(s_backicon,0,sklx1+10,skly1+5);}
 	else if menu_open = "item" {draw_sprite(s_backicon,0,itmx1+10,itmy1+5);}
