@@ -20,3 +20,5 @@ vicy = -100;
 othery = 600;
 backalpha = 0;
 finishtrans = false;
+vicfocus = 0;
+vicfocusdelay = 120;
