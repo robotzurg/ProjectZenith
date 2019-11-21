@@ -105,17 +105,11 @@ for (var plr = 0; plr < global.partycount; plr++) {
 
 //Enemy focus movement
 for (var en = 0; en < global.enemycount; en++) {
-	if global.charfocus = global.enemyparty[en] {	
+	if global.charfocus = global.enemyparty[en] && global.charfocus.dead == false {	
 		global.charfocus.x = lerp(global.charfocus.x,720,0.3);
 	} else {
 		global.enemyparty[en].x = lerp(global.enemyparty[en].x,760,0.3); 
 	}
-}
-
-if turnsdone == global.enemycount && global.currentturn == "Enemies" {
-	global.currentturn = "Players";
-	global.charfocus = global.party[0];
-	turnsdone = totaldead;
 }
 
 if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" {
@@ -125,5 +119,6 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 if mouse_check_button_pressed(mb_left) {
 	if global.currentturn = "Victory" {
 		global.currentturn = "End";
+		global.battledone = true;
 	}
 }

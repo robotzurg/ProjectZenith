@@ -8,6 +8,8 @@ global.party[1] = o_battleplayer2;
 global.partycount = array_length_1d(global.party);
 global.enemycount = 1;
 global.enemytype = o_parentenemy;
+global.enemytokill = o_enemy;
+global.battledone = false;
 
 draw_set_font(fnt_battle);
 

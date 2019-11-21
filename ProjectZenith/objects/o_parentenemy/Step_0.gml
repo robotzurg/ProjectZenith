@@ -46,15 +46,20 @@ if delay > 0 {
 		turndone = true;
 		o_BattleEngine.turnsdone += 1;
 		show_debug_message("Turns Done: " + string(o_BattleEngine.turnsdone))
+		show_debug_message("Max Turns: " + string(global.enemycount-o_BattleEngine.totaldead));
 		show_debug_message(string(id) +" Attack Finished.");
 	} else if selection = "wait" {
-		show_debug_message(string(id)  + " Picking next enemy.");
 		selection = "none";
-		if o_BattleEngine.turnsdone != global.enemycount { 
+		if o_BattleEngine.turnsdone != global.enemycount-o_BattleEngine.totaldead { 
+			show_debug_message(string(id)  + " Picking next enemy.");
 			pick_next_enemy();
+		} else {
+			o_BattleEngine.turnsdone = 0;
+			global.currentturn = "Players";
+			global.charfocus = global.party[0];
+		}
 		}
 	}
-}
 } else {
 	image_index = 1;	
 }
