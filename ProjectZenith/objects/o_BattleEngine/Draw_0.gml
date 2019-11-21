@@ -15,6 +15,11 @@ nine_slice_box_stretch(global.charfocus.textboxspr,atkx1,atky1,atkx2,atky2);
 nine_slice_box_stretch(sklselect,sklx1,skly1,sklx2,skly2);
 if menu_open = "none" or menu_open != "skills" {
 	nine_slice_box_stretch(itmselect,itmx1,itmy1,itmx2,itmy2);
+	if point_in_rectangle(mouse_x,mouse_y,itmx1,itmy1,itmx2,itmy2) && menu_open != "item" {
+		draw_sprite(s_potionicon,image_index,itmx1+95,itmy1+12);
+	} else if menu_open != "item" {
+		draw_sprite(s_potionicon,0,itmx1+95,itmy1+12);
+	}
 }
 draw_set_halign(fa_center);
 if global.currentturn = "Players" {
@@ -29,7 +34,7 @@ if menu_open = "none" {
 	if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) { draw_sprite(global.charfocus.wepequipped,image_index,430,atky1+12) }
 	else { draw_sprite(global.charfocus.wepequipped,0,430,atky1+12) }
 	draw_text(600,skly1+30,"Skills");
-	draw_text(800,itmy1+30,"Items");
+	draw_text(775,itmy1+30,"Items");
 	draw_set_valign(fa_top);
 } else {	
 	if menu_open = "skills" {draw_sprite(s_backicon,0,sklx1+10,skly1+5);}

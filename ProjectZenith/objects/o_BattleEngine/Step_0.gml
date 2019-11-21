@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 var click = mouse_check_button_pressed(mb_left);
 var hoverover = global.charfocus.textboxsprhover;
 var normboxspr  = global.charfocus.textboxspr;

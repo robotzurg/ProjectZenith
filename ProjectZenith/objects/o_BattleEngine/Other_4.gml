@@ -1,7 +1,6 @@
-if (live_call()) return live_result;
 if room = rm_battle {
 global.currentturn = "Players";
-image_speed = 0.5;
+image_speed = 0.2;
 
 instance_create_layer(160,128,"Instances",global.party[0]);
 instance_create_layer(160,256,"Instances",global.party[1]);
