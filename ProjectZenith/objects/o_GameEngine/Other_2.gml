@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 randomize();
 global.transition = "none";
 global.state = "platformer";

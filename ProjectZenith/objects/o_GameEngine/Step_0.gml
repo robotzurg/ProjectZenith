@@ -4,9 +4,9 @@ if keyboard_check_pressed(ord("R")) {
 }
 
 if global.currentturn = "Victory" {
-	primy = lerp(primy,200,0.25);
-	vicy = lerp(vicy,30,0.25);
-	othery = lerp(othery,440,0.25);
+	primy = lerp(primy,150,0.25);
+	vicy = lerp(vicy,15,0.25);
+	othery = lerp(othery,468,0.25);
 	backalpha = lerp(backalpha,0.9,0.25);
 	show_debug_message(primy);
 } else if global.currentturn = "End" && finishtrans == false {
