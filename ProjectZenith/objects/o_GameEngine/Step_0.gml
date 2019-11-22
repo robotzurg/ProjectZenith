@@ -29,7 +29,8 @@ if finishtrans = true {
 
 //Victory Player Focus code (250 bottom left, 480 middle, 730 top right)
 if global.currentturn = "Victory" {
-	show_debug_message(vicfocusdelay);
+	//show_debug_message(vicfocusdelay);
+	if xpdelay = 0 {
 	if vicfocusdelay != 0 {
 		vicfocusdelay -= 1;
 	} else {
@@ -40,6 +41,7 @@ if global.currentturn = "Victory" {
 			global.currentturn = "End";
 			global.battledone = true;
 		}
+	}
 	}
 	
 	switch (vicfocus) {
