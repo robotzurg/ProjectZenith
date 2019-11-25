@@ -48,11 +48,15 @@ if global.currentturn = "Victory" or global.currentturn = "Results" {
 				vicfocus = 2;
 			}
 		}
-
 	
+	vicfocus = 2
 	
-	
-	if global.currentturn = "Victory" {
+	for (var i=0;i<global.partycount;i++) {
+		global.partyvicx[i] = lerp(global.partyvicx[i], 480 - 250*(vicfocus > i) / (1 + (vicfocus > i+1)), 0.2);
+		global.partyvicy[i] = lerp(global.partyvicy[i], room_height/2 - 100*(vicfocus > i) * sign(map_range((vicfocus == 2), 0, 1, -1, 1)), 0.2);
+		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1*map_range((vicfocus == i),0,1,1,2), 0.2);
+	}
+	/*if global.currentturn = "Victory" {
 	switch (vicfocus) {
 	case 0:	
 		global.partyvicx[0] =  lerp(global.partyvicx[0],480,0.2);
@@ -76,6 +80,7 @@ if global.currentturn = "Victory" or global.currentturn = "Results" {
 		global.partyvicx[1] = lerp(global.partyvicx[1],380,0.2);	
 		global.partyvicy[1] = lerp(global.partyvicy[1],room_height/2,0.2);
 		global.partyvicscale[1] = lerp(global.partyvicscale[1],1,0.2); 
-	}
+	}*/
+	
 }
 }
