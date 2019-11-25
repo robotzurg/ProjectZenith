@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 if room = rm_battle {
 global.currentturn = "Players";
 image_speed = 0.2;
@@ -30,6 +31,14 @@ for (var i=0;i<global.enemycount;i++) {
 			xx++;
 		} break;
 	}
+}
+
+for (var i = 0; i < global.partycount; i++) {
+	global.partyvicx[i] =  480-(230*i)
+	global.partyvicy[i] = room_height/2+(100*i);
+	global.partyvicscale[i] = 2-i;
+	if i = 0 { global.partyvicisMVP[i] = true; }
+	else { global.partyvicisMVP[i] = false;} 
 }
 
 atkselect = global.charfocus.textboxspr;
