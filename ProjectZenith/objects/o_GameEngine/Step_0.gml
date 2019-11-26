@@ -29,53 +29,43 @@ if finishtrans = true {
 
 if room = rm_battle {
 
-if vicfocus = 2 && mouse_check_button_pressed(mb_left) {
+if global.currentturn == "Results"  {
 	global.currentturn = "End";
 	global.battledone = true;
 }
 
 //Victory Player Focus code (250 bottom left, 480 middle, 730 top right)
-if global.currentturn = "Victory" or global.currentturn = "Results" {
+if global.currentturn = "Victory" {
 		
 		if mouse_check_button_pressed(mb_left) {
-			if vicfocus != global.partycount-1 && vicfocus != 2 {
+			if vicfocus != global.partycount-1 {
 				vicfocus += 1;
 				xpdelay = 60;
-				show_debug_message("Vicfocus: " + string(vicfocus));
-				show_debug_message("global.partycount: " + string(global.partycount));
 			} else {
 				global.currentturn = "Results";
-				vicfocus = 2;
 			}
+			show_debug_message("Vicfocus: " + string(vicfocus));
+			show_debug_message("global.partycount: " + string(global.partycount));
+			show_debug_message("global.currentturn: " + string(global.currentturn));
 		}
 
-	
-	
-	
-	if global.currentturn = "Victory" {
-	switch (vicfocus) {
-	case 0:	
-		global.partyvicx[0] =  lerp(global.partyvicx[0],480,0.2);
-		global.partyvicy[0] = lerp(global.partyvicy[0],room_height/2,0.2);
-		global.partyvicscale[0] = lerp(global.partyvicscale[0],2,0.2);
-		global.partyvicx[1] = lerp(global.partyvicx[1],250,0.2);	
-		global.partyvicy[1] = lerp(global.partyvicy[1],room_height/2+100,0.2);
-		global.partyvicscale[1] = lerp(global.partyvicscale[1],1,0.2); break;
-	case 1: 
-		global.partyvicx[0] =  lerp(global.partyvicx[0],730,0.2);
-		global.partyvicy[0] = lerp(global.partyvicy[0],room_height/2-100,0.2);
-		global.partyvicscale[0] = lerp(global.partyvicscale[0],1,0.2);
-		global.partyvicx[1] = lerp(global.partyvicx[1],480,0.2);	
-		global.partyvicy[1] = lerp(global.partyvicy[1],room_height/2,0.2);
-		global.partyvicscale[1] = lerp(global.partyvicscale[1],2,0.2); break;
+
+	//Keep the victory player movements along the angles, and move them based on vicfocus
+	for (var i=0;i<global.partycount;i++) {
+		var angle = darctan(primy / 800);
+		l[i] = lerp(l[i], 200*(vicfocus - i), 0.2)
+		global.partyvicx[i] = room_width/2+lengthdir_x(l[i],angle);
+		global.partyvicy[i] = room_height/2+lengthdir_y(l[i],angle);
+		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1+(vicfocus == i), 0.2);    
 	}
-	} else {
-		global.partyvicx[0] =  lerp(global.partyvicx[0],580,0.2);
-		global.partyvicy[0] = lerp(global.partyvicy[0],room_height/2,0.2);
-		global.partyvicscale[0] = lerp(global.partyvicscale[0],1,0.2);
-		global.partyvicx[1] = lerp(global.partyvicx[1],380,0.2);	
-		global.partyvicy[1] = lerp(global.partyvicy[1],room_height/2,0.2);
-		global.partyvicscale[1] = lerp(global.partyvicscale[1],1,0.2); 
+	
+} else if global.currentturn = "Results" {
+	for (var i=0;i<global.partycount;i++) {
+		var angle = darctan(primy / 800);
+		l[i] = lerp(l[i], 200*(vicfocus - i)-400, 0.2)
+		global.partyvicx[i] = room_width/2+lengthdir_x(l[i],angle);
+		global.partyvicy[i] = room_height/2+lengthdir_y(l[i],angle);
+		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1, 0.2);    
 	}
 }
 }
