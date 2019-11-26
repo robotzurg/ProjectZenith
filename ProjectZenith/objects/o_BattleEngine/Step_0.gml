@@ -111,16 +111,6 @@ for (var en = 0; en < global.enemycount; en++) {
 	}
 }
 
-if (turnsdone == global.partycount) && global.currentturn == "Players" {
-	global.currentturn = "Enemies";
-	var enemypick = irandom_range(1,global.enemycount-1);
-	global.charfocus = global.enemyparty[enemypick];
-	for (var i = 0;i<global.partycount;i++) {
-		global.party[i].turndone = false;	
-	}
-	turnsdone = 0;
-}
-
-if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" {
+if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && o_GameEngine.vicfocus != global.partycount-1 && o_GameEngine.vicfocus != 2 {
 	global.currentturn = "Victory";
 }

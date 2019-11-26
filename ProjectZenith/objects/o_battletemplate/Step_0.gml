@@ -23,15 +23,24 @@ switch (selection) {
 			target.hp = 0;
 		}
 		turndone = true;
-		o_BattleEngine.turnsdone += 1;
 		selection = "none";
 		target = "none";
-		if o_BattleEngine.turnsdone != global.partycount {
-			for (var roll = 0; global.charfocus.turndone = true; roll ++) {
-				global.charfocus = global.party[roll]
-			}
+		if global.party[0].turndone = false {
+			global.charfocus = global.party[0]
+		} else if global.party[1].turndone = false {
+			global.charfocus = global.party[1];
+		} else {
+			global.charfocus = global.party[0];
 		}
 	}
 	break;
+}
+
+if global.party[0].turndone = true && global.party[1].turndone = true {
+	global.currentturn = "Enemies";
+	var enemypick = irandom_range(1,global.enemycount-1);
+	global.charfocus = global.enemyparty[enemypick];
+	global.party[0].turndone = false;
+	global.party[1].turndone = false;
 }
 }
