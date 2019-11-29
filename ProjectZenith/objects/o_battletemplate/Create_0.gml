@@ -13,7 +13,6 @@ name = "Test Player 1";
 selection = "none";
 target = "none";
 turndone = false;
-wepequipped = s_swordicon;
 
 //MVP Calculations
 dmgdealt = 0;
@@ -21,4 +20,4 @@ debuffsdealt = 0; //Will be added when buffs/debuffs are added
 buffsdealt = 0; //Will be added when buffs/debuffs are added
 healthhealed = 0;
 finalhitsdealt = 0;
-
+wepequipped = o_swordicon;

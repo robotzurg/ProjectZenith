@@ -207,6 +207,14 @@
             }
         },
         {
+            "Key": "517ea135-c28a-4eb4-a17d-d79e79fefb51",
+            "Value": {
+                "id": "7c1b0a0b-feaf-43d6-9bd2-30fb6dc8b4dc",
+                "resourcePath": "views\\517ea135-c28a-4eb4-a17d-d79e79fefb51.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "5978c0fa-b49e-40ba-a94f-ca4c341fe38f",
             "Value": {
                 "id": "49d79566-83be-48eb-85c1-dd6ed0548233",
@@ -300,6 +308,14 @@
                 "id": "3a4908d2-85e3-4619-905f-906bef2f1a73",
                 "resourcePath": "views\\84bf61aa-fbcb-4e10-b9ab-c670acb7dfcd.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "85f20602-8455-4549-b666-94be70461abb",
+            "Value": {
+                "id": "416ba89a-1d4f-4d92-9d0f-14c5b538aedc",
+                "resourcePath": "scripts\\map_range\\map_range.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -535,6 +551,14 @@
             }
         },
         {
+            "Key": "cdd4810f-2efb-40e3-a589-512629d77a8a",
+            "Value": {
+                "id": "d2e6e933-8e26-4467-8c9f-24f66285349b",
+                "resourcePath": "objects\\o_swordicon\\o_swordicon.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "d05b259c-bbcf-4198-b382-844006c61f49",
             "Value": {
                 "id": "903dc15e-5288-46a4-8883-60bdf69ae16c",
@@ -556,6 +580,14 @@
                 "id": "d7fac2aa-f450-4c03-bee3-7cd47108ff9e",
                 "resourcePath": "datafiles_yy\\GMLive\\gc.dll.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "dfc1d9ae-e081-44a6-8b88-5d99ceecb065",
+            "Value": {
+                "id": "df0f2e75-463e-4de4-b9db-0cfcc649488a",
+                "resourcePath": "objects\\o_potionicon\\o_potionicon.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -623,6 +655,14 @@
             }
         },
         {
+            "Key": "f6bf44ab-755a-41c9-9739-6eff5ffc865a",
+            "Value": {
+                "id": "11c08802-50b2-4891-b7db-5e00a5cb514d",
+                "resourcePath": "objects\\o_iconparent\\o_iconparent.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "fa88bc82-6430-4b5d-a21f-2c8c1644508b",
             "Value": {
                 "id": "467c3fdf-8c62-4ce0-b95b-196255d4d7ae",
@@ -636,6 +676,14 @@
                 "id": "c2b4fad5-8cbd-4c0f-8edb-7a0fdc436e5c",
                 "resourcePath": "sprites\\s_potionicon\\s_potionicon.yy",
                 "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fcfb6dbc-078a-44ac-a011-0b5d4b2e9897",
+            "Value": {
+                "id": "0a211717-39c7-4225-bb00-b2660e1d10e5",
+                "resourcePath": "objects\\o_bowicon\\o_bowicon.yy",
+                "resourceType": "GMObject"
             }
         },
         {
