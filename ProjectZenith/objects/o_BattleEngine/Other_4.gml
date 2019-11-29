@@ -1,7 +1,8 @@
 if room = rm_battle {
 	
 for (var inst = 0; inst<global.partycount;inst++) {
-	instance_create_layer(160,100+(125*inst),"Instances",global.party[inst]);
+	instance_create_layer(160,100+(125*inst)+(110 * (global.partycount = 1)) + (50 * (global.partycount = 2)),"Instances",global.party[inst])
+	
 }
 	
 atkselect = global.charfocus.textboxspr;

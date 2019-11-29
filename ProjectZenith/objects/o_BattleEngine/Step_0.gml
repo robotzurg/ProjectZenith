@@ -122,5 +122,17 @@ if (turnsdone == global.partycount) && global.currentturn == "Players" {
 }
 
 if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" {
+	var mvpcheck;
+	for (var ii = 0; ii<global.partycount;ii++) {
+		if ii = 0 {
+			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*2);
+			global.partyvicMVP = global.party[ii];
+		} else {
+			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*2);
+			if mvpcheck[ii-1] < mvpcheck[ii] { 
+				global.partyvicMVP = global.party[ii];
+			}
+		}
+	}
 	global.currentturn = "Victory";
 }

@@ -1,4 +1,4 @@
-hp = 2;
+hp = 5;
 maxhp = hp;
 mp = 20;
 maxmp = mp;

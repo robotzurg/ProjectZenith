@@ -16,6 +16,7 @@ switch (selection) {
 	case "attack": 
 	if target != "none" {
 		target.hp -= str;
+		dmgdealt += str;
 		if target.hp <= 0 {
 			target.dead = true;
 			o_BattleEngine.totaldead += 1;

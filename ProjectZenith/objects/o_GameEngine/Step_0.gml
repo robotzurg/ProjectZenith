@@ -29,10 +29,10 @@ if finishtrans = true {
 
 if room = rm_battle {
 
-if global.currentturn == "Results"  {
+/*if global.currentturn == "Results"  {
 	global.currentturn = "End";
 	global.battledone = true;
-}
+}*/
 
 //Victory Player Focus code (250 bottom left, 480 middle, 730 top right)
 if global.currentturn = "Victory" {
@@ -60,12 +60,13 @@ if global.currentturn = "Victory" {
 	}
 	
 } else if global.currentturn = "Results" {
+	vicfocus = (global.partycount);
 	for (var i=0;i<global.partycount;i++) {
 		var angle = darctan(primy / 800);
 		l[i] = lerp(l[i], 200*(vicfocus - i)-400, 0.2)
-		global.partyvicx[i] = room_width/2+lengthdir_x(l[i],angle);
-		global.partyvicy[i] = room_height/2+lengthdir_y(l[i],angle);
-		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1, 0.2);    
+		global.partyvicx[i] = room_width/2 + (lengthdir_x(l[i],angle))
+		global.partyvicy[i] = room_height/2 + (lengthdir_y(l[i],angle))
+		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1.5, 0.2);    
 	}
 }
 }
