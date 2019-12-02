@@ -68,5 +68,9 @@ if global.currentturn = "Victory" {
 		global.partyvicy[i] = room_height/2 + (lengthdir_y(l[i],angle))
 		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1.5, 0.2);    
 	}
+	if mouse_check_button_pressed(mb_left) {
+		global.currentturn = "End";
+		global.battledone = true;
+	}
 }
 }

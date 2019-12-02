@@ -32,4 +32,3 @@ backalpha = 0;
 finishtrans = false;
 vicfocus = 0;
 xpdelay = 60;
-flip = false

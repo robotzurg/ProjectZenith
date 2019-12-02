@@ -14,20 +14,17 @@ turnsdone = 0;
 totaldead = 0;
 
 
+btny1 = 450
+btny2 = 510
+
 atkx1 = 325
-atky1 = 450
 atkx2 = 475
-atky2 = 510
 
 sklx1 = 525
-skly1 = 450
 sklx2 = 675
-skly2 = 510
 
 itmx1 = 725
-itmy1 = 450
 itmx2 = 875
-itmy2 = 510
 
 global.currentturn = "Players";
 image_speed = 0.2;

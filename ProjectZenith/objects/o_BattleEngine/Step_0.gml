@@ -61,15 +61,15 @@ if point_in_rectangle(mouse_x,mouse_y,270,425,305,460) {
 switch(menu_open) {
 	case "skills": 
 	sklx1 = lerp(sklx1,265,0.4);
-	skly1 = lerp(skly1,420,0.4);
+	btny1 = lerp(btny1,420,0.4);
 	sklx2 = lerp(sklx2,955,0.4);
-	skly2 = lerp(skly2,540,0.4);
+	btny2 = lerp(btny2,540,0.4);
 	break;
 	case "item": 
 	itmx1 = lerp(itmx1,265,0.4);
-	itmy1 = lerp(itmy1,420,0.4);
+	btny1 = lerp(btny1,420,0.4);
 	itmx2 = lerp(itmx2,955,0.4);
-	itmy2 = lerp(itmy2,540,0.4);
+	btny2 = lerp(btny2,540,0.4);
 	break;
 	case "none": 
 	sklx1 = lerp(sklx1,525,0.4);
@@ -79,19 +79,11 @@ switch(menu_open) {
 }
 
 if global.currentturn = "Players"  && menu_open = "none" {
-	atky1 = lerp(atky1,450,0.3);
-	atky2 = lerp(atky2,510,0.3);
-	skly1 = lerp(skly1,450,0.3);
-	skly2 = lerp(skly2,510,0.3);
-	itmy1 = lerp(itmy1,450,0.3);
-	itmy2 = lerp(itmy2,510,0.3);
+	btny1 = lerp(btny1,450,0.3);
+	btny2 = lerp(btny2,510,0.3);
 } else if global.currentturn = "Enemies" {
-	atky1 = lerp(atky1,600,0.3);
-	atky2 = lerp(atky2,660,0.3);
-	skly1 = lerp(skly1,600,0.3);
-	skly2 = lerp(skly2,660,0.3);
-	itmy1 = lerp(itmy1,600,0.3);
-	itmy2 = lerp(itmy2,660,0.3);
+	btny1 = lerp(btny1,600,0.3);
+	btny2 = lerp(btny2,660,0.3);
 }
 //Player focus movement
 for (var plr = 0; plr < global.partycount; plr++) {
