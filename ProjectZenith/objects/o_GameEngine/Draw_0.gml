@@ -12,18 +12,20 @@ for (var i=0;i<global.partycount;i++) {
 		//Draw MVP Party member first
 		draw_sprite_ext(global.party[i].sprite_index, 0, global.partyvicx[i], global.partyvicy[i],global.partyvicscale[i],global.partyvicscale[i],0,c_white,1);
 		draw_set_halign(fa_center);
-				if global.partyvicMVP = global.party[i] {
-					draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-170,"MVP",1.5,1.5,0);
-				}
-				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
-				draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partygainedxp[i]));
-				if global.partycurrentxp[i] <= global.partygainedxp[i] && xpdelay = 0 {
-						global.partycurrentxp[i] += 1.15;
-				} else if xpdelay != 0  {
-					xpdelay -= 1;
-				}
-				var pc = (global.partycurrentxp[i] / global.partymaxxp) * 100;
-				draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+110,global.partyvicx[i]+50,global.partyvicy[i]+120,pc,c_gray,c_lime,c_lime,0,true,true);
+			if global.partyvicMVP = global.party[i] {
+				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-170,"MVP",1.5,1.5,0);
+			}
+			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
+			draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partygainedxp[i]));
+			
+			if global.partycurrentxp[i] <= global.partygainedxp[i] && xpdelay = 0 {
+					global.partycurrentxp[i] += 1.15;
+			} else if xpdelay != 0 {
+				xpdelay -= 1;
+			}
+			
+			var pc = (global.partycurrentxp[i] / global.partymaxxp) * 100;
+			draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+110,global.partyvicx[i]+50,global.partyvicy[i]+120,pc,c_gray,c_lime,c_lime,0,true,true);
 		draw_set_halign(fa_left);
 	} else {
 		draw_sprite_ext(global.party[i].sprite_index, 0, global.partyvicx[i], global.partyvicy[i],global.partyvicscale[i],global.partyvicscale[i],0,c_white,1);

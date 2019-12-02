@@ -2,8 +2,8 @@ if room = rm_battle {
 	
 for (var inst = 0; inst<global.partycount;inst++) {
 	instance_create_layer(160,100+(125*inst)+(110 * (global.partycount = 1)) + (50 * (global.partycount = 2)),"Instances",global.party[inst])
-	
 }
+global.charfocus = global.party[0];
 	
 atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;
@@ -12,6 +12,7 @@ runselect = global.charfocus.textboxspr;
 menu_open = "none";
 turnsdone = 0;
 totaldead = 0;
+o_GameEngine.vicfocus = 0;
 
 
 btny1 = 450

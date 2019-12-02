@@ -11,7 +11,7 @@ draw_text_transformed(100,490,"Strength: " + string(global.charfocus.str),0.8,0.
 draw_text_transformed(100,510,"Defense: " + string(global.charfocus.def),0.8,0.8,0);
 nine_slice_box_stretch(global.charfocus.textboxspr,atkx1,btny1,atkx2,btny2);
 nine_slice_box_stretch(sklselect,sklx1,btny1,sklx2,btny2);
-if menu_open = "none" or menu_open != "skills" {
+if menu_open == "none" or menu_open != "skills" {
 	nine_slice_box_stretch(itmselect,itmx1,btny1,itmx2,btny2);
 	if !instance_exists(o_potionicon) && menu_open != "item" {
 		instance_create_layer(itmx1+95,btny1+12,"UI",o_potionicon);

@@ -114,6 +114,7 @@ if (turnsdone == global.partycount) && global.currentturn == "Players" {
 }
 
 if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" {
+	//Check and change MVP based on the battle
 	var mvpcheck;
 	for (var ii = 0; ii<global.partycount;ii++) {
 		if ii = 0 {
@@ -125,6 +126,8 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 				global.partyvicMVP = global.party[ii];
 			}
 		}
+	//Hand out XP based on multiple factors
+	global.partygainedxp[ii] = global.party[ii].dmgdealt*global.enemycount;
 	}
 	global.currentturn = "Victory";
 }

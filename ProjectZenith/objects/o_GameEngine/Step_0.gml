@@ -3,12 +3,12 @@ if keyboard_check_pressed(ord("R")) {
 	game_restart();	
 }
 
-if global.currentturn = "Victory" {
+if global.currentturn == "Victory" {
 	primy = lerp(primy,150,0.25);
 	vicy = lerp(vicy,15,0.25);
 	othery = lerp(othery,468,0.25);
 	backalpha = lerp(backalpha,0.9,0.25);
-} else if global.currentturn = "End" && finishtrans == false {
+} else if global.currentturn == "End" && finishtrans == false {
 	primy = lerp(primy,700,0.25);
 	vicy = lerp(vicy,-100,0.25);
 	othery = lerp(othery,600,0.25);
@@ -17,33 +17,29 @@ if global.currentturn = "Victory" {
 	}
 }
 
-if finishtrans = true {
+if finishtrans == true {
 	primy = lerp(primy,0,0.25);
 	vicy = lerp(vicy,-100,0.25);
 	othery = lerp(othery,600,0.25);
 	backalpha = lerp(backalpha,0,0.25);
-	if primy = 0 {
+	if primy == 0 {
 		finishtrans = false;	
 	}
 }
 
-if room = rm_battle {
-
-/*if global.currentturn == "Results"  {
-	global.currentturn = "End";
-	global.battledone = true;
-}*/
+if room == rm_battle {
 
 //Victory Player Focus code (250 bottom left, 480 middle, 730 top right)
-if global.currentturn = "Victory" {
+if global.currentturn == "Victory" {
 		
-		if mouse_check_button_pressed(mb_left) {
-			if vicfocus != global.partycount-1 {
-				vicfocus += 1;
-				xpdelay = 60;
-			} else {
-				global.currentturn = "Results";
-			}
+	if mouse_check_button_pressed(mb_left) {
+		if vicfocus != global.partycount-1 {
+			vicfocus += 1;
+			xpdelay = 60;
+			global.partycurrentxp[vicfocus] = global.partygainedxp[vicfocus];
+		} else {
+			global.currentturn = "Results";
+		}
 			show_debug_message("Vicfocus: " + string(vicfocus));
 			show_debug_message("global.partycount: " + string(global.partycount));
 			show_debug_message("global.currentturn: " + string(global.currentturn));
@@ -59,7 +55,9 @@ if global.currentturn = "Victory" {
 		global.partyvicscale[i] = lerp(global.partyvicscale[i], 1+(vicfocus == i), 0.2);    
 	}
 	
-} else if global.currentturn = "Results" {
+	
+	
+} else if global.currentturn == "Results" {
 	vicfocus = (global.partycount);
 	for (var i=0;i<global.partycount;i++) {
 		var angle = darctan(primy / 800);
