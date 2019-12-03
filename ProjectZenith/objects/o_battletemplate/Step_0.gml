@@ -17,6 +17,7 @@ switch (selection) {
 	if target != "none" {
 		target.hp -= str;
 		dmgdealt += str;
+		create_fade_text(target.x-50,target.y,str);
 		if target.hp <= 0 {
 			target.dead = true;
 			o_BattleEngine.totaldead += 1;

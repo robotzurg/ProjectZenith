@@ -37,7 +37,8 @@ if delay > 0 {
 } else {
 	if selection = "attack" {
 		var target = irandom_range(0,global.partycount-1);
-		global.party[target].hp -= 2;
+		global.party[target].hp -= str;
+		create_fade_text(global.party[target].x+50,global.party[target].y,str);
 		instance_create_layer(x-32,y,"Instances",o_swordswing);
 		o_swordswing.user = self;
 		o_swordswing.usertype = "Enemy";

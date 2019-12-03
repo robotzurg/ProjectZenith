@@ -159,6 +159,14 @@
             }
         },
         {
+            "Key": "3a34e42d-9055-4bae-a048-59c2e5a20aa5",
+            "Value": {
+                "id": "5b1f1794-c01e-4d99-a259-44067fea8a6a",
+                "resourcePath": "sprites\\bk_testoverworld\\bk_testoverworld.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3c52b948-ef6e-4572-8d4f-5ce6e85a3fd1",
             "Value": {
                 "id": "d0c41bd0-71da-43e5-b690-e3c544ae7d58",
@@ -204,6 +212,14 @@
                 "id": "d2f088b8-3daa-47a9-915e-bd5de606632c",
                 "resourcePath": "views\\47f7c49a-2848-47a9-b03d-fc36eb29d034.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "50c24ccd-3c3d-4755-8fd6-d5ace56d2b7a",
+            "Value": {
+                "id": "2fac8605-2fd2-42ee-9380-acf63e30ec68",
+                "resourcePath": "scripts\\create_fade_text\\create_fade_text.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -399,10 +415,26 @@
             }
         },
         {
+            "Key": "9adba98d-12d7-4e15-af05-012a8c0f54d8",
+            "Value": {
+                "id": "f76fc9b9-d897-4397-8b68-1b2e92252c17",
+                "resourcePath": "objects\\o_fadetext\\o_fadetext.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "9cd7ba0a-9963-4bb7-8143-3922de74ac91",
             "Value": {
                 "id": "368846f6-99a9-47c8-b535-1dde062565a8",
                 "resourcePath": "sprites\\s_player3\\s_player3.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "9db87cf4-088d-4635-8a1d-cb3d88bedf91",
+            "Value": {
+                "id": "456438a3-ef66-45fd-a467-62e617a5e574",
+                "resourcePath": "sprites\\bk_testcave\\bk_testcave.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -523,6 +555,14 @@
             "Value": {
                 "id": "ee843075-13e9-48a8-9d05-8a33e76b8d38",
                 "resourcePath": "views\\c4f8525e-e886-4838-b8b6-d1811390a668.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "c77c7739-f5be-4ea9-9d40-6550c0d3f322",
+            "Value": {
+                "id": "501379d6-1df9-4a78-9197-b133b764e7a8",
+                "resourcePath": "views\\c77c7739-f5be-4ea9-9d40-6550c0d3f322.yy",
                 "resourceType": "GMFolder"
             }
         },
@@ -693,6 +733,14 @@
                 "resourcePath": "objects\\o_swordswing\\o_swordswing.yy",
                 "resourceType": "GMObject"
             }
+        },
+        {
+            "Key": "feeefba3-9020-4943-a4f7-bf8ba7ae1e28",
+            "Value": {
+                "id": "f4b24da4-649d-468a-8ac4-9e41e10eb230",
+                "resourcePath": "fonts\\fnt_fadetext\\fnt_fadetext.yy",
+                "resourceType": "GMFont"
+            }
         }
     ],
     "script_order": [
@@ -702,7 +750,8 @@
         "6fa40082-a106-40a2-a4a3-9aa4ef140ea9",
         "33438de3-e029-46ba-8f5a-4f7be632f410",
         "3c52b948-ef6e-4572-8d4f-5ce6e85a3fd1",
-        "5a60cc1e-de72-4511-b5fb-fc3d38e0de0e"
+        "5a60cc1e-de72-4511-b5fb-fc3d38e0de0e",
+        "50c24ccd-3c3d-4755-8fd6-d5ace56d2b7a"
     ],
     "tutorial": ""
 }

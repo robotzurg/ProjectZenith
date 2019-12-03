@@ -13,6 +13,7 @@ name = "Test Player 1";
 selection = "none";
 target = "none";
 turndone = false;
+currentxp = 0;
 
 //MVP Calculations
 dmgdealt = 0;

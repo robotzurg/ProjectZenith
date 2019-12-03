@@ -3,6 +3,8 @@ if keyboard_check_pressed(ord("R")) {
 	game_restart();	
 }
 
+/* VICTORY SCREEN CODE */
+
 if global.currentturn == "Victory" {
 	primy = lerp(primy,150,0.25);
 	vicy = lerp(vicy,15,0.25);
@@ -36,9 +38,9 @@ if global.currentturn == "Victory" {
 		if vicfocus != global.partycount-1 {
 			vicfocus += 1;
 			xpdelay = 60;
-			global.partycurrentxp[vicfocus] = global.partygainedxp[vicfocus];
 		} else {
-			global.currentturn = "Results";
+			global.currentturn = (global.partycount = 1) ? ("End") : ("Results");
+			if global.partycount = 1 { global.battledone = true; xpdelay = 60; }
 		}
 			show_debug_message("Vicfocus: " + string(vicfocus));
 			show_debug_message("global.partycount: " + string(global.partycount));
@@ -69,6 +71,9 @@ if global.currentturn == "Victory" {
 	if mouse_check_button_pressed(mb_left) {
 		global.currentturn = "End";
 		global.battledone = true;
+		xpdelay = 60;
 	}
 }
 }
+
+/*END OF VICTORY SCREEN CODE*/

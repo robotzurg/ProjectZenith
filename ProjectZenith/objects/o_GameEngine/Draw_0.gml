@@ -18,8 +18,12 @@ for (var i=0;i<global.partycount;i++) {
 			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
 			draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partygainedxp[i]));
 			
-			if global.partycurrentxp[i] <= global.partygainedxp[i] && xpdelay = 0 {
+			if global.partycurrentxp[i] <= global.partygainedxp[i] + global.party[i].currentxp && xpdelay = 0 {
 					global.partycurrentxp[i] += 1.15;
+					if global.partycurrentxp[i] >= global.partymaxxp {
+						global.partylevel[i] += 1;
+						global.partycurrentxp[i] = 0;
+					}
 			} else if xpdelay != 0 {
 				xpdelay -= 1;
 			}
@@ -62,3 +66,5 @@ draw_set_color(c_black);
 draw_text_transformed(40,vicy,"Victory!",2,2,0); //TOP LEFT
 draw_text(room_width-230,othery,"Gold Gained: 4");
 draw_set_color(c_white);
+
+show_debug_message("XP Delay: " + string(xpdelay));
