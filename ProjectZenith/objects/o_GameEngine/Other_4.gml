@@ -3,3 +3,5 @@ if room = rm_battle {
 		l[i] = 0;	
 	}
 }
+
+xpdelay = 60;
