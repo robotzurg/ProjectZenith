@@ -15,3 +15,4 @@ wepequipped = o_swordicon;
 delay = -1;
 selection = "none";
 dead = false;
+show_details = false;
