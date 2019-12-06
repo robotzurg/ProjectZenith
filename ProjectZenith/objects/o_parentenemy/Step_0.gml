@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 if global.currentturn = "Players" {
 	turndone = false;	
 }
@@ -18,12 +19,20 @@ if keyboard_check(ord("O")) {
 	hp -= 1;	
 }
 
+image_index = (position_meeting(mouse_x,mouse_y,self)) ? 2 : 0;
+
+if mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,self) {
+	show_details = false;	
+}
+
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) && global.currentturn == "Players" {
 	if global.charfocus.selection != "none" {
 		global.charfocus.target = self;
+	} else {
+		show_details = !show_details;	
 	}
-	show_details = !show_details;
 }
+
 
 
 if global.currentturn == "Enemies" && global.charfocus = self && selection == "none" && turndone == false  {

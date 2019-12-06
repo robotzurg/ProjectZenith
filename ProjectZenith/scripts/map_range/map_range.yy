@@ -1,5 +1,5 @@
 {
-    "id": "5a60cc1e-de72-4511-b5fb-fc3d38e0de0e",
+    "id": "21f4f999-2deb-4402-a34f-ee9f35854ceb",
     "modelName": "GMScript",
     "mvc": "1.0",
     "name": "map_range",

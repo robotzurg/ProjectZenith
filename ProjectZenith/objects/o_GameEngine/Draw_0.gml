@@ -36,12 +36,12 @@ for (var i=0;i<global.partycount;i++) {
 		if global.currentturn = "Results" {
 		draw_set_halign(fa_center);
 			if global.partyvicMVP = global.party[i] {
-				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-170,"MVP",1.5,1.5,0);
+				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-140,"MVP",1.5,1.5,0);
 			}
-			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
-			draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partygainedxp[i]));
+			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-100,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
+			draw_text(global.partyvicx[i],global.partyvicy[i]+100,"EXP +" + string(global.partygainedxp[i]));
 			var pc = (global.partycurrentxp[i] / global.partymaxxp) * 100;
-			draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+110,global.partyvicx[i]+50,global.partyvicy[i]+120,pc,c_gray,c_lime,c_lime,0,true,true);
+			draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+85,global.partyvicx[i]+50,global.partyvicy[i]+95,pc,c_gray,c_lime,c_lime,0,true,true);
 		draw_set_halign(fa_left);
 		}
 	}
@@ -67,4 +67,4 @@ draw_text_transformed(40,vicy,"Victory!",2,2,0); //TOP LEFT
 draw_text(room_width-230,othery,"Gold Gained: 4");
 draw_set_color(c_white);
 
-show_debug_message("XP Delay: " + string(xpdelay));
+draw_text_transformed(room_width-30,room_height-25,fps,1,1,0);

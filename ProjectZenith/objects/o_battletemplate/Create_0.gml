@@ -14,6 +14,7 @@ selection = "none";
 target = "none";
 turndone = false;
 currentxp = 0;
+show_details = false;
 
 //MVP Calculations
 dmgdealt = 0;

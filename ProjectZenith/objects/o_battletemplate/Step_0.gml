@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 if turndone = false {
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) {
 	global.charfocus.selection = "none";
@@ -7,9 +8,11 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self)
 }
 
 if position_meeting(mouse_x,mouse_y,object_index) {
-	image_index = 1;	
+	image_index = 1;
+	if mouse_check_button_pressed(mb_left) { show_details = !show_details };
 } else {
 	image_index = 0;	
+	if mouse_check_button_pressed(mb_left) { show_details = false };
 }
 
 switch (selection) {

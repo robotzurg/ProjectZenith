@@ -10,6 +10,7 @@ atkselect = global.charfocus.textboxspr;
 sklselect = global.charfocus.textboxspr;
 itmselect = global.charfocus.textboxspr;
 runselect = global.charfocus.textboxspr;
+glitchselect = global.charfocus.textboxspr;
 menu_open = "none";
 turnsdone = 0;
 totaldead = 0;

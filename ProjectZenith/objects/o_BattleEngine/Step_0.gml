@@ -12,16 +12,19 @@ if point_in_rectangle(mouse_x,mouse_y,0,1,80,60) {
 	runselect = normboxspr
 }
 
+if point_in_rectangle(mouse_x,mouse_y,room_width-100,1,room_width,60) {
+	glitchselect = hoverover;
+	if (click) { global.charfocus.selection = (global.charfocus.selection = "none") ? ("glitch") : ("none") }
+} else {
+	if global.charfocus.selection != "glitch" {
+		glitchselect = normboxspr;
+	}
+}
+
 if menu_open = "none" {
 if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) {
 	atkselect = hoverover;
-	if (click) {
-		if global.charfocus.selection = "none" {
-			global.charfocus.selection = "attack";
-		} else {
-			global.charfocus.selection = "none";	
-		}
-	}
+	if (click) { global.charfocus.selection = (global.charfocus.selection = "none") ? ("attack") : ("none") }
 } else {
 	if global.charfocus.selection != "attack" {
 		atkselect = normboxspr;

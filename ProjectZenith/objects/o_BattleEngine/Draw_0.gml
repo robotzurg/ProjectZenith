@@ -2,7 +2,7 @@
 if (live_call()) return live_result;
 nine_slice_box_stretch(global.charfocus.textboxspr,0,420,260,540);
 nine_slice_box_stretch(runselect,0,1,80,60);
-nine_slice_box_stretch(runselect,room_width-100,1,room_width,60)
+nine_slice_box_stretch(glitchselect,room_width-100,1,room_width,60)
 draw_text(18,15,"Run");
 draw_text(room_width-85,15,"Glitch");
 draw_sprite(global.charfocus.portrait,0,50,490);
