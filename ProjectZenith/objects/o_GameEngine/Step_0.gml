@@ -33,19 +33,26 @@ if room == rm_battle {
 
 //Victory Player Focus code (250 bottom left, 480 middle, 730 top right)
 if global.currentturn == "Victory" {
-		
+	
+	if xpdelay < 50 && mouse_check_button_pressed(mb_left) {
+		fillxp = true;	
+	}
+	
 	if mouse_check_button_pressed(mb_left) {
-		if vicfocus != global.partycount-1 {
+		/*if vicfocus != global.partycount-1 {
 			vicfocus += 1;
 			xpdelay = 60;
+			fillxp = false;
 		} else {
 			global.currentturn = (global.partycount = 1) ? ("End") : ("Results");
 			if global.partycount = 1 { global.battledone = true; xpdelay = 60; }
-		}
+		}*/
 			show_debug_message("Vicfocus: " + string(vicfocus));
 			show_debug_message("global.partycount: " + string(global.partycount));
 			show_debug_message("global.currentturn: " + string(global.currentturn));
 		}
+		
+
 
 
 	//Keep the victory player movements along the angles, and move them based on vicfocus

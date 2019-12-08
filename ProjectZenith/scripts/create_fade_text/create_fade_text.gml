@@ -7,5 +7,5 @@ var xx = argument0;
 var yy = argument1;
 var txt = argument2;
 
-var newText = instance_create_layer(xx,yy,"UI",o_fadetext);
+var newText = instance_create_depth(xx,yy,-1000,o_fadetext);
 newText.text = txt;
