@@ -34,3 +34,4 @@ finishtrans = false;
 vicfocus = 0;
 xpdelay = 60;
 fillxp = false;
+xpfilled = false;

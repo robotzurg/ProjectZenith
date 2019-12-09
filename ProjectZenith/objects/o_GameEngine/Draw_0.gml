@@ -18,26 +18,31 @@ for (var i=0;i<global.partycount;i++) {
 			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
 			draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partydisplayxp[i]));
 			if fillxp == false {
-				if global.partygainedxp[i] >= 0 + global.party[i].currentxp && xpdelay = 0 {
-						global.partycurrentxp[i] += 1.15;
-						global.partygainedxp[i] -= 1.15;
-						if global.partycurrentxp[i] >= global.partymaxxp {
-							global.partylevel[i] += 1;
-							global.partycurrentxp[i] = 0;
-							create_fade_text(global.partyvicx[i]+80,global.partyvicy[i]-80,"Level Up!");
-						}
+				if xpdelay = 0 {
+					if global.partygainedxp[i] >= global.party[i].currentxp {
+							global.partycurrentxp[i] += 1.15;
+							global.partygainedxp[i] -= 1.15;
+							if global.partycurrentxp[i] >= global.partymaxxp {
+								global.partylevel[i] += 1;
+								global.partycurrentxp[i] = 0;
+								create_fade_text(global.partyvicx[i]+80,global.partyvicy[i]-80,"Level Up!");
+							}
+					} else {
+						xpfilled = true;	
+					}
 				} else if xpdelay != 0 {
 					xpdelay -= 1;
 				}
 			} else {
 				global.partycurrentxp[i] = global.partydisplayxp[i];
+				global.partygainedxp[i] = 0;
+				xpdelay = 0;
 				for (var ii = 0; global.partycurrentxp[i] > 100; ii += 100) {
 					global.partycurrentxp[i] -= 100;
 					global.partylevel[i] += 1;
-					show_debug_message(global.partylevel[i]);
-					show_debug_message(global.partycurrentxp[i]);
 				}
 				fillxp = false;
+				xpfilled = true;
 			}
 
 			
