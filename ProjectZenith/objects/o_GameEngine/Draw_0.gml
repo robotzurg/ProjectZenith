@@ -16,10 +16,12 @@ for (var i=0;i<global.partycount;i++) {
 				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-170,"MVP",1.5,1.5,0);
 			}
 			draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-130,string(global.party[i].name) + " (Lv. " + string(global.partylevel[i]) + ")" ,0.7,0.7,0);
+			
+			
 			draw_text(global.partyvicx[i],global.partyvicy[i]+125,"EXP +" + string(global.partydisplayxp[i]));
 			if fillxp == false {
 				if xpdelay = 0 {
-					if global.partygainedxp[i] >= global.party[i].currentxp {
+					if global.partygainedxp[i]+global.party[i].currentxp >= global.party[i].currentxp {
 							global.partycurrentxp[i] += 1.15;
 							global.partygainedxp[i] -= 1.15;
 							if global.partycurrentxp[i] >= global.partymaxxp {
@@ -34,7 +36,7 @@ for (var i=0;i<global.partycount;i++) {
 					xpdelay -= 1;
 				}
 			} else {
-				global.partycurrentxp[i] = global.partydisplayxp[i];
+				global.partycurrentxp[i] += global.partydisplayxp[i];
 				global.partygainedxp[i] = 0;
 				xpdelay = 0;
 				for (var ii = 0; global.partycurrentxp[i] > 100; ii += 100) {

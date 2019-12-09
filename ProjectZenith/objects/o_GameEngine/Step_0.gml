@@ -43,6 +43,7 @@ if global.currentturn == "Victory" {
 			vicfocus += 1;
 			xpdelay = 60;
 			fillxp = false;
+			xpfilled = false;
 		} else {
 			global.currentturn = (global.partycount = 1) ? ("End") : ("Results");
 			if global.partycount = 1 { global.battledone = true; xpdelay = 60; }

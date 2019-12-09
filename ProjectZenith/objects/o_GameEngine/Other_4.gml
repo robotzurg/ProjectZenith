@@ -5,3 +5,4 @@ if room = rm_battle {
 }
 
 xpdelay = 60;
+global.enemytokill = o_enemy;

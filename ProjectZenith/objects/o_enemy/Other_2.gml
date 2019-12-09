@@ -1,0 +1,1 @@
+killafterbattle = false;

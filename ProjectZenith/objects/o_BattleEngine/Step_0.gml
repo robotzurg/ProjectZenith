@@ -130,7 +130,7 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 			}
 		}
 	//Hand out XP based on multiple factors
-	global.partygainedxp[ii] = 333;
+	global.partygainedxp[ii] = 120;
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
 	global.currentturn = "Victory";
