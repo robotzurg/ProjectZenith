@@ -11,7 +11,7 @@ if global.currentturn == "Victory" {
 	othery = lerp(othery,468,0.25);
 	backalpha = lerp(backalpha,0.9,0.25);
 } else if global.currentturn == "End" && finishtrans == false {
-	primy = lerp(primy,700,0.25);
+	primy = lerp(primy,710,0.25);
 	vicy = lerp(vicy,-100,0.25);
 	othery = lerp(othery,600,0.25);
 	if alarm[2] < 0 && room = rm_battle {

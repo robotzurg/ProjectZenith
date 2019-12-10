@@ -130,7 +130,12 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 			}
 		}
 	//Hand out XP based on multiple factors
-	global.partygainedxp[ii] = 120;
+	global.partygainedxp[ii] = (global.partylevel[ii] + global.party[ii].dmgdealt) * ((global.partyvicMVP = global.party[ii]) ? 2 : 1);
+	show_debug_message("XP Gained First Part: " + string(global.partygainedxp[ii]));
+	for (var enemies = 0; enemies < global.enemycount; enemies++) {
+		global.partygainedxp[ii] += global.party[ii].killedenemy[enemies]*global.partylevel[ii]; //Give XP from enemies that were killed
+		show_debug_message("XP Gained Final: " + string(global.partygainedxp[ii]))
+	}
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
 	global.currentturn = "Victory";

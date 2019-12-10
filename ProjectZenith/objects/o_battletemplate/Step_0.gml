@@ -25,6 +25,13 @@ switch (selection) {
 			target.dead = true;
 			o_BattleEngine.totaldead += 1;
 			target.hp = 0;
+			for (var i = 0; i < 4; i++) {
+				if killedenemy[i] = 0 {
+					killedenemy[i] = target.xp;
+					show_debug_message(killedenemy[i]);
+					break;
+				}
+			}
 		}
 		turndone = true;
 		o_BattleEngine.turnsdone += 1;
