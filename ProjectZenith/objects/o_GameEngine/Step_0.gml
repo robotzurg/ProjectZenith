@@ -1,6 +1,13 @@
 if (live_call()) return live_result;
+
+//Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
 	game_restart();	
+}
+
+//Open the Party Management Menu if Escape is pressed
+if keyboard_check_pressed(vk_escape) && !instance_exists(o_PartyMenu) {
+	instance_create_layer(	
 }
 
 /* VICTORY SCREEN CODE */

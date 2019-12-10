@@ -15,7 +15,7 @@ if global.currentturn == "Enemies" && turndone == true {
 }
 
 if show_details == true {
-	nine_slice_box_stretch(textboxspr,x-200,y,x-40,y+150);
+	nine_slice_box_stretch(global.charfocus.textboxsprhover,x-200,y,x-40,y+150);
 	draw_text_transformed(x-181,y+10,name,0.8,0.8,0);
 	draw_text_transformed(x-181,y+30,"HP: " + string(hp) + "/" + string(maxhp),0.8,0.8,0);
 	draw_text_transformed(x-181,y+50,"Strength: " + string(str),0.8,0.8,0);

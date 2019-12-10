@@ -121,20 +121,18 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 	var mvpcheck;
 	for (var ii = 0; ii<global.partycount;ii++) {
 		if ii = 0 {
-			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*2);
+			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*1.5);
 			global.partyvicMVP = global.party[ii];
 		} else {
-			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*2);
+			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*1.5);
 			if mvpcheck[ii-1] < mvpcheck[ii] { 
 				global.partyvicMVP = global.party[ii];
 			}
 		}
 	//Hand out XP based on multiple factors
 	global.partygainedxp[ii] = (global.partylevel[ii] + global.party[ii].dmgdealt) * ((global.partyvicMVP = global.party[ii]) ? 2 : 1);
-	show_debug_message("XP Gained First Part: " + string(global.partygainedxp[ii]));
 	for (var enemies = 0; enemies < global.enemycount; enemies++) {
 		global.partygainedxp[ii] += global.party[ii].killedenemy[enemies]*global.partylevel[ii]; //Give XP from enemies that were killed
-		show_debug_message("XP Gained Final: " + string(global.partygainedxp[ii]))
 	}
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
