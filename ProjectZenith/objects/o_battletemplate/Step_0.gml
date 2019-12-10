@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 if turndone = false {
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) {
 	global.charfocus.selection = "none";

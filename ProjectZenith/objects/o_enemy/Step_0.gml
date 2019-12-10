@@ -1,4 +1,4 @@
-if global.enemytokill = object_index && global.battledone == true {
-	instance_destroy();	
+if global.enemytokill == id && global.battledone == true {
+	instance_destroy(self);	
 	global.battledone = false;
 }

@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 draw_self();
 
 if selection != "none" and target != "none" and turndone = false {

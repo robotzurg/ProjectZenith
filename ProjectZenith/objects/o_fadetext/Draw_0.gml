@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 a -= 0.02;
 if a = 0 { instance_destroy(); }
 

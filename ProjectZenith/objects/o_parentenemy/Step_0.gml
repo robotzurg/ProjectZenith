@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 if global.currentturn = "Players" {
 	turndone = false;	
 }

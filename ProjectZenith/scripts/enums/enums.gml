@@ -6,3 +6,8 @@ enum status {
 	defdown
 }
 
+enum char {
+	battleplayer1,
+	battleplayer2,
+	battleplayer3,
+}
