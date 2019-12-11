@@ -10,6 +10,7 @@
 ///@param xp
 ///@param max_xp
 ///@param level
+///@param battle_object
 
 var map = argument0;
 var char_id = argument1;
@@ -22,6 +23,7 @@ var wep_equip = argument7;
 var xp = argument8;
 var max_xp = argument9;
 var level = argument10;
+var obj = argument11;
 
 ds_map_add(map, "id", char_id);
 ds_map_add(map, "name", name);
@@ -33,3 +35,4 @@ ds_map_add(map, "wep_equipped", wep_equip);
 ds_map_add(map, "xp", xp);
 ds_map_add(map, "max_xp", max_xp);
 ds_map_add(map, "level", level);
+ds_map_add(map, "obj", obj);

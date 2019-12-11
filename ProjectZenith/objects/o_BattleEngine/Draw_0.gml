@@ -1,4 +1,5 @@
 ///BATTLE UI
+if (live_call()) return live_result;
 nine_slice_box_stretch(global.charfocus.textboxspr,0,420,260,540);
 nine_slice_box_stretch(runselect,0,1,80,60);
 nine_slice_box_stretch(glitchselect,room_width-100,1,room_width,60)
