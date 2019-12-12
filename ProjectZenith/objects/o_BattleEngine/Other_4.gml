@@ -1,9 +1,8 @@
-if (live_call()) return live_result
+//if (live_call()) return live_result
 if room = rm_battle {
 	
 for (var inst = 0; inst<global.partycount;inst++) {
-	var map = global.currentparty[| inst]
-	instance_create_layer(160,100+(125*inst)+(110 * (global.partycount = 1)) + (50 * (global.partycount = 2)),"Instances",map[? "battle_object"])
+	create_party(inst);
 	global.party[inst].currentxp = global.partycurrentxp[inst];
 }
 global.charfocus = global.party[0];

@@ -27,7 +27,6 @@ switch (selection) {
 			for (var i = 0; i < 4; i++) {
 				if killedenemy[i] = 0 {
 					killedenemy[i] = target.xp;
-					show_debug_message(killedenemy[i]);
 					break;
 				}
 			}

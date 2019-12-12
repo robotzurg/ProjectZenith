@@ -1,19 +1,24 @@
-hp = 100;
-maxhp = hp;
-mp = 20;
-maxmp = mp;
-str = 2;
-def = 2;
+ID = char.battleplayer1;
+
+var map = global.party_members[| ID];
+sprite_index = map[? "spr"];
+name = map[? "name"];
+hp = map[? "hp"];
+maxhp = map[? "maxhp"];
+mp = map[? "mp"];
+maxmp = map[? "maxmp"];
+str = map[? "str"];
+def = map[? "def"];
+portrait = map[? "portrait"];
+textboxspr = map[? "textbox_spr"];
+currentxp = map[? "xp"];
+wepequipped = map[? "wep_equipped"];
 buff = status.none;
 debuff = status.none;
-portrait = s_testportrait;
-textboxspr = s_9sliceselect;
-textboxsprhover = s_9slice;
-name = "Test Player 1";
+textboxsprhover = s_9sliceselect;
 selection = "none";
 target = "none";
 turndone = false;
-currentxp = 0;
 show_details = false;
 
 //MVP Calculations
@@ -22,7 +27,6 @@ debuffsdealt = 0; //Will be added when buffs/debuffs are added
 buffsdealt = 0; //Will be added when buffs/debuffs are added
 healthhealed = 0;
 finalhitsdealt = 0;
-wepequipped = o_swordicon;
 killedenemy[0] = 0;
 killedenemy[1] = 0;
 killedenemy[2] = 0;
