@@ -1,12 +1,12 @@
 if turndone = false {
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) {
-	global.charfocus.selection = "none";
-	global.charfocus.target = "none";
-	global.charfocus = object_index;
+	o_BattleEngine.plrID[global.charfocus].selection = "none";
+	o_BattleEngine.plrID[global.charfocus].target = "none";
+	global.charfocus = partyID;
 	o_BattleEngine.menu_open = "none";
 }
 
-if position_meeting(mouse_x,mouse_y,object_index) {
+if position_meeting(mouse_x,mouse_y,self) {
 	image_index = 1;
 	if mouse_check_button_pressed(mb_left) { show_details = !show_details };
 } else {
@@ -36,8 +36,8 @@ switch (selection) {
 		selection = "none";
 		target = "none";
 		if o_BattleEngine.turnsdone != global.partycount {
-			for (var roll = 0; global.charfocus.turndone = true; roll ++) {
-				global.charfocus = global.party[roll]
+			for (var roll = 0; o_BattleEngine.plrID[global.charfocus].turndone = true; roll ++) {
+				global.charfocus = roll
 			}
 		}
 	}
@@ -47,6 +47,6 @@ switch (selection) {
 
 if selection != "none" and target != "none" and turndone = false {
 	instance_create_layer(x+50,y,"Instances",o_swordswing);
-	o_swordswing.user = object_index;
+	o_swordswing.user = id;
 	o_swordswing.usertype = "Player";
 }

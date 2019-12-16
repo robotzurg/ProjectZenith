@@ -1,87 +1,73 @@
 if (live_call()) return live_result
-var click = mouse_check_button_pressed(mb_left);
-var hoverover = global.charfocus.textboxsprhover;
-var normboxspr  = global.charfocus.textboxspr;
+//var hoverover = global.charfocus.textboxsprhover;
+//Set data extraction variables
+var foc = global.charfocus;
+var par = global.currentparty[| foc];
 
-if global.currentturn = "Players" {
-if point_in_rectangle(mouse_x,mouse_y,0,1,80,60) {
-	runselect = hoverover;
-	if (click) {
-		trans_to_room(testroom,"run1");
-	}
-} else {
-	runselect = normboxspr
+if global.currentturn = "Players" { //If it's the players turn, enable the buttons
+	
+//Check for clicks on each seperate button
+
+//RUN BUTTON
+if click_on_button(0,1,80,60) { 
+	trans_to_room(testroom,"run1");
 }
 
-if point_in_rectangle(mouse_x,mouse_y,room_width-100,1,room_width,60) {
-	glitchselect = hoverover;
-	if (click) { global.charfocus.selection = (global.charfocus.selection = "none") ? ("glitch") : ("none") }
-} else {
-	if global.charfocus.selection != "glitch" {
-		glitchselect = normboxspr;
-	}
+//GLITCH BUTTON
+if click_on_button(room_width-100,1,room_width,60) {
+	plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("glitch") : ("none") //If selection = none, set to glitch, otherwise set to none
 }
 
-if menu_open = "none" {
-if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) {
-	atkselect = hoverover;
-	if (click) { global.charfocus.selection = (global.charfocus.selection = "none") ? ("attack") : ("none") }
-} else {
-	if global.charfocus.selection != "attack" {
-		atkselect = normboxspr;
+if menu_open = "none" { //Disable these buttons if the menu is open on one
+	//ATTACK BUTTON
+	if click_on_button(415,450,475,510) {
+		plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("attack") : ("none") //See above
 	}
-}
 
-if point_in_rectangle(mouse_x,mouse_y,525,450,675,510) {
-	sklselect = hoverover;
-	if (click) {
+	//SKILLS BUTTON
+	if click_on_button(525,450,675,510) {
 		menu_open = "skills";
-		sklselect = normboxspr;
 	}
-} else {
-	sklselect = normboxspr;
-}
 
-if point_in_rectangle(mouse_x,mouse_y,725,450,875,510) {
-	itmselect = hoverover;
-	if (click) {
+	//ITEMS BUTTON
+	if click_on_button(725,450,875,510) {
 		menu_open = "item";
-		itmselect = normboxspr;
 	}
-} else {
-	itmselect = normboxspr;
-}
-}
 
-if menu_open != "none" {
-if point_in_rectangle(mouse_x,mouse_y,270,425,305,460) {
-	if (click) {
+} else {
+	//BACK BUTTON (if a battle menu is open, you can click it to go back to the main buttons)
+	if click_on_button(270,425,305,460) {
 		menu_open = "none";
 	}
 }
-}
-}
 
+} //End of if global.currentturn = "Players"
+
+//Position handling based on the current open menu (for expanding button menus)
 switch(menu_open) {
+	
 	case "skills": 
 	sklx1 = lerp(sklx1,265,0.4);
 	btny1 = lerp(btny1,420,0.4);
 	sklx2 = lerp(sklx2,955,0.4);
 	btny2 = lerp(btny2,540,0.4);
 	break;
+	
 	case "item": 
 	itmx1 = lerp(itmx1,265,0.4);
 	btny1 = lerp(btny1,420,0.4);
 	itmx2 = lerp(itmx2,955,0.4);
 	btny2 = lerp(btny2,540,0.4);
 	break;
-	case "none": 
+	
+	case "none":  //Default
 	sklx1 = lerp(sklx1,525,0.4);
 	sklx2 = lerp(sklx2,675,0.4);
 	itmx1 = lerp(itmx1,725,0.4);
 	itmx2 = lerp(itmx2,875,0.4);
 }
 
+//Move buttons out of view if it's the enemies turn
 if global.currentturn = "Players"  && menu_open = "none" {
 	btny1 = lerp(btny1,450,0.3);
 	btny2 = lerp(btny2,510,0.3);
@@ -89,16 +75,17 @@ if global.currentturn = "Players"  && menu_open = "none" {
 	btny1 = lerp(btny1,600,0.3);
 	btny2 = lerp(btny2,660,0.3);
 }
-//Player focus movement
-for (var plr = 0; plr < global.partycount; plr++) {
-	if global.charfocus = global.party[plr] {
-		global.charfocus.x = lerp(global.charfocus.x,200,0.3);	
+
+//Move up the focused player with a lerp
+for (var plr = 0; plr < global.enemycount; plr++) {
+	if global.charfocus == plrID[plr].partyID {
+		plrID[global.charfocus].x = lerp(plrID[global.charfocus].x,200,0.3)
 	} else {
-		global.party[plr].x = lerp(global.party[plr].x,160,0.3);
+		plrID[plr].x = lerp(plrID[plr].x,160,0.3)
 	}
 }
 
-//Enemy focus movement
+//Move up the focused enemy with a lerp
 for (var en = 0; en < global.enemycount; en++) {
 	if global.charfocus = global.enemyparty[en] && global.charfocus.dead == false {	
 		global.charfocus.x = lerp(global.charfocus.x,720,0.3);
@@ -107,37 +94,36 @@ for (var en = 0; en < global.enemycount; en++) {
 	}
 }
 
+//If all the players turns are done, pick a random enemy and begin the enemies turns
 if (turnsdone == global.partycount) && global.currentturn == "Players" {
 	global.currentturn = "Enemies";
 	var enemypick = irandom_range(1,global.enemycount-1);
 	global.charfocus = global.enemyparty[enemypick];
-	for (var i = 0;i<global.partycount;i++) {
-		global.party[i].turndone = false;	
+	for (var i = 0;i<global.partycount;i++) { //Set all the players turns to done, just in case
+		plrID[i].turndone = false;	
 	}
-	turnsdone = 0;
+	turnsdone = 0; //Reset the turns done for the enemies turns
 }
 
-if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" {
+if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" { //If the battle is over but we aren't on the Victory or Results screen yet
 	//Check and change MVP based on the battle
 	var mvpcheck;
 	for (var ii = 0; ii<global.partycount;ii++) {
 		if ii = 0 {
-			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*1.5);
-			global.partyvicMVP = global.party[ii];
+			mvpcheck[ii] = plrID[ii].dmgdealt + plrID[ii].debuffsdealt + plrID[ii].buffsdealt + plrID[ii].finalhitsdealt + (plrID[ii].healthhealed*1.5); //Just read it, it's pretty self explanatory lol
+			global.partyvicMVP = plrID[ii];
 		} else {
-			mvpcheck[ii] = global.party[ii].dmgdealt + global.party[ii].debuffsdealt + global.party[ii].buffsdealt + global.party[ii].finalhitsdealt + (global.party[ii].healthhealed*1.5);
-			if mvpcheck[ii-1] < mvpcheck[ii] { 
-				global.partyvicMVP = global.party[ii];
+			mvpcheck[ii] = plrID[ii].dmgdealt + plrID[ii].debuffsdealt + plrID[ii].buffsdealt + plrID[ii].finalhitsdealt + (plrID[ii].healthhealed*1.5);
+			if mvpcheck[ii-1] < mvpcheck[ii] { //If the total number is bigger then the previous total number, set the new MVP!
+				global.partyvicMVP = plrID[ii];
 			}
 		}
 	//Hand out XP based on multiple factors
-	global.partygainedxp[ii] = (global.partylevel[ii] + global.party[ii].dmgdealt) * ((global.partyvicMVP = global.party[ii]) ? 2 : 1);
+	global.partygainedxp[ii] = (par[? "level"] + plrID[ii].dmgdealt) * ((global.partyvicMVP = plrID[ii]) ? 2 : 1);
 	for (var enemies = 0; enemies < global.enemycount; enemies++) {
-		global.partygainedxp[ii] += global.party[ii].killedenemy[enemies]*global.partylevel[ii]; //Give XP from enemies that were killed
+		global.partygainedxp[ii] += plrID[ii].killedenemy[enemies]*par[? "level"]; //Give XP from enemies that were killed
 	}
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
 	global.currentturn = "Victory";
 }
-
-

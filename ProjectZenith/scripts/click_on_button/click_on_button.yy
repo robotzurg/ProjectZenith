@@ -1,8 +1,8 @@
 {
-    "id": "b9e1ac16-e12d-4cd8-bb36-7e738a00a3b9",
+    "id": "eb496728-d0b7-41b5-8b32-fdb753b812c9",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "map_range",
+    "name": "click_on_button",
     "IsCompatibility": false,
     "IsDnD": false
 }

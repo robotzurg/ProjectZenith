@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {

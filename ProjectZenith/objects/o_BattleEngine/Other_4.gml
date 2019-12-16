@@ -1,56 +1,29 @@
 //if (live_call()) return live_result
 if room = rm_battle {	
-for (var inst = 0; inst<global.partycount;inst++) {
-	create_party(inst);
-	//global.party[inst].currentxp = global.partycurrentxp[inst];
-}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-/*
-global.charfocus = global.party[0];
-	
-atkselect = global.charfocus.textboxspr;
-sklselect = global.charfocus.textboxspr;
-itmselect = global.charfocus.textboxspr;
-runselect = global.charfocus.textboxspr;
-glitchselect = global.charfocus.textboxspr;
+
+//Set the character focus to party member 1
+global.charfocus = 0;
+
+//Data extraction variables
+var foc = global.charfocus;
+var par = global.currentparty[| foc];
+
+//Initialize some variables for later use
+atkselect = par[? "textbox_spr"];
+sklselect = par[? "textbox_spr"];
+itmselect = par[? "textbox_spr"];
+runselect = par[? "textbox_spr"];
+glitchselect = par[? "textbox_spr"];
 menu_open = "none";
 turnsdone = 0;
 totaldead = 0;
 o_GameEngine.vicfocus = 0;
+global.currentturn = "Players";
+for (var plr = 0; plr < global.partycount; plr++) {
+	plrID[plr] = 0;	
+}
 
-
+//Initalize button coordinate variables
 btny1 = 450
 btny2 = 510
 
@@ -63,9 +36,13 @@ sklx2 = 675
 itmx1 = 725
 itmx2 = 875
 
-global.currentturn = "Players";
-image_speed = 0.2;
+//Create the party instances in battle and set their instance IDs to a variable
+for (var inst = 0; inst<global.partycount;inst++) {
+	create_party(inst);
+	//global.party[inst].currentxp = global.partycurrentxp[inst];
+}
 
+//Create the enemies based on the enemy count (lots of position changing based on the for loop)
 var xx = 0;
 var ex = 720;
 var ey = 175;
@@ -89,16 +66,9 @@ for (var i=0;i<global.enemycount;i++) {
 		} else {
 			global.enemyparty[i] = instance_create_layer(ex+100,ey-35+(115*xx),"Instances",global.enemytype); 	
 			xx++;
-		} break;
+		} break
+		
 	}
 }
 
-for (var i=0;i<global.partycount;i++) {
-		var angle = darctan(o_GameEngine.primy / 800);
-		o_GameEngine.l[i] = lerp(o_GameEngine.l[i], 200*(o_GameEngine.vicfocus - i), 0.2)
-		global.partyvicx[i] = room_width/2+lengthdir_x(o_GameEngine.l[i],angle);
-		global.partyvicy[i] = room_height/2+lengthdir_y(o_GameEngine.l[i],angle);
-		global.partyvicscale[i] = 1*(o_GameEngine.vicfocus+1)
-	}
-*/
-}
+} //End of if room = rm_battle

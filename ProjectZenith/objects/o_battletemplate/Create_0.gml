@@ -1,12 +1,15 @@
-ID = char.battleplayer1;
+ID = global.IDtoinsert
+partyID = global.partyIDtoinsert;
+show_debug_message("What It is (ID): " + string(ID));
+show_debug_message("What It is (PartyID): " + string(partyID));
 
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];
 name = map[? "name"];
 hp = map[? "hp"];
-maxhp = map[? "maxhp"];
+maxhp = map[? "max_hp"];
 mp = map[? "mp"];
-maxmp = map[? "maxmp"];
+maxmp = map[? "max_mp"];
 str = map[? "str"];
 def = map[? "def"];
 portrait = map[? "portrait"];

@@ -20,7 +20,7 @@ if o_BattleEngine.menu_open = "none" {
 }
 
 if object_index != o_potionicon && o_BattleEngine.menu_open = "none" {
-	if object_index = global.charfocus.wepequipped {
+	if object_index = o_BattleEngine.plrID[global.charfocus].wepequipped {
 		image_alpha = 1;	
 	} else {
 		image_alpha = 0;	

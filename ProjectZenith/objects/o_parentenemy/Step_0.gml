@@ -25,8 +25,8 @@ if mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,self
 }
 
 if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) && global.currentturn == "Players" {
-	if global.charfocus.selection != "none" {
-		global.charfocus.target = self;
+	if o_BattleEngine.plrID[global.charfocus].selection != "none" {
+		o_BattleEngine.plrID[global.charfocus].target = self;
 	} else {
 		show_details = !show_details;	
 	}
@@ -46,8 +46,8 @@ if delay > 0 {
 } else {
 	if selection = "attack" {
 		var target = irandom_range(0,global.partycount-1);
-		global.party[target].hp -= str;
-		create_fade_text(global.party[target].x+50,global.party[target].y,str);
+		o_BattleEngine.plrID[target].hp -= str;
+		create_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,str);
 		instance_create_layer(x-32,y,"Instances",o_swordswing);
 		o_swordswing.user = self;
 		o_swordswing.usertype = "Enemy";
@@ -66,7 +66,7 @@ if delay > 0 {
 		} else {
 			o_BattleEngine.turnsdone = 0;
 			global.currentturn = "Players";
-			global.charfocus = global.party[0];
+			global.charfocus = 0;
 		}
 		}
 	}

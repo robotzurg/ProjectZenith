@@ -1,12 +1,12 @@
 ///VICTORY SCREEN UI
-if (live_call()) return live_result;
+
 draw_set_alpha(backalpha);
 draw_rectangle_color(0,0,room_width,room_height,c_black,c_black,c_black,c_black,false);
 draw_set_alpha(1);
 
 
 if room = rm_battle {
-if (global.currentturn = "Victory") or (global.currentturn = "End") or (global.currentturn = "Results") {
+/*if (global.currentturn = "Victory") or (global.currentturn = "End") or (global.currentturn = "Results") {
 for (var i=0;i<global.partycount;i++) {
 	if i == vicfocus {
 		//Draw MVP Party member first
@@ -67,7 +67,7 @@ for (var i=0;i<global.partycount;i++) {
 	}
 
 }
-}
+}*/
 }
 
 draw_primitive_begin(pr_trianglelist); //TOP LEFT
