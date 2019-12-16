@@ -1,10 +1,43 @@
 //if (live_call()) return live_result
-if room = rm_battle {
-	
+if room = rm_battle {	
 for (var inst = 0; inst<global.partycount;inst++) {
 	create_party(inst);
-	global.party[inst].currentxp = global.partycurrentxp[inst];
+	//global.party[inst].currentxp = global.partycurrentxp[inst];
 }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+/*
 global.charfocus = global.party[0];
 	
 atkselect = global.charfocus.textboxspr;
@@ -67,5 +100,5 @@ for (var i=0;i<global.partycount;i++) {
 		global.partyvicy[i] = room_height/2+lengthdir_y(o_GameEngine.l[i],angle);
 		global.partyvicscale[i] = 1*(o_GameEngine.vicfocus+1)
 	}
-
+*/
 }

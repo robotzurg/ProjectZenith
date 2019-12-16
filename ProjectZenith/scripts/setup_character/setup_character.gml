@@ -14,6 +14,7 @@
 ///@param maxhp
 ///@param mp
 ///@param maxmp
+///@param portrait
 
 var map = argument0;
 var char_id = argument1;
@@ -43,7 +44,7 @@ ds_map_add(map, "xp", xp);
 ds_map_add(map, "max_xp", max_xp);
 ds_map_add(map, "level", level);
 ds_map_add(map, "hp", hp);
-ds_map_add(map, "maxhp", maxhp);
+ds_map_add(map, "max_hp", maxhp);
 ds_map_add(map, "mp", mp);
-ds_map_add(map, "maxmp", maxmp);
+ds_map_add(map, "max_mp", maxmp);
 ds_map_add(map, "portrait", portrait);

@@ -12,6 +12,7 @@ if instance_exists(o_PartyMenu) {
 	backalpha = lerp(backalpha,0,0.3);	
 }
 
+
 if !instance_exists(o_PartyMenu) {
 
 //Open the Party Management Menu if Escape is pressed
