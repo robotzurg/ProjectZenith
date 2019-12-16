@@ -48,9 +48,9 @@ global.currentparty = ds_list_create();
 setup_party_data();
 
 //Set up Characters
-setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, 0, 100, 1)
-setup_character(char2map,char.battleplayer2,"Battle Player 2", s_player2, s_9slicep2, 5, 2, o_bowicon, 0, 100, 1)
-setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9slicep3, 10, 10, o_bowicon, 0, 100, 1)
+//setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, 0, 100, 1)
+//setup_character(char2map,char.battleplayer2,"Battle Player 2", s_player2, s_9slicep2, 5, 2, o_bowicon, 0, 100, 1)
+//setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9slicep3, 10, 10, o_bowicon, 0, 100, 1)
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);

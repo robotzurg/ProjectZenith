@@ -139,3 +139,5 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 	}
 	global.currentturn = "Victory";
 }
+
+
