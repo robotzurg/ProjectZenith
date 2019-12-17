@@ -50,7 +50,7 @@ add_to_party(char.battleplayer3,2);
 //Set the Party Count
 global.partycount = ds_list_size(global.party_members)
 
-//Party Member setup
+//Party Member setup (legacy)
 for (var i = 0; i < global.partycount; i++) {
 	global.partygainedxp[i] = 0;
 	global.partycurrentxp[i] = 0;

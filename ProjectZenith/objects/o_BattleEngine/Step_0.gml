@@ -9,34 +9,34 @@ if global.currentturn = "Players" { //If it's the players turn, enable the butto
 //Check for clicks on each seperate button
 
 //RUN BUTTON
-if click_on_button(0,1,80,60) { 
+if click_on_button(runselect,0,1,80,60) { 
 	trans_to_room(testroom,"run1");
 }
 
 //GLITCH BUTTON
-if click_on_button(room_width-100,1,room_width,60) {
+if click_on_button(glitchselect,room_width-100,1,room_width,60) {
 	plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("glitch") : ("none") //If selection = none, set to glitch, otherwise set to none
 }
 
 if menu_open = "none" { //Disable these buttons if the menu is open on one
 	//ATTACK BUTTON
-	if click_on_button(415,450,475,510) {
+	if click_on_button(atkselect,415,450,475,510) {
 		plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("attack") : ("none") //See above
 	}
 
 	//SKILLS BUTTON
-	if click_on_button(525,450,675,510) {
+	if click_on_button(sklselect,525,450,675,510) {
 		menu_open = "skills";
 	}
 
 	//ITEMS BUTTON
-	if click_on_button(725,450,875,510) {
+	if click_on_button(itmselect,725,450,875,510) {
 		menu_open = "item";
 	}
 
 } else {
 	//BACK BUTTON (if a battle menu is open, you can click it to go back to the main buttons)
-	if click_on_button(270,425,305,460) {
+	if click_on_button("N/A",270,425,305,460) {
 		menu_open = "none";
 	}
 }

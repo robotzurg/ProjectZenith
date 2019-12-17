@@ -5,7 +5,7 @@ if turndone = true {
 }
 
 if show_details = true {
-		nine_slice_box_stretch(textboxspr,x+40,y-30,x+180,y+120);
+	nine_slice_box_stretch(textboxspr,x+40,y-30,x+180,y+120);
 	draw_text_transformed(x+50,y-20,name,0.8,0.8,0);
 	draw_text_transformed(x+50,y,"HP: " + string(hp) + "/" + string(maxhp),0.8,0.8,0);
 	draw_text_transformed(x+50,y+20,"Strength: " + string(str),0.8,0.8,0);
