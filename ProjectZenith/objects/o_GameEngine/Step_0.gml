@@ -1,5 +1,3 @@
-
-
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
 	game_restart();	

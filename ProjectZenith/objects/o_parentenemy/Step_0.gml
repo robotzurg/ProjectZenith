@@ -2,12 +2,12 @@ if global.currentturn = "Players" {
 	turndone = false;	
 }
 
-if turndone == true && global.charfocus = self && global.currentturn = "Enemies" && selection = "none" {
+if turndone == true && global.enemyfocus = self && global.currentturn = "Enemies" && selection = "none" {
 	show_debug_message(string(id) + " Enemy's turn already done, picking next enemy");
 	pick_next_enemy();
 }
 
-if dead == true && global.charfocus == self && global.currentturn == "Enemies" && selection = "none" {
+if dead == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection = "none" {
 	show_debug_message(string(id) + " Enemy is dead, picking next enemy");
 	pick_next_enemy();
 }
@@ -34,7 +34,7 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self)
 
 
 
-if global.currentturn == "Enemies" && global.charfocus = self && selection == "none" && turndone == false  {
+if global.currentturn == "Enemies" && global.enemyfocus == self && selection == "none" && turndone == false  {
 	show_debug_message(string(id) + " I'm Attacking!");
 	target = irandom_range(0,global.partycount-1);
 	selection = "attack"

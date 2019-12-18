@@ -19,7 +19,7 @@ if o_BattleEngine.menu_open = "none" {
 	image_alpha = 0;	
 }
 
-if object_index != o_potionicon && o_BattleEngine.menu_open = "none" {
+if object_index != o_potionicon && o_BattleEngine.menu_open = "none" && global.currentturn = "Players" {
 	if object_index = o_BattleEngine.plrID[global.charfocus].wepequipped {
 		image_alpha = 1;	
 	} else {

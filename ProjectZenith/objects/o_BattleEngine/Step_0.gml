@@ -1,4 +1,4 @@
-if (live_call()) return live_result
+//if (live_call()) return live_result
 //var hoverover = global.charfocus.textboxsprhover;
 //Set data extraction variables
 var foc = global.charfocus;
@@ -77,7 +77,7 @@ if global.currentturn = "Players"  && menu_open = "none" {
 }
 
 //Move up the focused player with a lerp
-for (var plr = 0; plr < global.enemycount; plr++) {
+for (var plr = 0; plr < global.partycount; plr++) {
 	if global.charfocus == plrID[plr].partyID {
 		plrID[global.charfocus].x = lerp(plrID[global.charfocus].x,200,0.3)
 	} else {
@@ -98,7 +98,7 @@ for (var en = 0; en < global.enemycount; en++) {
 if (turnsdone == global.partycount) && global.currentturn == "Players" {
 	global.currentturn = "Enemies";
 	var enemypick = irandom_range(1,global.enemycount-1);
-	global.charfocus = global.enemyparty[enemypick];
+	global.enemyfocus = global.enemyparty[enemypick];
 	for (var i = 0;i<global.partycount;i++) { //Set all the players turns to done, just in case
 		plrID[i].turndone = false;	
 	}

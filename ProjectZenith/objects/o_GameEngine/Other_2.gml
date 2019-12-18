@@ -38,9 +38,9 @@ global.currentparty = ds_list_create();
 setup_party_data();
 
 //Set up Characters
-setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, 0, 100, 1, 50, 50, 50, 50, s_testportrait)
-setup_character(char2map,char.battleplayer2,"Battle Player 2", s_player2, s_9slicep2, 5, 2, o_bowicon, 0, 100, 1, 25, 25, 25, 25, s_testportraitp2)
-setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9slicep3, 10, 10, o_bowicon, 0, 100, 1, 10, 10, 10, 10, s_testportraitp3)
+setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, 0, 100, 1, 50, 50, 50, 50, s_testportrait,s_9sliceselect)
+setup_character(char2map,char.battleplayer2,"Battle Player 2", s_player2, s_9slicep2, 5, 2, o_bowicon, 0, 100, 1, 25, 25, 25, 25, s_testportraitp2,s_9slicep2select)
+setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9slicep3, 10, 10, o_bowicon, 0, 100, 1, 10, 10, 10, 10, s_testportraitp3,s_9slicep3select)
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);
@@ -48,14 +48,12 @@ add_to_party(char.battleplayer2,1);
 add_to_party(char.battleplayer3,2);
 
 //Set the Party Count
-global.partycount = ds_list_size(global.party_members)
+global.partycount = 3
 
 //Party Member setup (legacy)
 for (var i = 0; i < global.partycount; i++) {
 	global.partygainedxp[i] = 0;
-	global.partycurrentxp[i] = 0;
 	global.partydisplayxp[i] = 0;
-	global.partylevel[i] = 1;
 }
 
 draw_set_font(fnt_battle);

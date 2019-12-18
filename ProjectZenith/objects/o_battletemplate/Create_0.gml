@@ -18,7 +18,6 @@ currentxp = map[? "xp"];
 wepequipped = map[? "wep_equipped"];
 buff = status.none;
 debuff = status.none;
-textboxsprhover = s_9sliceselect;
 selection = "none";
 target = "none";
 turndone = false;

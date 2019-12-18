@@ -3,8 +3,6 @@
 
 var pos = argument0;
 
-
-
 var map = global.currentparty[| pos]
 global.IDtoinsert = map[? "id"];
 global.partyIDtoinsert = pos;

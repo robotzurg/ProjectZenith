@@ -71,4 +71,7 @@ for (var i=0;i<global.enemycount;i++) {
 	}
 }
 
+//Set enemy focus (USES LEGACY SYSTEM!)
+global.enemyfocus = global.enemyparty[0];
+
 } //End of if room = rm_battle
