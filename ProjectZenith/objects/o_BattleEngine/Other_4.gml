@@ -29,12 +29,18 @@ btny2 = 510
 
 atkx1 = 325
 atkx2 = 475
+atky1 = 450
+atky2 = 510
 
 sklx1 = 525
 sklx2 = 675
+skly1 = 450
+skly2 = 510
 
 itmx1 = 725
 itmx2 = 875
+itmy1 = 450
+itmy2 = 510
 
 //Create the party instances in battle and set their instance IDs to a variable
 for (var inst = 0; inst<global.partycount;inst++) {

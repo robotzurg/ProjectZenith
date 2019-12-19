@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
 	game_restart();	
@@ -5,7 +6,7 @@ if keyboard_check_pressed(ord("R")) {
 
 //Dim the background if the party menu opens
 if instance_exists(o_PartyMenu) {
-	backalpha = lerp(backalpha,0.8,0.3);	
+	backalpha = lerp(backalpha,0.9,0.3);	
 } else {
 	backalpha = lerp(backalpha,0,0.3);	
 }
@@ -23,15 +24,16 @@ if keyboard_check_pressed(vk_escape) && !instance_exists(o_PartyMenu) {
 
 /* VICTORY SCREEN CODE */
 
-if global.currentturn == "Victory" {
+if global.currentturn == "Victory" or global.currentturn == "Results" {
 	primy = lerp(primy,150,0.25);
 	vicy = lerp(vicy,15,0.25);
 	othery = lerp(othery,468,0.25);
-	backalpha = lerp(backalpha,0.9,0.25);
+	backalpha = lerp(backalpha,1.8,0.25);
 } else if global.currentturn == "End" && finishtrans == false {
 	primy = lerp(primy,710,0.25);
 	vicy = lerp(vicy,-100,0.25);
 	othery = lerp(othery,600,0.25);
+	backalpha = lerp(backalpha,1.8,0.25);
 	if alarm[2] < 0 && room = rm_battle {
 	alarm[2] = 30;
 	}

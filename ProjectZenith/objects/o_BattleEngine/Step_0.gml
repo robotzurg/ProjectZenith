@@ -1,4 +1,4 @@
-//if (live_call()) return live_result
+if (live_call()) return live_result
 //var hoverover = global.charfocus.textboxsprhover;
 //Set data extraction variables
 var foc = global.charfocus;
@@ -9,28 +9,28 @@ if global.currentturn = "Players" { //If it's the players turn, enable the butto
 //Check for clicks on each seperate button
 
 //RUN BUTTON
-if click_on_button(runselect,0,1,80,60) { 
+if click_on_button("run",0,1,80,60) { 
 	trans_to_room(testroom,"run1");
 }
 
 //GLITCH BUTTON
-if click_on_button(glitchselect,room_width-100,1,room_width,60) {
+if click_on_button("glitch",room_width-100,1,room_width,60) {
 	plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("glitch") : ("none") //If selection = none, set to glitch, otherwise set to none
 }
 
 if menu_open = "none" { //Disable these buttons if the menu is open on one
 	//ATTACK BUTTON
-	if click_on_button(atkselect,415,450,475,510) {
+	if click_on_button("attack",415,450,475,510) {
 		plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("attack") : ("none") //See above
 	}
 
 	//SKILLS BUTTON
-	if click_on_button(sklselect,525,450,675,510) {
+	if click_on_button("skills",525,450,675,510) {
 		menu_open = "skills";
 	}
 
 	//ITEMS BUTTON
-	if click_on_button(itmselect,725,450,875,510) {
+	if click_on_button("items",725,450,875,510) {
 		menu_open = "item";
 	}
 
@@ -48,32 +48,44 @@ switch(menu_open) {
 	
 	case "skills": 
 	sklx1 = lerp(sklx1,265,0.4);
-	btny1 = lerp(btny1,420,0.4);
+	skly1 = lerp(skly1,420,0.4);
 	sklx2 = lerp(sklx2,955,0.4);
-	btny2 = lerp(btny2,540,0.4);
+	skly2 = lerp(skly2,540,0.4);
 	break;
 	
 	case "item": 
 	itmx1 = lerp(itmx1,265,0.4);
-	btny1 = lerp(btny1,420,0.4);
+	itmy1 = lerp(itmy1,420,0.4);
 	itmx2 = lerp(itmx2,955,0.4);
-	btny2 = lerp(btny2,540,0.4);
+	itmy2 = lerp(itmy2,540,0.4);
 	break;
 	
 	case "none":  //Default
 	sklx1 = lerp(sklx1,525,0.4);
 	sklx2 = lerp(sklx2,675,0.4);
+	skly1 = lerp(skly1,450,0.4);
+	skly2 = lerp(skly2,510,0.4);
 	itmx1 = lerp(itmx1,725,0.4);
 	itmx2 = lerp(itmx2,875,0.4);
+	itmy1 = lerp(itmy1,450,0.4);
+	itmy2 = lerp(itmy2,510,0.4);
 }
 
 //Move buttons out of view if it's the enemies turn
 if global.currentturn = "Players"  && menu_open = "none" {
-	btny1 = lerp(btny1,450,0.3);
-	btny2 = lerp(btny2,510,0.3);
+	atky1 = lerp(atky1,450,0.3);
+	atky2 = lerp(atky2,510,0.3);
+	skly1 = lerp(skly1,450,0.3);
+	skly2 = lerp(skly2,510,0.3);
+	itmy1 = lerp(itmy1,450,0.3);
+	itmy2 = lerp(itmy2,510,0.3);
 } else if global.currentturn = "Enemies" {
-	btny1 = lerp(btny1,600,0.3);
-	btny2 = lerp(btny2,660,0.3);
+	atky1 = lerp(atky1,600,0.3);
+	atky2 = lerp(atky2,660,0.3);
+	skly1 = lerp(skly1,600,0.3);
+	skly2 = lerp(skly2,660,0.3);
+	itmy1 = lerp(itmy1,600,0.3);
+	itmy2 = lerp(itmy2,660,0.3);
 }
 
 //Move up the focused player with a lerp

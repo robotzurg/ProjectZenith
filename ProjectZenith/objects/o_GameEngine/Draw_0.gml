@@ -1,5 +1,5 @@
 ///VICTORY SCREEN UI
-
+if (live_call()) return live_result;
 //Set data extraction variables
 var foc = vicfocus
 var par = global.currentparty[| foc];
@@ -14,6 +14,7 @@ if room = rm_battle {
 if (global.currentturn = "Victory") or (global.currentturn = "End") or (global.currentturn = "Results") { //If the battle is over
 for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party member
 	if i == vicfocus {
+		
 		//Draw the focused character
 		draw_sprite_ext(o_BattleEngine.plrID[i].sprite_index, 0, global.partyvicx[i], global.partyvicy[i],global.partyvicscale[i],global.partyvicscale[i],0,c_white,1);
 		
@@ -37,7 +38,7 @@ for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party mem
 							create_fade_text(global.partyvicx[i]+80,global.partyvicy[i]-80,"Level Up!");
 							}
 					} else {
-						xpfilled = true;	
+						xpfilled = true;
 					}
 				} else if xpdelay != 0 {
 					xpdelay -= 1;
@@ -72,10 +73,14 @@ for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party mem
 			
 			//Draw details for every haracter
 			draw_set_halign(fa_center);
-				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-100,string(par[? "name"]) + " (Lv. " + string(par[? "level"]) + ")" ,0.7,0.7,0);
-				draw_text(global.partyvicx[i],global.partyvicy[i]+100,"EXP +" + string(global.partydisplayxp[i]));
+				if global.partyvicMVP == o_BattleEngine.plrID[i] {
+					draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-140,"MVP",1.5,1.5,0);
+				}
+				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-100,string(par[? "name"]) + " (Lv. " + string(par[? "level"]) + ")" ,0.7,0.7,0); //Battle Player 1 (Lv. 3)
+				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]+97,"EXP: " + string(round(par[? "xp"])) + "/" + string(par[? "max_xp"]),0.75,0.75,0); //EXP: 10/100
+				draw_text(global.partyvicx[i],global.partyvicy[i]+115,"EXP +" + string(global.partydisplayxp[i])); //EXP +25
 				var pc = (par[? "xp"] / par[? "max_xp"]) * 100;
-				draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+85,global.partyvicx[i]+50,global.partyvicy[i]+95,pc,c_gray,c_lime,c_lime,0,true,true);
+				draw_healthbar(global.partyvicx[i]-50,global.partyvicy[i]+85,global.partyvicx[i]+50,global.partyvicy[i]+95,pc,c_gray,c_lime,c_lime,0,true,true); //Draw XP Barr
 			draw_set_halign(fa_left);
 		}
 	}

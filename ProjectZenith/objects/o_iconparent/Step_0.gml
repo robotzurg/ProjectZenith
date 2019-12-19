@@ -27,4 +27,8 @@ if object_index != o_potionicon && o_BattleEngine.menu_open = "none" && global.c
 	}
 } 
 
-y = o_BattleEngine.btny1+15;
+if object_index = o_potionicon {
+y = o_BattleEngine.itmy1+15;
+} else {
+y = o_BattleEngine.atky1+15;
+}
