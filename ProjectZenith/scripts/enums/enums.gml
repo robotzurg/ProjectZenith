@@ -10,4 +10,5 @@ enum char {
 	battleplayer1,
 	battleplayer2,
 	battleplayer3,
+	none
 }
