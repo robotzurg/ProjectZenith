@@ -1,7 +1,5 @@
 ID = global.IDtoinsert
 partyID = global.partyIDtoinsert;
-show_debug_message("What It is (ID): " + string(ID));
-show_debug_message("What It is (PartyID): " + string(partyID));
 
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];
