@@ -2,7 +2,7 @@ if (live_call()) return live_result;
 
 grabbed = array_create(3)
 disable = array_create(3,false);
-global.holding = false;
+global.holding = -1;
 
 par1x = (grabbed[0] = true) ? mouse_x : room_width/2-250
 par1y = (grabbed[0] = true) ? mouse_y : room_height/2-50
