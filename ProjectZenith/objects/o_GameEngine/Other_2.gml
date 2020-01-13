@@ -55,7 +55,7 @@ add_to_party(char.battleplayer2,1);
 add_to_party(char.battleplayer3,2);
 
 //Set the Party Count
-global.partycount = 3
+global.partycount = ds_list_size(global.currentparty);
 
 //Party Member setup (legacy)
 for (var i = 0; i < global.partycount; i++) {

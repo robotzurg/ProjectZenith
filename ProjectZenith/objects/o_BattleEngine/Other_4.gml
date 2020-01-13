@@ -24,8 +24,6 @@ for (var plr = 0; plr < global.partycount; plr++) {
 }
 
 //Initalize button coordinate variables
-btny1 = 450
-btny2 = 510
 
 atkx1 = 325
 atkx2 = 475

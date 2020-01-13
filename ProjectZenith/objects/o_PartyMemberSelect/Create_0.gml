@@ -22,8 +22,8 @@ switch (ID) {
 	default: extrapartypos = 0; break;
 }
 
-show_debug_message(extrapartypos);
+//show_debug_message(extrapartypos);
 
 picked_up = false;
-scale = 1.5;
-backstock = false;
+scale = (partyID != -1) ? 1.5 : 1;
+backstock = (partyID != -1) ? false : true
