@@ -35,6 +35,7 @@ var max_mp = argument[14];
 var portrait = argument[15];
 var textbox_spr_hover = argument[16];
 
+ds_map_add(map, "map", map);
 ds_map_add(map, "id", char_id);
 ds_map_add(map, "name", name);
 ds_map_add(map, "spr", spr);

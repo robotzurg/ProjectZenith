@@ -1,5 +1,13 @@
+if (live_call()) return live_result;
 ID = global.IDtoinsert
 partyID = global.partyIDtoinsert;
+var map_ = global.currentparty[| partyID];
+partyPos = ds_list_find_index(global.currentparty, map_[? "map"]);
+show_debug_message(partyPos);
+
+picked_up = false;
+scale = 1.5;
+backstock = false
 
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];
@@ -21,9 +29,3 @@ switch (ID) {
 	case char.battleplayer3: extrapartypos = 2; break;
 	default: extrapartypos = 0; break;
 }
-
-//show_debug_message(extrapartypos);
-
-picked_up = false;
-scale = (partyID != -1) ? 1.5 : 1;
-backstock = (partyID != -1) ? false : true
