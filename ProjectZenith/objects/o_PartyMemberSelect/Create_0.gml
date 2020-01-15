@@ -2,12 +2,14 @@ if (live_call()) return live_result;
 ID = global.IDtoinsert
 partyID = global.partyIDtoinsert;
 var map_ = global.currentparty[| partyID];
-partyPos = ds_list_find_index(global.currentparty, map_[? "map"]);
-show_debug_message(partyPos);
+if partyID != -1 {
+	partyID = ds_list_find_index(global.currentparty, map_[? "map"]);
+	extrapartypos = -1;
+}
 
 picked_up = false;
-scale = 1.5;
-backstock = false
+scale = (partyID == -1) ? 1 : 1.5;
+backstock = (partyID == -1) ? true : false;
 
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];
@@ -22,10 +24,3 @@ portrait = map[? "portrait"];
 textboxspr = map[? "textbox_spr"];
 currentxp = map[? "xp"];
 wepequipped = map[? "wep_equipped"];
-
-switch (ID) {
-	case char.battleplayer1: extrapartypos = 0; break;
-	case char.battleplayer2: extrapartypos = 1; break;
-	case char.battleplayer3: extrapartypos = 2; break;
-	default: extrapartypos = 0; break;
-}

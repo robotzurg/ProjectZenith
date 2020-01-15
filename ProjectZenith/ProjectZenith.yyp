@@ -82,7 +82,7 @@
             "Key": "1a54ac1c-6fbe-4b43-9f1e-d9792cf0bb05",
             "Value": {
                 "id": "13356f4f-b7f6-49ec-8d34-8d4fb10b14b4",
-                "resourcePath": "sprites\\s_9sliceselect\\s_9sliceselect.yy",
+                "resourcePath": "sprites\\s_9slice\\s_9slice.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -746,7 +746,7 @@
             "Key": "fa88bc82-6430-4b5d-a21f-2c8c1644508b",
             "Value": {
                 "id": "467c3fdf-8c62-4ce0-b95b-196255d4d7ae",
-                "resourcePath": "sprites\\s_9slice\\s_9slice.yy",
+                "resourcePath": "sprites\\s_9sliceselect\\s_9sliceselect.yy",
                 "resourceType": "GMSprite"
             }
         },

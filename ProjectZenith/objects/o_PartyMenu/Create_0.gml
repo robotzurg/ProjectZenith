@@ -1,6 +1,6 @@
 if (live_call()) return live_result;
 
-global.holding = -1;
+global.holding = -2;
 
 var map = global.currentparty[| 0]
 if map != 0 {

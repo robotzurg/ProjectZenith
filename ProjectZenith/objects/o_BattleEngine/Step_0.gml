@@ -82,10 +82,10 @@ if global.currentturn = "Players"  && menu_open = "none" {
 } else if global.currentturn = "Enemies" {
 	atky1 = lerp(atky1,600,0.3);
 	atky2 = lerp(atky2,660,0.3);
-	skly1 = lerp(skly1,600,0.3);
-	skly2 = lerp(skly2,660,0.3);
-	itmy1 = lerp(itmy1,600,0.3);
-	itmy2 = lerp(itmy2,660,0.3);
+	skly1 = lerp(skly1,660,0.3);
+	skly2 = lerp(skly2,750,0.3);
+	itmy1 = lerp(itmy1,660,0.3);
+	itmy2 = lerp(itmy2,750,0.3);
 }
 
 //Move up the focused player with a lerp
