@@ -1,4 +1,3 @@
-//if (live_call()) return live_result
 if room = rm_battle {	
 
 //Set the character focus to party member 1

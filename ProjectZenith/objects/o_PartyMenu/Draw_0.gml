@@ -1,4 +1,5 @@
 if (live_call()) return live_result;
+if menufoc == "party" {
 //Data Extraction Variables for each party member
 var char1 = global.currentparty[| 0];
 var char2 = global.currentparty[| 1];
@@ -31,14 +32,16 @@ draw_set_halign(fa_left);
 //Draw the box for the extra players
 draw_rectangle(25,365,935,515,true);
 
-//draw_text(100,100,global.partycount);
-
-for(var ii = 0; ii < ds_list_size(global.currentparty); ii++) {
-	draw_text(10, 50+(ii*25), string(ds_list_find_value(global.currentparty, ii)));
-} 
-
-for(var ii = 0; ii < ds_list_size(global.extraparty); ii++) {
-	draw_text(75, 50+(ii*25), string(ds_list_find_value(global.extraparty, ii)));
-} 
+} else {
+	draw_set_halign(fa_center);
+	draw_text_transformed(room_width/2,50,"Pause Menu",2,2,0);	
+	draw_text(room_width/2,200,"Resume");
+	draw_text(room_width/2,250,"Settings");
+	draw_text(room_width/2,300,"Quit");
+	draw_set_halign(fa_left);
+}
 	
-	
+//Draw arrow leading into pause menu
+draw_set_halign(fa_right)
+draw_sprite(s_pauseicon,0,room_width-40,5);
+draw_set_halign(fa_left);

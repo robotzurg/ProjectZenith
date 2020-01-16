@@ -1,5 +1,4 @@
 ///BATTLE UI///
-
 //Set data extraction variables
 var foc = global.charfocus;
 var par = global.currentparty[| foc];

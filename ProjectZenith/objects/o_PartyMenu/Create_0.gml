@@ -1,6 +1,7 @@
 if (live_call()) return live_result;
 
 global.holding = -2;
+menufoc = "party";
 
 var map = global.currentparty[| 0]
 if map != 0 {

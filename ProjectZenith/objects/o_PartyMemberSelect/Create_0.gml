@@ -10,6 +10,8 @@ if partyID != -1 {
 picked_up = false;
 scale = (partyID == -1) ? 1 : 1.5;
 backstock = (partyID == -1) ? true : false;
+popuptimer = 0;
+popup = false;
 
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];

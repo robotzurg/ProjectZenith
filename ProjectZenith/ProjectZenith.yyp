@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "36663867-5c95-4993-9990-dff190a21c44",
+            "Value": {
+                "id": "784c1ce3-c59c-4812-b8b2-2faf1c1cdd28",
+                "resourcePath": "sprites\\s_pauseicon\\s_pauseicon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "380e5aeb-c02f-4dbd-bd74-0db4ba6c50da",
             "Value": {
                 "id": "dd9d90cb-3268-40c9-989b-d97e571d124d",

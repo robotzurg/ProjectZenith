@@ -1,5 +1,5 @@
 if (live_call()) return live_result;
-
+if o_PartyMenu.menufoc == "party" {
 if partyID != -1 {
 	var map_ = global.party_members[| ID];
 	partyID = ds_list_find_index(global.currentparty, map_[? "map"]);
@@ -71,9 +71,9 @@ image_yscale = scale;
 if picked_up == true {
 	x = mouse_x;
 	y = mouse_y;
-}
-
-if picked_up == false {
+	depth = -50;
+	popup = false
+} else {
 	if backstock == false {
 		switch (partyID) {
 			case 0: x = room_width/2-250 y = room_height/2-50; break;
@@ -84,6 +84,31 @@ if picked_up == false {
 		x = 90 + 90 * (extrapartypos)
 		y = 440;
 	}
+	depth = 0;
+}
+
+//Text Menu pop up
+if position_meeting(mouse_x,mouse_y,self) && picked_up == false {
+	/*popuptimer += 1;
+	if popuptimer == 30 {
+		popup = true;	
+	}
+} else {
+	if popup == false && picked_up == false {
+		popuptimer -= 4
+	} else {
+		popuptimer = 0;	
+	}
+	popup = false;*/
+	if mouse_check_button_pressed(mb_right) {
+		popup = !popup;		
+	}
+} else if mouse_check_button_pressed(mb_right) {
+	popup = false;	
+}
+
+popuptimer = clamp(popuptimer,0,30);
+
 }
 
 if !instance_exists(o_PartyMenu) {

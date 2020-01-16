@@ -1,4 +1,3 @@
-if (live_call()) return live_result
 //var hoverover = global.charfocus.textboxsprhover;
 //Set data extraction variables
 var foc = global.charfocus;
@@ -11,6 +10,7 @@ if global.currentturn = "Players" { //If it's the players turn, enable the butto
 //RUN BUTTON
 if click_on_button("run",0,1,80,60) { 
 	trans_to_room(testroom,"run1");
+	global.battledone = true;
 }
 
 //GLITCH BUTTON

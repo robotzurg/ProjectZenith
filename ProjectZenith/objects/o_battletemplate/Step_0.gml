@@ -8,10 +8,10 @@ if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self)
 
 if position_meeting(mouse_x,mouse_y,self) {
 	image_index = 1;
-	if mouse_check_button_pressed(mb_left) { show_details = !show_details };
+	if mouse_check_button_pressed(mb_right) { show_details = !show_details };
 } else {
 	image_index = 0;	
-	if mouse_check_button_pressed(mb_left) { show_details = false };
+	if mouse_check_button_pressed(mb_right) or mouse_check_button_pressed(mb_left) { show_details = false };
 }
 
 switch (selection) {

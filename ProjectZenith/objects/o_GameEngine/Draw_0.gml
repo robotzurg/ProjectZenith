@@ -1,5 +1,4 @@
 ///VICTORY SCREEN UI
-if (live_call()) return live_result;
 //Set data extraction variables
 var foc = vicfocus
 var par = global.currentparty[| foc];

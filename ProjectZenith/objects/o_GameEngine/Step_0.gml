@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
 	game_restart();	
@@ -14,8 +13,8 @@ if instance_exists(o_PartyMenu) {
 
 if !instance_exists(o_PartyMenu) {
 
-//Open the Party Management Menu if Escape is pressed
-if keyboard_check_pressed(vk_escape) && !instance_exists(o_PartyMenu) {
+//Open the Party Management Menu if Escape is pressed and the room is not the battle room
+if keyboard_check_pressed(vk_escape) && !instance_exists(o_PartyMenu) && room != rm_battle {
 	instance_create_depth(x,y,-1500,o_PartyMenu);
 	instance_deactivate_all(true);
 	instance_activate_object(o_PartyMenu);
