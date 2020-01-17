@@ -1,5 +1,4 @@
 draw_self();
-if (live_call()) return live_result;
 if turndone == true {
 	draw_sprite(s_turndoneicon,0,x-50,y-40);
 }

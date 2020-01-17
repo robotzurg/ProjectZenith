@@ -1,7 +1,11 @@
-if (live_call()) return live_result;
+
 
 global.holding = -2;
-menufoc = "party";
+menufoc = "pause";
+scale[0] = 1;
+scale[1] = 1;
+scale[2] = 1;
+scale[3] = 1;
 
 var map = global.currentparty[| 0]
 if map != 0 {

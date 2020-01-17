@@ -1,4 +1,3 @@
-if (live_call()) return live_result;
 ID = global.IDtoinsert
 partyID = global.partyIDtoinsert;
 var map_ = global.currentparty[| partyID];

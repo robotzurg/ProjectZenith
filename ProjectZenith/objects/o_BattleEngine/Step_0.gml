@@ -1,4 +1,3 @@
-//var hoverover = global.charfocus.textboxsprhover;
 //Set data extraction variables
 var foc = global.charfocus;
 var par = global.currentparty[| foc];
