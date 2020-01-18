@@ -26,17 +26,18 @@ camY = lerp(camY, targetY, CAM_SMOOTH);
 }
 
 var wheel = mouse_wheel_down() - mouse_wheel_up();
-
 if (wheel != 0) {
-	wheel *= 0.1;
+	wheel *= 0.2;
 	
 	//Add to size
 	var addW = camW * wheel;
 	var addH = camH * wheel;
 	
-	camW += addW;
-	camH += addH;
-	
+	camW += addW
+	camH += addH
+	show_debug_message(camW);
+	show_debug_message(camH);
+
 	//Position
 	camX -= addW / 2;
 	camY -= addH / 2;

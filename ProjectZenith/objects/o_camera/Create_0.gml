@@ -6,6 +6,10 @@
 
 view_enabled = true;
 view_visible[0] = true;
+global.zoom = 0;
+zoom = false;
+addW = 0;
+addH = 0;
 
 // Create camera
 camera = camera_create_view(0, 0, RES_W, RES_H);
@@ -28,4 +32,4 @@ var window_height = RES_H * RES_SCALE;
 window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
 mouse_x_previous = device_mouse_x_to_gui(0)
-mouse_y_previous = device_mouse_y_to_gui(0)
+mouse_y_previous = device_mouse_y_to_gui(0);

@@ -1,0 +1,1 @@
+global.zoom = 0;
