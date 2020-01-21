@@ -1,10 +1,10 @@
-if point_in_rectangle(mouse_x,mouse_y,415,450,475,510) && object_index != o_potionicon {
+if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,415,450,475,510) && object_index != o_potionicon {
 	if animate = false && looped = false {
 		animate = true;	
 		looped = true;
 	}
 	image_speed = animate
-} else if point_in_rectangle(mouse_x,mouse_y,725,450,875,510) && object_index = o_potionicon {
+} else if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,725,450,875,510) && object_index = o_potionicon {
 	image_speed = 1;	
 } else {
 	image_speed = 0;	

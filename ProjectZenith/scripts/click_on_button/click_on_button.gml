@@ -13,7 +13,7 @@ var y1 = argument2;
 var x2 = argument3;
 var y2 = argument4;
 
-if point_in_rectangle(mouse_x,mouse_y,x1,y1,x2,y2) {
+if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,x1,y1,x2,y2) {
 	//Based on button type, change the 9slice box to hover since the mouse is in the button
 	switch (type) {
 		case "attack": atkselect = par[? "textbox_spr_hover"] break;

@@ -3,11 +3,15 @@ global.transition = "none";
 global.state = "platformer";
 global.charfocus = char.battleplayer1;
 global.currentturn = "Players";
-global.partymaxxp = 100;
 global.enemycount = 1;
 global.enemytype = o_parentenemy;
 global.enemytokill = o_enemy;
-global.battledone = false;
+global.battledone = false
+
+global.d_global.d_mouse_x = device_global.d_mouse_x_to_gui(0);
+global.d_global.d_mouse_y = device_global.d_mouse_y_to_gui(0);
+global.window_width = RES_W * RES_SCALE;
+global.window_height = RES_H * RES_SCALE;
 
 //Victory Screen Variables
 primy = 0;

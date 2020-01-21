@@ -5,7 +5,7 @@ var par = global.currentparty[| foc];
 
 //Draw the dimmed background
 draw_set_alpha(backalpha);
-draw_rectangle_color(0,0,room_width,room_height,c_black,c_black,c_black,c_black,false);
+draw_rectangle_color(0,0,global.window_width,global.window_height,c_black,c_black,c_black,c_black,false);
 draw_set_alpha(1);
 
 
@@ -96,16 +96,16 @@ draw_primitive_end();
 
 //Draw bottom right white triange
 draw_primitive_begin(pr_trianglelist); //BOTTOM RIGHT
-draw_vertex(room_width, room_height-primy);
-draw_vertex(room_width, room_height);
-draw_vertex(room_width-primx, room_height);
+draw_vertex(global.window_width, global.window_height-primy);
+draw_vertex(global.window_width, global.window_height);
+draw_vertex(global.window_width-primx, global.window_height);
 draw_primitive_end();
 
 //Draw extra text
 draw_set_color(c_black);
 draw_text_transformed(40,vicy,"Victory!",2,2,0); //TOP LEFT
-draw_text(room_width-230,othery,"Gold Gained: 4");
+draw_text(global.window_width-230,othery,"Gold Gained: 4");
 draw_set_color(c_white);
 
 //Draw FPS throughout the game (Debug)
-draw_text_transformed(room_width-30,room_height-25,fps,1,1,0);
+draw_text_transformed(global.window_width-30,global.window_height-25,fps,1,1,0);

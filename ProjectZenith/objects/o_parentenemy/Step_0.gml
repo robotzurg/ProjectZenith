@@ -18,13 +18,13 @@ if keyboard_check(ord("O")) {
 	hp -= 1;	
 }
 
-image_index = (position_meeting(mouse_x,mouse_y,self)) ? 2 : 0;
+image_index = (position_meeting(global.d_mouse_x,global.d_mouse_y,self)) ? 2 : 0;
 
-if mouse_check_button_pressed(mb_left) && !position_meeting(mouse_x,mouse_y,self) {
+if mouse_check_button_pressed(mb_left) && !position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
 	show_details = false;	
 }
 
-if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) && global.currentturn == "Players" {
+if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) && global.currentturn == "Players" {
 	if o_BattleEngine.plrID[global.charfocus].selection != "none" {
 		o_BattleEngine.plrID[global.charfocus].target = self;
 	} else {

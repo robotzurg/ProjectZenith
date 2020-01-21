@@ -1,12 +1,10 @@
-
-
 //Leave the party select menu and activate all the instances again
 if keyboard_check_pressed(vk_escape) {
 	instance_destroy();	
 	instance_activate_all()
 }
 
-if point_in_rectangle(mouse_x,mouse_y,room_width-48,0,room_width,50) && mouse_check_button_pressed(mb_left) && menufoc == "party" {
+if point_in_rectangle(global.d_global.d_mouse_x,global.d_global.d_mouse_y,room_width-48,0,room_width,50) && mouse_check_button_pressed(mb_left) && menufoc == "party" {
 	if menufoc == "party" {
 		menufoc = "pause";	
 	} else {
@@ -16,7 +14,7 @@ if point_in_rectangle(mouse_x,mouse_y,room_width-48,0,room_width,50) && mouse_ch
 
 var click = mouse_check_button_pressed(mb_left)
 	
-if point_in_rectangle(mouse_x,mouse_y,420,175,540,215) {
+if point_in_rectangle(global.d_global.d_mouse_x,global.d_global.d_mouse_y,global.window_width/2-50,175,global.window_width/2+50,220) {
 	if click {
 		instance_destroy();	
 		instance_activate_all()
@@ -26,7 +24,7 @@ if point_in_rectangle(mouse_x,mouse_y,420,175,540,215) {
 	scale[0] = lerp(scale[0],1,0.25);
 }
 
-if point_in_rectangle(mouse_x,mouse_y,420,225,540,265) {
+if point_in_rectangle(global.d_global.d_mouse_x,global.d_global.d_mouse_y,global.window_width/2-50,225,global.window_width/2+50,270) {
 	if click {
 			
 	}
@@ -35,7 +33,7 @@ if point_in_rectangle(mouse_x,mouse_y,420,225,540,265) {
 	scale[1] = lerp(scale[1],1,0.5);
 }
 
-if point_in_rectangle(mouse_x,mouse_y,405,275,555,315) {
+if point_in_rectangle(global.d_global.d_mouse_x,global.d_global.d_mouse_y,global.window_width/2-75,275,global.window_width/2+75,320) {
 	if click {
 		menufoc = "party";
 	}
@@ -44,7 +42,7 @@ if point_in_rectangle(mouse_x,mouse_y,405,275,555,315) {
 	scale[2] = lerp(scale[2],1,0.25);
 }
 
-if point_in_rectangle(mouse_x,mouse_y,420,325,540,365) {
+if point_in_rectangle(global.d_global.d_mouse_x,global.d_global.d_mouse_y,global.window_width/2-50,325,global.window_width/2+50,370) {
 	if click {
 		game_end();
 	}

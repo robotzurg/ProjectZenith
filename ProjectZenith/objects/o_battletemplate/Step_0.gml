@@ -1,12 +1,12 @@
 if turndone = false {
-if mouse_check_button_pressed(mb_left) && position_meeting(mouse_x,mouse_y,self) {
+if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
 	o_BattleEngine.plrID[global.charfocus].selection = "none";
 	o_BattleEngine.plrID[global.charfocus].target = "none";
 	global.charfocus = partyID;
 	o_BattleEngine.menu_open = "none";
 }
 
-if position_meeting(mouse_x,mouse_y,self) {
+if position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
 	image_index = 1;
 	if mouse_check_button_pressed(mb_right) { show_details = !show_details };
 } else {
