@@ -1,7 +1,7 @@
 if (live_call()) return live_result;
 //Update global.d_mouse_x and global.d_mouse_y positions
-global.d_global.d_mouse_x = device_global.d_mouse_x_to_gui(0);
-global.d_global.d_mouse_y = device_global.d_mouse_y_to_gui(0);
+global.d_mouse_x = device_mouse_x_to_gui(0);
+global.d_mouse_y = device_mouse_y_to_gui(0);
 
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
@@ -24,7 +24,7 @@ if keyboard_check_pressed(vk_escape) && !instance_exists(o_PartyMenu) && room !=
 	instance_deactivate_all(true);
 	instance_activate_object(o_PartyMenu);
 	instance_activate_object(obj_gmlive);
-	instance_activate_object(o_PartyMemberSelect);
+	//instance_activate_object(o_PartyMemberSelect);
 }
 
 /* VICTORY SCREEN CODE */

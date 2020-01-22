@@ -1,5 +1,3 @@
-
-
 global.holding = -2;
 menufoc = "pause";
 scale[0] = 1;

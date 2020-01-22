@@ -1,4 +1,4 @@
-///map_range(value, min1, max1, min2, max2);
+///map_range_(value, min1, max1, min2, max2);
 //@param value
 //@param min1
 //@param max1

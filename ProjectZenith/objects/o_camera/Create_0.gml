@@ -31,5 +31,5 @@ var window_height = RES_H * RES_SCALE;
 
 window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
-global.d_mouse_x_previous = device_global.d_mouse_x_to_gui(0)
-global.d_mouse_y_previous = device_global.d_mouse_y_to_gui(0);
+global.d_mouse_x_previous = device_mouse_x_to_gui(0)
+global.d_mouse_y_previous = device_mouse_y_to_gui(0);

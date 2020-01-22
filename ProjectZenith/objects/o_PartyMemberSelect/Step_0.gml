@@ -1,5 +1,3 @@
-
-
 if !instance_exists(o_PartyMenu) {
 	instance_destroy();
 	exit;
