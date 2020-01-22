@@ -4,13 +4,17 @@ var key_jump = keyboard_check(vk_space);
 
 if global.state = "platformer" {
 if (key_left) {
-	hspd = -4;	
+	hspd = -maxhspd;
 } else if (key_right) {
-	hspd = 4;	
+	hspd = maxhspd;	
 } else if (key_left) && (key_right) {
 	hspd = 0;	
 } else {
 	hspd = 0;	
+}
+
+if hspd != 0 {
+	flipped = sign(hspd);
 }
 
 if (key_jump) && (on_ground) {
