@@ -48,5 +48,5 @@ draw_rectangle(25,365,935,515,true);
 	
 //Draw arrow leading into pause menu
 draw_set_halign(fa_right)
-if menufoc == "party" { draw_sprite(s_pauseicon,0,global.window_width-40,global.window_width-500); }
+if menufoc == "party" { draw_sprite(s_pauseicon,0,global.window_width-40,global.window_height-530); }
 draw_set_halign(fa_left);

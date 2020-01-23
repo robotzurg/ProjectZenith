@@ -6,7 +6,7 @@ if keyboard_check_pressed(vk_escape) {
 
 }
 
-if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,room_width-48,0,room_width,50) && mouse_check_button_pressed(mb_left) && menufoc == "party" {
+if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,global.window_width-48,0,global.window_width,50) && mouse_check_button_pressed(mb_left) && menufoc == "party" {
 	if menufoc == "party" {
 		menufoc = "pause";	
 	} else {
