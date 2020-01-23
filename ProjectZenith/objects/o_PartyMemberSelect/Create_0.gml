@@ -12,6 +12,8 @@ backstock = (partyID == -1) ? true : false;
 popuptimer = 0;
 popup = false;
 
+image_alpha = 0;
+
 var map = global.party_members[| ID];
 sprite_index = map[? "spr"];
 name = map[? "name"];

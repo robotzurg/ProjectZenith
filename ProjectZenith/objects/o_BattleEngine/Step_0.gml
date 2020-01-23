@@ -68,6 +68,9 @@ switch(menu_open) {
 	itmx2 = lerp(itmx2,875,0.4);
 	itmy1 = lerp(itmy1,450,0.4);
 	itmy2 = lerp(itmy2,510,0.4);
+	atky1 = lerp(atky1,450,0.4);
+	atky2 = lerp(atky2,510,0.4);
+	break;
 }
 
 //Move buttons out of view if it's the enemies turn
@@ -79,8 +82,8 @@ if global.currentturn = "Players"  && menu_open = "none" {
 	itmy1 = lerp(itmy1,450,0.3);
 	itmy2 = lerp(itmy2,510,0.3);
 } else if global.currentturn = "Enemies" {
-	atky1 = lerp(atky1,600,0.3);
-	atky2 = lerp(atky2,660,0.3);
+	atky1 = lerp(atky1,660,0.3);
+	atky2 = lerp(atky2,750,0.3);
 	skly1 = lerp(skly1,660,0.3);
 	skly2 = lerp(skly2,750,0.3);
 	itmy1 = lerp(itmy1,660,0.3);
@@ -138,3 +141,6 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 	}
 	global.currentturn = "Victory";
 }
+
+show_debug_message(atky1)
+show_debug_message(atky2)

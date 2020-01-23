@@ -1,7 +1,7 @@
 if (live_call()) return live_result;
 if o_PartyMenu.menufoc == "party" {
 	
-draw_sprite_ext(sprite_index,0,x,y,scale,scale,0,image_blend,image_alpha);
+draw_sprite_ext(sprite_index,0,x,y,scale,scale,0,image_blend,1);
 
 if popuptimer != 0 && popup == false {
 	draw_rectangle(x+20,y-50,x+20+(popuptimer),y-60,false);

@@ -12,3 +12,8 @@ enum char {
 	battleplayer3,
 	none
 }
+
+enum enemy {
+	blueboy,
+	pinkgirl,
+}

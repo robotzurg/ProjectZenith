@@ -42,7 +42,6 @@ itmy2 = 510
 //Create the party instances in battle and set their instance IDs to a variable
 for (var inst = 0; inst<global.partycount;inst++) {
 	create_party(inst);
-	//global.party[inst].currentxp = global.partycurrentxp[inst];
 }
 
 //Create the enemies based on the enemy count (lots of position changing based on the for loop)
