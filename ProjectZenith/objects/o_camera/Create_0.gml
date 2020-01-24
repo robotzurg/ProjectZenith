@@ -8,8 +8,6 @@ view_enabled = true;
 view_visible[0] = true;
 global.zoom = 0;
 zoom = false;
-addW = 0;
-addH = 0;
 
 // Create camera
 camera = camera_create_view(0, 0, RES_W, RES_H);
