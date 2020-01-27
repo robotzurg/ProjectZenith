@@ -1,8 +1,8 @@
 {
-    "id": "e8d0f355-aa24-4e97-ac74-3abf62920696",
+    "id": "d8dfa160-87b6-4292-b078-c3a93a399b8d",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_collision",
+    "name": "o_townsperson",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "69aaf606-5bfc-44b9-a54e-9973131bc6f3",
-    "visible": false
+    "spriteId": "0d181256-59fd-4f60-8819-77128820b537",
+    "visible": true
 }

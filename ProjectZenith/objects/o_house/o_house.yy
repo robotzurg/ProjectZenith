@@ -1,8 +1,8 @@
 {
-    "id": "e8d0f355-aa24-4e97-ac74-3abf62920696",
+    "id": "bf587ba6-c984-4648-8391-1f30010c27f1",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_collision",
+    "name": "o_house",
     "eventList": [
         
     ],
@@ -24,6 +24,6 @@
     "physicsStartAwake": true,
     "properties": null,
     "solid": false,
-    "spriteId": "69aaf606-5bfc-44b9-a54e-9973131bc6f3",
-    "visible": false
+    "spriteId": "d6712f94-6b4f-4cba-afd2-677d84256633",
+    "visible": true
 }
