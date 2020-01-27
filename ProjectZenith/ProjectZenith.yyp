@@ -383,6 +383,14 @@
             }
         },
         {
+            "Key": "88c21126-1f3d-4bd0-a27a-ace3e9f3d324",
+            "Value": {
+                "id": "eb77d646-2715-4e67-9e4c-a733feba98d2",
+                "resourcePath": "objects\\o_DialogueController\\o_DialogueController.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "8be669e0-68bd-48eb-893f-de708a6dd8e6",
             "Value": {
                 "id": "b8b66529-acdf-49a2-9d04-2ccdba1ceb93",
