@@ -69,8 +69,8 @@ setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9sli
 setup_character(emptymap,9999,"Nobody.",s_player,s_9slice,0,0,o_swordicon,0,100,1,100,100,100,100,s_testportrait,s_9sliceselect);
 
 //Set up enemy data 
-setup_enemy(en1map, enemy.blueboy, "Blue Boy", s_enemy, s_9slicep2, 2, 2, 1, 10, 10, 5, 5);
-setup_enemy(en2map, enemy.pinkgirl, "Pink Girl", s_testenemy2, s_9slice, 2, 2, 1, 15, 15, 10, 10);
+setup_enemy(en1map, enemy.blueboy, "Blue Boy", s_enemy, s_9slicep2, 1000, 2, 1, 10, 10, 5, 5);
+setup_enemy(en2map, enemy.pinkgirl, "Pink Girl", s_testenemy2, s_9slice, 1000, 2, 1, 15, 15, 10, 10);
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);

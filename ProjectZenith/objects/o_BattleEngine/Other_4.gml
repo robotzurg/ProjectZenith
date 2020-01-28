@@ -44,13 +44,8 @@ for (var inst = 0; inst<global.partycount;inst++) {
 	create_party(inst);
 }
 
-//Create the enemies based on the enemy count (lots of position changing based on the for loop)
-var xx = 0;
-var ex = 720;
-var ey = 175;
-
 for (var i=0;i<global.enemycount;i++) {
-	switch (global.enemycount) {
+	/*switch (global.enemycount) {
 		case 1:	global.enemyparty[i] = instance_create_layer(ex+40,ey+15+(96*i),"Instances",global.enemytype); break;
 		case 2:	global.enemyparty[i] = instance_create_layer(ex+40,ey-35+(111*i),"Instances",global.enemytype); break;
 		case 3:	global.enemyparty[i] = instance_create_layer(ex+40,ey-85+(111*i),"Instances",global.enemytype); break;
@@ -70,7 +65,9 @@ for (var i=0;i<global.enemycount;i++) {
 			xx++;
 		} break
 		
-	}
+	}*/
+	
+	create_enemyparty(i);
 }
 
 //Set enemy focus (USES LEGACY SYSTEM!)

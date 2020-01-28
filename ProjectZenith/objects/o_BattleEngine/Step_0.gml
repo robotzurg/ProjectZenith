@@ -101,10 +101,10 @@ for (var plr = 0; plr < global.partycount; plr++) {
 
 //Move up the focused enemy with a lerp
 for (var en = 0; en < global.enemycount; en++) {
-	if global.charfocus = global.enemyparty[en] && global.charfocus.dead == false {	
+	if global.charfocus == enID[en] && global.charfocus.dead == false {	
 		global.charfocus.x = lerp(global.charfocus.x,720,0.3);
 	} else {
-		global.enemyparty[en].x = lerp(global.enemyparty[en].x,760,0.3); 
+		enID[en].x = lerp(enID[en].x,760,0.3); 
 	}
 }
 

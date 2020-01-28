@@ -1,1 +1,1 @@
-battle_start(o_parentenemy,3);
+battle_start(enemy.blueboy,irandom_range(1,5));

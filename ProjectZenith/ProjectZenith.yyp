@@ -711,6 +711,14 @@
             }
         },
         {
+            "Key": "d41c4c30-8674-4d71-b8fd-09d2e4bb1359",
+            "Value": {
+                "id": "f0596193-d8c2-4f67-a170-22c442607363",
+                "resourcePath": "scripts\\create_enemyparty\\create_enemyparty.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "d5eae536-f606-4e81-af22-9bf5b713391f",
             "Value": {
                 "id": "980038f4-6ca5-4323-97e5-f76ee1293829",
@@ -863,6 +871,14 @@
             }
         },
         {
+            "Key": "fd91ebdd-3f29-49f7-b653-c90723688b30",
+            "Value": {
+                "id": "42206fb3-c260-4ea4-a69b-726818904121",
+                "resourcePath": "scripts\\add_to_enemyparty\\add_to_enemyparty.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "fe8f00a3-8552-4d2d-b870-5373b81ee4a5",
             "Value": {
                 "id": "51545e33-06bb-4cc0-a176-f0cb6ffcb154",
@@ -890,8 +906,10 @@
         "b4ccc17e-1b4e-49da-b2d0-5a0bf3b3b10f",
         "5c001916-6f63-4a81-a4de-d19211e1aac8",
         "9f59f3eb-e8c8-4b43-a168-1f03f8d6df3a",
+        "fd91ebdd-3f29-49f7-b653-c90723688b30",
         "bb3f76da-dcad-46ae-a91c-6182013d9149",
         "1357bf10-6028-48d9-9b65-d59ce8066573",
+        "d41c4c30-8674-4d71-b8fd-09d2e4bb1359",
         "eb496728-d0b7-41b5-8b32-fdb753b812c9",
         "4e33bfb5-389f-4e16-a85c-c7da692644f5",
         "17a13040-b94b-45a7-b529-1d61382eba55"
