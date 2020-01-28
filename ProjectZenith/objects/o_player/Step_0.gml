@@ -2,7 +2,7 @@ var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"))
 var key_jump = keyboard_check(vk_space);
 
-if global.state = "platformer" {
+if global.state == "platformer" && global.dialogue_disable == false {
 if (key_left) {
 	hspd = -maxhspd;
 } else if (key_right) {

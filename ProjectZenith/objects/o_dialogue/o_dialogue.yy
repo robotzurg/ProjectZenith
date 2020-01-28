@@ -2,7 +2,7 @@
     "id": "88c21126-1f3d-4bd0-a27a-ace3e9f3d324",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_DialogueController",
+    "name": "o_dialogue",
     "eventList": [
         {
             "id": "69b853d0-13c0-4b2d-80dd-212535e05ac8",
@@ -22,6 +22,16 @@
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
+            "m_owner": "88c21126-1f3d-4bd0-a27a-ace3e9f3d324"
+        },
+        {
+            "id": "87c52d77-878d-4630-a446-0191a024333d",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 8,
             "m_owner": "88c21126-1f3d-4bd0-a27a-ace3e9f3d324"
         }
     ],

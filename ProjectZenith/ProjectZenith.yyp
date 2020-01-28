@@ -103,6 +103,14 @@
             }
         },
         {
+            "Key": "17a13040-b94b-45a7-b529-1d61382eba55",
+            "Value": {
+                "id": "5f0e11c7-bc80-46cc-8451-ecc306c154f1",
+                "resourcePath": "scripts\\start_dialogue\\start_dialogue.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "1a54ac1c-6fbe-4b43-9f1e-d9792cf0bb05",
             "Value": {
                 "id": "13356f4f-b7f6-49ec-8d34-8d4fb10b14b4",
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "4e137bf9-4b1e-4867-bacd-4190d122765f",
+            "Value": {
+                "id": "c43d5836-7aed-4f1f-9877-3718c1d92144",
+                "resourcePath": "fonts\\fnt_textbox\\fnt_textbox.yy",
+                "resourceType": "GMFont"
+            }
+        },
+        {
             "Key": "4e33bfb5-389f-4e16-a85c-c7da692644f5",
             "Value": {
                 "id": "bb66bf10-8627-4b00-a306-8d53dc6cf8ea",
@@ -308,6 +324,14 @@
                 "id": "18b5461b-72c8-4020-9ef1-8edad4e2b6d6",
                 "resourcePath": "scripts\\setup_enemy\\setup_enemy.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "5fd13af0-d50e-4b1b-8c3d-b547cadf3916",
+            "Value": {
+                "id": "fe36d199-eee2-4b1a-aec4-ecb3b91704be",
+                "resourcePath": "sprites\\s_interacticon\\s_interacticon.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -410,7 +434,7 @@
             "Key": "88c21126-1f3d-4bd0-a27a-ace3e9f3d324",
             "Value": {
                 "id": "eb77d646-2715-4e67-9e4c-a733feba98d2",
-                "resourcePath": "objects\\o_DialogueController\\o_DialogueController.yy",
+                "resourcePath": "objects\\o_dialogue\\o_dialogue.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -869,7 +893,8 @@
         "bb3f76da-dcad-46ae-a91c-6182013d9149",
         "1357bf10-6028-48d9-9b65-d59ce8066573",
         "eb496728-d0b7-41b5-8b32-fdb753b812c9",
-        "4e33bfb5-389f-4e16-a85c-c7da692644f5"
+        "4e33bfb5-389f-4e16-a85c-c7da692644f5",
+        "17a13040-b94b-45a7-b529-1d61382eba55"
     ],
     "tutorial": ""
 }

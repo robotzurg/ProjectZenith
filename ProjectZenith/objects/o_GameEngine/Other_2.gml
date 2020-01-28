@@ -7,6 +7,8 @@ global.enemycount = 1;
 global.enemytype = o_parentenemy;
 global.enemytokill = o_enemy;
 global.battledone = false
+global.camera_focus = o_player;
+global.dialogue_disable = false;
 
 global.d_mouse_x = device_mouse_x_to_gui(0);
 global.d_mouse_y = device_mouse_y_to_gui(0);
@@ -85,5 +87,4 @@ for (var i = 0; i < global.partycount; i++) {
 }
 
 draw_set_font(fnt_battle);
-
 

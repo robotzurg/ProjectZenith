@@ -15,8 +15,8 @@ if mouse_check_button(mb_middle) {
 }
 else {
 //Set target camera position
-var targetX = o_player.x - camW/2;
-var targetY = o_player.y - camH/2-50;
+var targetX = global.camera_focus.x - camW/2;
+var targetY = global.camera_focus.y - camH/2-50;
 
 targetX = clamp(targetX, 0, room_width - camW);
 targetY = clamp(targetY, 0, room_height - camH);
