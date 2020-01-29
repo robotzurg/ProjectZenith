@@ -1,13 +1,12 @@
-//add_to_party(char_id, position);
+//add_to_enemyparty(char_id);
 ///@param char_id
-///@param position
 
 var char_id = argument0;
-var pos = argument1;
 
 var mymap = global.enemy_list[| char_id];
 
-ds_list_replace(global.enemyparty,pos,mymap);
+ds_list_add(global.enemyparty,mymap);
+var pos = (ds_list_size(global.enemyparty)-1)
 ds_list_mark_as_map(global.enemyparty,pos);
 
 var newloc = global.enemyparty[| pos];

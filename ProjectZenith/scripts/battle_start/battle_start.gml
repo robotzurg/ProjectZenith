@@ -5,7 +5,7 @@ var enemy = argument0;
 var amount = argument1;
 
 for (var i = 0;i<amount;i++) {
-	global.enemyparty[i] = 
+	add_to_enemyparty(enemy);
 }
 
 if !(instance_exists(o_transition)) {

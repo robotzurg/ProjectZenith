@@ -45,32 +45,10 @@ for (var inst = 0; inst<global.partycount;inst++) {
 }
 
 for (var i=0;i<global.enemycount;i++) {
-	/*switch (global.enemycount) {
-		case 1:	global.enemyparty[i] = instance_create_layer(ex+40,ey+15+(96*i),"Instances",global.enemytype); break;
-		case 2:	global.enemyparty[i] = instance_create_layer(ex+40,ey-35+(111*i),"Instances",global.enemytype); break;
-		case 3:	global.enemyparty[i] = instance_create_layer(ex+40,ey-85+(111*i),"Instances",global.enemytype); break;
-		case 4:
-		if i = 0 {
-			global.enemyparty[i] = instance_create_layer(ex-2,ey-115+(100*i),"Instances",global.enemytype); 
-		} else if i = 1 or i = 2 {
-			global.enemyparty[i] = instance_create_layer(ex+30,ey-115+(100*i),"Instances",global.enemytype); 
-		} else if i = 3 {
-			global.enemyparty[i] = instance_create_layer(ex-2,ey-115+(100*i),"Instances",global.enemytype); 	
-		} break;
-		case 5:
-		if i < 3 {
-			global.enemyparty[i] = instance_create_layer(ex,ey-85+(111*i),"Instances",global.enemytype); 
-		} else {
-			global.enemyparty[i] = instance_create_layer(ex+100,ey-35+(115*xx),"Instances",global.enemytype); 	
-			xx++;
-		} break
-		
-	}*/
-	
 	create_enemyparty(i);
 }
 
 //Set enemy focus (USES LEGACY SYSTEM!)
-global.enemyfocus = global.enemyparty[0];
+global.enemyfocus = enID[0];
 
 } //End of if room = rm_battle

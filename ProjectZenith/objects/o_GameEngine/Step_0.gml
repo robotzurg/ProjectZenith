@@ -2,7 +2,6 @@ if (live_call()) return live_result;
 //Update global.d_mouse_x and global.d_mouse_y positions
 global.d_mouse_x = device_mouse_x_to_gui(0);
 global.d_mouse_y = device_mouse_y_to_gui(0);
-
 //Restart the Game if R is pressed
 if keyboard_check_pressed(ord("R")) {
 	game_restart();	

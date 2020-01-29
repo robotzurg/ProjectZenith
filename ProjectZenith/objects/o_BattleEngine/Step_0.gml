@@ -109,10 +109,10 @@ for (var en = 0; en < global.enemycount; en++) {
 }
 
 //If all the players turns are done, pick a random enemy and begin the enemies turns
-if (turnsdone == global.partycount) && global.currentturn == "Players" {
+if (turnsdone == global.partycount) && global.currentturn == "Players" && totaldead != global.enemycount {
 	global.currentturn = "Enemies";
 	var enemypick = irandom_range(1,global.enemycount-1);
-	global.enemyfocus = global.enemyparty[enemypick];
+	global.enemyfocus = enID[enemypick]
 	for (var i = 0;i<global.partycount;i++) { //Set all the players turns to done, just in case
 		plrID[i].turndone = false;	
 	}
