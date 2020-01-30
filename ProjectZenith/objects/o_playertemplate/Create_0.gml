@@ -20,6 +20,7 @@ selection = "none";
 target = "none";
 turndone = false;
 show_details = false;
+dead = false;
 
 //MVP Calculations
 dmgdealt = 0;

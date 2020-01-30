@@ -2,7 +2,7 @@
     "id": "8be669e0-68bd-48eb-893f-de708a6dd8e6",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_battletemplate",
+    "name": "o_playertemplate",
     "eventList": [
         {
             "id": "5eaba2f1-5788-428d-976c-9a719af429dd",

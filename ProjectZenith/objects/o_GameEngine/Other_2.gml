@@ -1,15 +1,14 @@
-randomize();
+randomize(); //Randomize the seed, to make every open of the game have different RNG
 global.transition = "none";
 global.state = "platformer";
 global.charfocus = char.battleplayer1;
 global.currentturn = "Players";
 global.enemycount = 1;
-global.enemytype = o_parentenemy;
+global.enemytype = o_enemytemplate;
 global.enemytokill = o_enemy;
 global.battledone = false
 global.camera_focus = o_player;
 global.dialogue_disable = false;
-
 global.d_mouse_x = device_mouse_x_to_gui(0);
 global.d_mouse_y = device_mouse_y_to_gui(0);
 global.window_width = RES_W * RES_SCALE;
@@ -26,6 +25,7 @@ vicfocus = 0;
 xpdelay = 60;
 fillxp = false;
 xpfilled = false;
+newroom = false;
 
 //Set up data storage data structures for party members
 global.party_members = ds_list_create();
@@ -69,8 +69,8 @@ setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9sli
 setup_character(emptymap,9999,"Nobody.",s_player,s_9slice,0,0,o_swordicon,0,100,1,100,100,100,100,s_testportrait,s_9sliceselect);
 
 //Set up enemy data 
-setup_enemy(en1map, enemy.blueboy, "Blue Boy", s_enemy, s_9slicep2, 1000, 2, 1, 10, 10, 5, 5);
-setup_enemy(en2map, enemy.pinkgirl, "Pink Girl", s_testenemy2, s_9slice, 1000, 2, 1, 15, 15, 10, 10);
+setup_enemy(en1map, enemy.blueboy, "Blue Boy", s_enemy, s_9slicep2, 2, 2, 1, 10, 10, 5, 5);
+setup_enemy(en2map, enemy.pinkgirl, "Pink Girl", s_testenemy2, s_9slice, 3, 2, 1, 15, 15, 10, 10);
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);

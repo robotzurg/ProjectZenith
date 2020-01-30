@@ -13,8 +13,8 @@ draw_text(room_width-85,15,"Glitch");
 nine_slice_box_stretch(par[? "textbox_spr"],0,420,260,540); //Player Data Textbox
 draw_sprite(par[? "portrait"],0,50,490);
 draw_text(15,424,par[? "name"]);
-draw_text_transformed(100,450,"HP: " + string(par[? "hp"]) + "/" + string(par[? "max_hp"]),0.8,0.8,0);
-draw_text_transformed(100,470,"MP: " + string(par[? "mp"]) + "/" + string(par[? "max_mp"]),0.8,0.8,0);
+draw_text_transformed(100,450,"HP: " + string(plrID[foc].hp) + "/" + string(par[? "max_hp"]),0.8,0.8,0);
+draw_text_transformed(100,470,"MP: " + string(plrID[foc].mp) + "/" + string(par[? "max_mp"]),0.8,0.8,0);
 draw_text_transformed(100,490,"Strength: " + string(par[? "str"]),0.8,0.8,0);
 draw_text_transformed(100,510,"Defense: " + string(par[? "def"]),0.8,0.8,0);
 

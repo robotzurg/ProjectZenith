@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 x = focus.x+30;
 y = focus.y-focus.sprite_height
 

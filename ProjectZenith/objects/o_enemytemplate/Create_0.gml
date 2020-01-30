@@ -1,6 +1,5 @@
 ID = global.IDtoinsert
 partyID = global.partyIDtoinsert;
-show_debug_message(ID);
 
 var map = global.enemy_list[| ID];
 sprite_index = map[? "spr"];

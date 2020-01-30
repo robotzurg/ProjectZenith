@@ -1,2 +1,9 @@
+is_ext = false;
 text = "No Text Input!";
 a = 1;
+xscale = image_xscale;
+yscale = image_yscale;
+color = image_blend;
+rotation = image_angle;
+speed_ = 0.5;
+duration = 0.02;

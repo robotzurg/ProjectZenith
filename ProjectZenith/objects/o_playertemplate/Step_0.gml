@@ -1,4 +1,21 @@
-if turndone = false {
+if global.currentturn == "Players" && selection == "none" && global.charfocus == partyID {
+	if turndone == true {
+		show_debug_message(string(id) + " Player's turn already done, picking next player");
+		pick_next_player();
+	}
+	
+	if dead == true {
+		show_debug_message(string(id) + " Player is dead, picking next player");
+		pick_next_player();
+	}
+}
+
+if dead == true {
+	image_index = 1;	
+	turndone = true;
+}
+
+if turndone == false && dead == false {
 if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
 	o_BattleEngine.plrID[global.charfocus].selection = "none";
 	o_BattleEngine.plrID[global.charfocus].target = "none";
@@ -7,11 +24,16 @@ if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,glob
 }
 
 if position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
-	image_index = 1;
 	if mouse_check_button_pressed(mb_right) { show_details = !show_details };
-} else {
-	image_index = 0;	
+} else {	
 	if mouse_check_button_pressed(mb_right) or mouse_check_button_pressed(mb_left) { show_details = false };
+}
+
+
+if selection != "none" and target != "none" and turndone = false {
+	instance_create_layer(x+50,y,"Instances",o_swordswing);
+	o_swordswing.user = id;
+	o_swordswing.usertype = "Player";
 }
 
 switch (selection) {
@@ -19,10 +41,10 @@ switch (selection) {
 	if target != "none" {
 		target.hp -= str;
 		dmgdealt += str;
-		create_fade_text(target.x-50,target.y,str);
+		draw_fade_text(target.x-50,target.y,str);
 		if target.hp <= 0 {
 			target.dead = true;
-			o_BattleEngine.totaldead += 1;
+			o_BattleEngine.enemytotaldead += 1;
 			target.hp = 0;
 			for (var i = 0; i < 4; i++) {
 				if killedenemy[i] = 0 {
@@ -36,17 +58,11 @@ switch (selection) {
 		selection = "none";
 		target = "none";
 		if o_BattleEngine.turnsdone != global.partycount {
-			for (var roll = 0; o_BattleEngine.plrID[global.charfocus].turndone = true; roll ++) {
-				global.charfocus = roll
-			}
+			instance_deactivate_object(o_iconparent)
+			show_debug_message(string(id)  + " Picking next player.");
+			pick_next_player();
 		}
 	}
 	break;
 }
-}
-
-if selection != "none" and target != "none" and turndone = false {
-	instance_create_layer(x+50,y,"Instances",o_swordswing);
-	o_swordswing.user = id;
-	o_swordswing.usertype = "Player";
 }

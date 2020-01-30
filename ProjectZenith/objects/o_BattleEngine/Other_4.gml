@@ -15,7 +15,8 @@ runselect = par[? "textbox_spr"];
 glitchselect = par[? "textbox_spr"];
 menu_open = "none";
 turnsdone = 0;
-totaldead = 0;
+enemytotaldead = 0;
+playertotaldead = 0;
 o_GameEngine.vicfocus = 0;
 global.currentturn = "Players";
 for (var plr = 0; plr < global.partycount; plr++) {
@@ -48,7 +49,7 @@ for (var i=0;i<global.enemycount;i++) {
 	create_enemyparty(i);
 }
 
-//Set enemy focus (USES LEGACY SYSTEM!)
+//Set enemy focus
 global.enemyfocus = enID[0];
 
 } //End of if room = rm_battle

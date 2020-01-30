@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 if menufoc == "party" {
 //Data Extraction Variables for each party member
 var char1 = global.currentparty[| 0];

@@ -1,5 +1,5 @@
 draw_self();
-if turndone == true {
+if turndone == true && dead == false {
 	draw_sprite(s_turndoneicon,0,x-50,y-40);
 }
 

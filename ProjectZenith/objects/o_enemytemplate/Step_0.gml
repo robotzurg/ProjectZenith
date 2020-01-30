@@ -1,13 +1,13 @@
-if global.currentturn = "Players" {
+if global.currentturn == "Players" {
 	turndone = false;	
 }
 
-if turndone == true && global.enemyfocus = self && global.currentturn = "Enemies" && selection = "none" {
+if turndone == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection == "none" {
 	show_debug_message(string(id) + " Enemy's turn already done, picking next enemy");
 	pick_next_enemy();
 }
 
-if dead == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection = "none" {
+if dead == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection == "none" {
 	show_debug_message(string(id) + " Enemy is dead, picking next enemy");
 	pick_next_enemy();
 }
@@ -32,8 +32,6 @@ if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,glob
 	}
 }
 
-
-
 if global.currentturn == "Enemies" && global.enemyfocus == self && selection == "none" && turndone == false  {
 	show_debug_message(string(id) + " I'm Attacking!");
 	target = irandom_range(0,global.partycount-1);
@@ -45,22 +43,33 @@ if delay > 0 {
 	delay -= 1	
 } else {
 	if selection = "attack" {
-		var target = irandom_range(0,global.partycount-1);
-		o_BattleEngine.plrID[target].hp -= str;
-		create_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,str);
-		instance_create_layer(x-32,y,"Instances",o_swordswing);
-		o_swordswing.user = self;
-		o_swordswing.usertype = "Enemy";
-		selection = "wait";
-		delay = 60;
-		turndone = true;
-		o_BattleEngine.turnsdone += 1;
-		show_debug_message("Turns Done: " + string(o_BattleEngine.turnsdone))
-		show_debug_message("Max Turns: " + string(global.enemycount-o_BattleEngine.totaldead));
-		show_debug_message(string(id) +" Attack Finished.");
+		var roll = pick_next_target();
+		if roll == false {
+			exit; //If the target we picked is dead, cut back to the start of the code so that we can try again.
+		} else {
+			o_BattleEngine.plrID[target].hp -= str;
+			if o_BattleEngine.plrID[target].hp <= 0 {
+				o_BattleEngine.plrID[target].dead = true;
+				o_BattleEngine.playertotaldead += 1;
+				show_debug_message("Player Killed.");
+			}
+			draw_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,str);
+			instance_create_layer(x-32,y,"Instances",o_swordswing);
+			o_swordswing.user = self;
+			o_swordswing.usertype = "Enemy";
+			selection = "wait";
+			delay = 60;
+			turndone = true;
+			o_BattleEngine.turnsdone += 1;
+			
+			//Paste info to the console, for debugging
+			show_debug_message("Turns Done: " + string(o_BattleEngine.turnsdone))
+			show_debug_message("Max Turns: " + string(global.enemycount-o_BattleEngine.enemytotaldead));
+			show_debug_message(string(id) +" Attack Finished.");
+		}
 	} else if selection = "wait" {
 		selection = "none";
-		if o_BattleEngine.turnsdone != global.enemycount-o_BattleEngine.totaldead { 
+		if o_BattleEngine.turnsdone != global.enemycount-o_BattleEngine.enemytotaldead { 
 			show_debug_message(string(id)  + " Picking next enemy.");
 			pick_next_enemy();
 		} else {

@@ -1,33 +1,24 @@
-//create_party(pos);
+//create_enemyparty(pos);
 ///@param pos
-
 var ex = 720;
 var ey = 175;
-var xx = 0;
 var pos = argument0;
 
 var map = global.enemyparty[| pos]
 global.IDtoinsert = map[? "id"];
 global.partyIDtoinsert = pos;
 switch (global.enemycount) {
-	case 1:	var en_inst = instance_create_layer(ex+40,ey+15+(96*pos),"Instances",o_parentenemy); break;
-	case 2:	var en_inst = instance_create_layer(ex+40,ey-35+(111*pos),"Instances",o_parentenemy); break;
-	case 3:	var en_inst = instance_create_layer(ex+40,ey-85+(111*pos),"Instances",o_parentenemy); break;
-	case 4:
-		if pos = 0 {
-			var en_inst = instance_create_layer(ex-2,ey-115+(100*pos),"Instances",o_parentenemy); 
-		} else if pos = 1 or pos = 2 {
-			var en_inst = instance_create_layer(ex+30,ey-115+(100*pos),"Instances",o_parentenemy); 
-		} else if pos = 3 {
-			var en_inst = instance_create_layer(ex-2,ey-115+(100*pos),"Instances",o_parentenemy); 	
-		} break;
+	case 1:	var en_inst = instance_create_layer(ex+40,ey+55+(96*pos),"Instances",o_enemytemplate); break;
+	case 2:	var en_inst = instance_create_layer(ex+40,ey+(111*pos),"Instances",o_enemytemplate); break;
+	case 3:	var en_inst = instance_create_layer(ex+40,ey-65+(111*pos),"Instances",o_enemytemplate); break;
+	case 4: var en_inst = instance_create_layer(ex+40,ey-95+(100*pos),"Instances",o_enemytemplate); break;
 	case 5:
 		if pos < 3 {
-			var en_inst = instance_create_layer(ex,ey-85+(111*pos),"Instances",o_parentenemy); 
+			var en_inst = instance_create_layer(ex,ey-65+(111*pos),"Instances",o_enemytemplate); 
 		} else {
-			var en_inst = instance_create_layer(ex+100,ey-35+(115*xx),"Instances",o_parentenemy); 	
-			xx++;
-		} break		
+			show_debug_message("outwards");
+			var en_inst = instance_create_layer(ex+100,ey-350+(111*pos),"Instances",o_enemytemplate); 	
+		} break;
 	}
 
 enID[pos] = en_inst.id;

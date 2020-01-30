@@ -1,3 +1,4 @@
+
 //Set data extraction variables
 var foc = global.charfocus;
 var par = global.currentparty[| foc];
@@ -99,7 +100,8 @@ for (var plr = 0; plr < global.partycount; plr++) {
 	}
 }
 
-//Move up the focused enemy with a lerp
+/*//Move up the focused enemy with a lerp
+if global.enemycount != 5 {
 for (var en = 0; en < global.enemycount; en++) {
 	if global.charfocus == enID[en] && global.charfocus.dead == false {	
 		global.charfocus.x = lerp(global.charfocus.x,720,0.3);
@@ -107,11 +109,12 @@ for (var en = 0; en < global.enemycount; en++) {
 		enID[en].x = lerp(enID[en].x,760,0.3); 
 	}
 }
+}*/
 
 //If all the players turns are done, pick a random enemy and begin the enemies turns
-if (turnsdone == global.partycount) && global.currentturn == "Players" && totaldead != global.enemycount {
+if (turnsdone == global.partycount-playertotaldead) && global.currentturn == "Players" && enemytotaldead != global.enemycount {
 	global.currentturn = "Enemies";
-	var enemypick = irandom_range(1,global.enemycount-1);
+	var enemypick = irandom_range(0,global.enemycount-1);
 	global.enemyfocus = enID[enemypick]
 	for (var i = 0;i<global.partycount;i++) { //Set all the players turns to done, just in case
 		plrID[i].turndone = false;	
@@ -119,7 +122,7 @@ if (turnsdone == global.partycount) && global.currentturn == "Players" && totald
 	turnsdone = 0; //Reset the turns done for the enemies turns
 }
 
-if totaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" { //If the battle is over but we aren't on the Victory or Results screen yet
+if enemytotaldead == global.enemycount && global.currentturn != "Victory" && global.currentturn != "End" && global.currentturn != "Results" { //If the battle is over but we aren't on the Victory or Results screen yet
 	//Check and change MVP based on the battle
 	var mvpcheck;
 	for (var ii = 0; ii<global.partycount;ii++) {
@@ -140,7 +143,11 @@ if totaldead == global.enemycount && global.currentturn != "Victory" && global.c
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
 	global.currentturn = "Victory";
+	
 }
 
-show_debug_message(atky1)
-show_debug_message(atky2)
+//If all party members are dead
+if playertotaldead == global.partycount {
+	trans_to_room(testroom,"run1");
+	global.battledone = true;
+}

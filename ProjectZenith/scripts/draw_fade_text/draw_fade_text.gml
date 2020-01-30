@@ -1,7 +1,7 @@
-///create_fade_text(x,y,text);
+///draw_fade_text(x,y,text);
 ///@param x
 ///@param y
-///@param text;
+///@param text
 
 var xx = argument0;
 var yy = argument1;

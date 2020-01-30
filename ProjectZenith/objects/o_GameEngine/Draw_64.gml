@@ -3,12 +3,19 @@
 var foc = vicfocus
 var par = global.currentparty[| foc];
 
+//Draw text whenever we enter a new room
+/*if (newroom == true) && room != rm_battle {
+	draw_fade_text_ext(global.window_width/2,global.window_height/2,string(global.currentroom),2,2,0,c_white,0.15,0.008);
+	newroom = false;	
+}*/ 
+//Add this ^ later
+
 //Draw the dimmed background
 draw_set_alpha(backalpha);
 draw_rectangle_color(0,0,global.window_width,global.window_height,c_black,c_black,c_black,c_black,false);
 draw_set_alpha(1);
 
-
+//Victory Screen drawing
 if room = rm_battle {
 if (global.currentturn = "Victory") or (global.currentturn = "End") or (global.currentturn = "Results") { //If the battle is over
 for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party member
@@ -18,7 +25,7 @@ for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party mem
 		draw_sprite_ext(o_BattleEngine.plrID[i].sprite_index, 0, global.partyvicx[i], global.partyvicy[i],global.partyvicscale[i],global.partyvicscale[i],0,c_white,1);
 		
 		draw_set_halign(fa_center); //Center everything
-			//Draw details about the character such as MVP, EXP +, and Name and Level
+			//Draw details about the character such as MVP, EXP, Name and Level
 			if global.partyvicMVP == o_BattleEngine.plrID[i] {
 				draw_text_transformed(global.partyvicx[i],global.partyvicy[i]-170,"MVP",1.5,1.5,0);
 			}
@@ -34,7 +41,7 @@ for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party mem
 						if par[? "xp"] >= par[? "max_xp"] {
 							par[? "level"] += 1;
 							par[? "xp"] = 0;
-							create_fade_text(global.partyvicx[i]+80,global.partyvicy[i]-80,"Level Up!");
+							draw_fade_text(global.partyvicx[i]+80,global.partyvicy[i]-80,"Level Up!");
 							}
 					} else {
 						xpfilled = true;

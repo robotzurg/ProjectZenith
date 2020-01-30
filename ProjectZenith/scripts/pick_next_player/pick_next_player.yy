@@ -1,8 +1,8 @@
 {
-    "id": "50c24ccd-3c3d-4755-8fd6-d5ace56d2b7a",
+    "id": "c1151be5-f084-4a40-902f-72695c7b968a",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "create_fade_text",
+    "name": "pick_next_player",
     "IsCompatibility": false,
     "IsDnD": false
 }

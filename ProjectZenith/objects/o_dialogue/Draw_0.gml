@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 draw_set_font(fnt_textbox);
 nine_slice_box_stretch(s_9slice,focus.x+22,focus.y-focus.sprite_height+20,focus.x+40,focus.y-focus.sprite_height+40);
 nine_slice_box_stretch(s_9slice,focus.x+22,focus.y-focus.sprite_height-15,focus.x+string_width(message[message_current])+40,focus.y-focus.sprite_height+30);

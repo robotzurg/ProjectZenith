@@ -14,3 +14,5 @@ if room = rm_battle {
 }
 
 xpdelay = 60;
+
+newroom = true;
