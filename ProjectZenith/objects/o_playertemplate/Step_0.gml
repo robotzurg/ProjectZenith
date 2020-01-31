@@ -39,9 +39,18 @@ if selection != "none" and target != "none" and turndone = false {
 switch (selection) {
 	case "attack": 
 	if target != "none" {
-		target.hp -= str;
-		dmgdealt += str;
-		draw_fade_text(target.x-50,target.y,str);
+		var damage = str;
+		var crit = false;
+		if (chance(crit_chance)) { 
+			damage = str*2; 
+			show_debug_message(damage); 
+			crit = true;
+		}
+		
+		target.hp -= damage
+		dmgdealt += damage
+		if crit == false { draw_fade_text(target.x-50,target.y,damage); } else { draw_fade_text(target.x-50,target.y,"Critical Hit! " + string(damage)); }
+		
 		if target.hp <= 0 {
 			target.dead = true;
 			o_BattleEngine.enemytotaldead += 1;

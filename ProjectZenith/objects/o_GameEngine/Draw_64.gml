@@ -4,10 +4,10 @@ var foc = vicfocus
 var par = global.currentparty[| foc];
 
 //Draw text whenever we enter a new room
-/*if (newroom == true) && room != rm_battle {
+if (newroom == true) && room != rm_battle {
 	draw_fade_text_ext(global.window_width/2,global.window_height/2,string(global.currentroom),2,2,0,c_white,0.15,0.008);
 	newroom = false;	
-}*/ 
+}
 //Add this ^ later
 
 //Draw the dimmed background

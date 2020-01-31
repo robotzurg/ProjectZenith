@@ -14,6 +14,7 @@ portrait = map[? "portrait"];
 textboxspr = map[? "textbox_spr"];
 currentxp = map[? "xp"];
 wepequipped = map[? "wep_equipped"];
+crit_chance = map[? "crit_chance"];
 buff = status.none;
 debuff = status.none;
 selection = "none";
