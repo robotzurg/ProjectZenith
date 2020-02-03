@@ -1,4 +1,4 @@
-
+if (live_call()) return live_result;
 if menufoc == "party" {
 //Data Extraction Variables for each party member
 var char1 = global.currentparty[| 0];
@@ -15,16 +15,25 @@ draw_set_halign(fa_center);
 draw_text_transformed(wmid-250,hmid-180,"#1",1.5,1.5,0);
 if char1 != 0 {
 	draw_text_transformed(wmid-250,hmid+40,char1[? "name"],1,1,0);
+	draw_rectangle(wmid-200,hmid-130,wmid-150,hmid-80,true);
+	draw_rectangle(wmid-200,hmid-70,wmid-150,hmid-20,true);
+	draw_sprite(s_partywepicon,0,wmid-173,hmid-45);
 }
 
 draw_text_transformed(wmid,hmid-180,"#2",1.5,1.5,0);
 if char2 != 0 {
 	draw_text_transformed(wmid,hmid+40,char2[? "name"],1,1,0);
+	draw_rectangle(wmid+50,hmid-130,wmid+100,hmid-80,true);
+	draw_rectangle(wmid+50,hmid-70,wmid+100,hmid-20,true);
+	draw_sprite(s_partywepicon,0,wmid+77,hmid-45);
 }
 
 draw_text_transformed(wmid+250,hmid-180,"#3",1.5,1.5,0);
 if char3 != 0 {
 	draw_text_transformed(wmid+250,hmid+40,char3[? "name"],1,1,0);
+	draw_rectangle(wmid+300,hmid-130,wmid+350,hmid-80,true);
+	draw_rectangle(wmid+300,hmid-70,wmid+350,hmid-20,true);
+	draw_sprite(s_partywepicon,0,wmid+327,hmid-45);
 }
 
 draw_set_halign(fa_left);

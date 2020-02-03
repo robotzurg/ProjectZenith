@@ -1,4 +1,4 @@
-//setup_character(id, name, sprite, textbox_sprite, strength, defense, weapon_equipped, xp, max_xp, level, hp, max_hp, mp, max_mp, portrait, textbox_spr_hover);
+//setup_character(id, name, sprite, textbox_sprite, strength, defense, weapon_equipped, xp, max_xp, level, hp, max_hp, mp, max_mp, portrait, textbox_spr_hover, crit_chance);
 ///@param map
 ///@param id
 ///@param name
@@ -16,6 +16,7 @@
 ///@param maxmp
 ///@param portrait
 ///@param textbox_sprite_hover
+///@param crit_chance
 
 var map = argument[0];
 var char_id = argument[1];
@@ -34,6 +35,7 @@ var mp = argument[13];
 var max_mp = argument[14];
 var portrait = argument[15];
 var textbox_spr_hover = argument[16];
+var crit_chance = argument[17];
 
 ds_map_add(map, "map", map);
 ds_map_add(map, "id", char_id);
@@ -52,3 +54,4 @@ ds_map_add(map, "mp", mp);
 ds_map_add(map, "max_mp", max_mp);
 ds_map_add(map, "portrait", portrait);
 ds_map_add(map, "textbox_spr_hover", textbox_spr_hover);
+ds_map_add(map, "crit_chance", crit_chance);
