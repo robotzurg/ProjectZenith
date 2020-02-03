@@ -44,3 +44,11 @@ if place_meeting(x,y+vspd,o_collision) {
 y += vspd;
 
 }
+
+if instance_exists(o_sign) {
+	if position_meeting(x,y,o_sign) {
+		o_sign.show_popup = true;	
+	} else {
+		o_sign.show_popup = false;	
+	}
+}

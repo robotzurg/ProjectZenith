@@ -29,5 +29,15 @@ var window_height = RES_H * RES_SCALE;
 
 window_set_position(display_width/2 - window_width/2, display_height/2 - window_height/2);
 
+//Set camera position
+var camW = camera_get_view_width(camera);
+var camH = camera_get_view_height(camera);
+var targetX =o_player.x - camW/2;
+var targetY = o_player.y - camH/2-50;
+
+camera_set_view_pos(camera, targetX, targetY);
+
 global.d_mouse_x_previous = device_mouse_x_to_gui(0)
 global.d_mouse_y_previous = device_mouse_y_to_gui(0);
+
+show_debug_message("camera created.");
