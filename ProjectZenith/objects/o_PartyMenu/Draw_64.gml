@@ -17,7 +17,8 @@ if char1 != 0 {
 	draw_text_transformed(wmid-250,hmid+40,char1[? "name"],1,1,0);
 	draw_rectangle(wmid-200,hmid-130,wmid-150,hmid-80,true);
 	draw_rectangle(wmid-200,hmid-70,wmid-150,hmid-20,true);
-	draw_sprite(s_partywepicon,0,wmid-173,hmid-45);
+	draw_sprite(weptosprite(char1[? "wep_equipped"]),0,wmid-189,hmid-120);
+	draw_sprite(s_partywepicon,0,wmid-189,hmid-60);
 }
 
 draw_text_transformed(wmid,hmid-180,"#2",1.5,1.5,0);
@@ -25,7 +26,8 @@ if char2 != 0 {
 	draw_text_transformed(wmid,hmid+40,char2[? "name"],1,1,0);
 	draw_rectangle(wmid+50,hmid-130,wmid+100,hmid-80,true);
 	draw_rectangle(wmid+50,hmid-70,wmid+100,hmid-20,true);
-	draw_sprite(s_partywepicon,0,wmid+77,hmid-45);
+	draw_sprite(weptosprite(char2[? "wep_equipped"]),0,wmid+61,hmid-120);
+	draw_sprite(s_partywepicon,0,wmid+61,hmid-60);
 }
 
 draw_text_transformed(wmid+250,hmid-180,"#3",1.5,1.5,0);
@@ -33,13 +35,18 @@ if char3 != 0 {
 	draw_text_transformed(wmid+250,hmid+40,char3[? "name"],1,1,0);
 	draw_rectangle(wmid+300,hmid-130,wmid+350,hmid-80,true);
 	draw_rectangle(wmid+300,hmid-70,wmid+350,hmid-20,true);
-	draw_sprite(s_partywepicon,0,wmid+327,hmid-45);
+	draw_sprite(weptosprite(char3[? "wep_equipped"]),0,wmid+311,hmid-120);
+	draw_sprite(s_partywepicon,0,wmid+311,hmid-60);
 }
 
 draw_set_halign(fa_left);
 
 //Draw the box for the extra players
 draw_rectangle(25,365,935,515,true);
+draw_rectangle(25,325,65,365,true);
+draw_sprite(s_partymemicon,((membox=="party") ? 1 : 0),30,330);
+draw_rectangle(70,325,110,365,true);
+draw_sprite(s_partywepicon,((membox=="wep") ? 1 : 0),75,330)
 
 
 } else {

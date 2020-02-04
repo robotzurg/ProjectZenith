@@ -24,7 +24,7 @@ camX = lerp(camX, targetX, CAM_SMOOTH);
 camY = lerp(camY, targetY, CAM_SMOOTH);
 }
 
-var wheel = mouse_wheel_down() - mouse_wheel_up();
+/*var wheel = mouse_wheel_down() - mouse_wheel_up();
 if (wheel != 0) {
 	wheel *= 0.2;
 	
@@ -38,7 +38,7 @@ if (wheel != 0) {
 	//Position
 	camX -= addW / 2;
 	camY -= addH / 2;
-}
+}*/
 
 //Apply camera position
 camera_set_view_pos(camera, camX, camY);

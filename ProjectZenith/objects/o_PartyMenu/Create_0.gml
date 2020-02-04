@@ -1,5 +1,6 @@
 global.holding = -2;
 menufoc = "pause";
+membox = "party";
 scale[0] = 1;
 scale[1] = 1;
 scale[2] = 1;

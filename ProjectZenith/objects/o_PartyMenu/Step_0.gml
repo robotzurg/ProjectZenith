@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 //Leave the party select menu and activate all the instances again
 if keyboard_check_pressed(vk_escape) {
 	instance_destroy();	
@@ -58,4 +59,16 @@ if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,global.window_width/2-50
 	
 } else {
 	instance_activate_object(o_PartyMemberSelect);	
+	
+	if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,25,325,65,365) {
+		if click {
+			membox = "party";
+		}
+	}
+	
+	if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,70,325,110,365) {
+		if click {
+			membox = "wep";
+		}
+	}
 }

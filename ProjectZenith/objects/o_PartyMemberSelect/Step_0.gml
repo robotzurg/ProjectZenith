@@ -23,7 +23,7 @@ if (held_click) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) && g
 if mouse_check_button_released(mb_left) && picked_up == true {
 	picked_up = false;
 	global.holding = -2;
-	if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,25,365,935,515) && backstock == false && global.partycount > 1 {
+	if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,25,365,935,515) && backstock == false && global.partycount > 1 && o_PartyMenu.membox == "party" {
 		var _val = global.currentparty[| partyID];
 		var _valID = _val[? "id"];
 		ds_list_delete(global.currentparty, partyID);
@@ -33,7 +33,7 @@ if mouse_check_button_released(mb_left) && picked_up == true {
 		global.partycount -= 1;
 		backstock = true;
 		partyID = -1;
-	} else if backstock == true {
+	} else if backstock == true && o_PartyMenu.membox == "party" {
 		
 		 if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,150,90,305,350) {
 			backstock = false;	
