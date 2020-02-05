@@ -1,4 +1,11 @@
 //Party Menu code for o_iconparent
+if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,25,365,935,515) && backstock == false && o_PartyMenu.membox == "wep" {
+	
+}
+
+
+
+
 
 
 

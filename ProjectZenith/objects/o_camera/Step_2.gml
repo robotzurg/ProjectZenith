@@ -1,3 +1,4 @@
+if room != rm_battle {
 //Get current camera position
 var camX = camera_get_view_x(camera)
 var camY = camera_get_view_y(camera)
@@ -46,4 +47,4 @@ camera_set_view_size(camera, camW, camH);
 
 global.d_mouse_x_previous = device_mouse_x_to_gui(0);
 global.d_mouse_y_previous = device_mouse_y_to_gui(0);
-
+}

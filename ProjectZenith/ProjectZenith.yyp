@@ -759,6 +759,14 @@
             }
         },
         {
+            "Key": "ca39f7dc-1c29-433e-9c21-6e7d0c3f5f92",
+            "Value": {
+                "id": "2c858d96-3104-4b12-b5fa-3a2cbdb4e4ca",
+                "resourcePath": "sprites\\s_demonboss\\s_demonboss.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "ca5c06ee-0474-4a33-8dbf-cb3d86aaa92b",
             "Value": {
                 "id": "d7fb7791-78c4-4f84-adab-8bf2cfcab45c",
