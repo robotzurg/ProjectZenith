@@ -17,3 +17,7 @@ enum enemy {
 	blueboy,
 	pinkgirl,
 }
+
+enum boss {
+	demonboss
+}
