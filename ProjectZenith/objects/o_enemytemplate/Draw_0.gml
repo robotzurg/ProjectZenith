@@ -3,7 +3,7 @@ draw_self();
 var pc;
 pc = (hp / maxhp) * 100;
 
-draw_healthbar(x-25,y+50,x+25,y+40,pc,c_gray,c_red,c_red,0,true,true);
+draw_healthbar(x-25,y+50,x+25,sprite_height+40,pc,c_gray,c_red,c_red,0,true,true);
 
 if global.currentturn == "Players" && o_BattleEngine.plrID[global.charfocus].selection == "attack" && position_meeting(global.d_mouse_x,global.d_mouse_y,self) && dead == false {
 	draw_sprite(s_targeticon,0,x,y);
