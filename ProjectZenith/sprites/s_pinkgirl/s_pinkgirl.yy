@@ -2,7 +2,7 @@
     "id": "35e9ddf3-c085-4ca2-a2b8-005ff7c57d3d",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_testenemy2",
+    "name": "s_pinkgirl",
     "For3D": false,
     "HTile": false,
     "VTile": false,

@@ -44,12 +44,12 @@ ds_list_mark_as_map(global.party_members,3);
 
 //Set up enemy characters
 global.enemy_list = ds_list_create();
-en1map = ds_map_create();
-en2map = ds_map_create();
-ds_list_add(global.enemy_list,en1map);
-ds_list_mark_as_map(global.enemy_list,en1map)
-ds_list_add(global.enemy_list,en2map);
-ds_list_mark_as_map(global.enemy_list,en2map)
+bbmap = ds_map_create();
+pgmap = ds_map_create();
+ds_list_add(global.enemy_list,bbmap);
+ds_list_mark_as_map(global.enemy_list,bbmap)
+ds_list_add(global.enemy_list,pgmap);
+ds_list_mark_as_map(global.enemy_list,pgmap)
 
 
 //Set up data storage data strcutures for CURRENT party members
@@ -77,8 +77,8 @@ setup_character(char3map,char.battleplayer3,"Battle Player 3", s_player3, s_9sli
 setup_character(emptymap,9999,"Nobody.",s_player,s_9slice,0,0,o_swordicon,0,100,1,100,100,100,100,s_testportrait,s_9sliceselect, 10);
 
 //Set up enemy data 
-setup_enemy(en1map, enemy.blueboy, "Blue Boy", s_demonboss, s_9slicep2, 2, 2, 1, 10, 10, 5, 5);
-setup_enemy(en2map, enemy.pinkgirl, "Pink Girl", s_testenemy2, s_9slice, 3, 2, 1, 15, 15, 10, 10);
+setup_enemy(bbmap, enemy.blueboy, "Blue Boy", s_blueboy, s_9slicep2, 2, 2, 1, 10, 10, 5, 5);
+setup_enemy(pgmap, enemy.pinkgirl, "Pink Girl", s_pinkgirl, s_9slice, 3, 2, 1, 15, 15, 10, 10);
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);
@@ -95,4 +95,3 @@ for (var i = 0; i < global.partycount; i++) {
 }
 
 draw_set_font(fnt_battle);
-

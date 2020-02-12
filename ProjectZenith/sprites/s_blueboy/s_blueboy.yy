@@ -2,7 +2,7 @@
     "id": "a993b279-d428-4efc-9aff-7da298b543bb",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "s_enemy",
+    "name": "s_blueboy",
     "For3D": false,
     "HTile": false,
     "VTile": false,

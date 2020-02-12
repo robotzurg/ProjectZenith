@@ -5,16 +5,6 @@
     "name": "o_GameEngine",
     "eventList": [
         {
-            "id": "43aa8cf1-7aa0-4b5f-968c-ecb4279cba39",
-            "modelName": "GMEvent",
-            "mvc": "1.0",
-            "IsDnD": false,
-            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
-            "enumb": 2,
-            "eventtype": 7,
-            "m_owner": "67ac659a-0456-45a9-9557-9219211d0e2f"
-        },
-        {
             "id": "6270c96a-51a2-4cfb-be47-948ecf6dd583",
             "modelName": "GMEvent",
             "mvc": "1.0",
@@ -51,6 +41,16 @@
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 4,
+            "eventtype": 7,
+            "m_owner": "67ac659a-0456-45a9-9557-9219211d0e2f"
+        },
+        {
+            "id": "95ad8598-bc3a-4824-b785-c41f87a200ad",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 2,
             "eventtype": 7,
             "m_owner": "67ac659a-0456-45a9-9557-9219211d0e2f"
         }
