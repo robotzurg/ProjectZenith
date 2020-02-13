@@ -3,12 +3,13 @@ if timer != 0 {
 } else {
 	position += 1;
 	switch position {
-		case 1:	var amt = 240;
+		case 1:	var amt = 360;
 		display = 0;
-		texty = 400;
+		texty = 450;
 		textdisplay = "There once lived a race of shadow people." break;
-		case 2:  var amt = 720; 
-		display = 1;break;
+		case 2:  var amt = 360; 
+		display = 1;
+		textdisplay = "Then their houses burned down :(" break;
 		case 3: room_goto(testroom) exit;
 	}
 	timer = amt;

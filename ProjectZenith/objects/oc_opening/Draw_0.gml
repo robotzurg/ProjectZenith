@@ -6,5 +6,5 @@ if display != "N/A" {
 }
 
 if textdisplay != "N/A" {
-	draw_text_transformed(textx,texty,textdisplay,2,2,0);	
+	draw_text_transformed(textx,texty,textdisplay,1.5,1.5,0);	
 }
