@@ -1,4 +1,8 @@
 ///start_dialogue(object, message_1, message_2, ...)
+///@param object
+///@param message_1
+///@param message_2
+///@param ...
 global.vartoadd[0] = argument[0]; //Add focus to the list of arguments to add.
 global.vartoadd[1] = argument_count-1;  //Grab the amount of messages, subtracting 1 because of the object condition
 
