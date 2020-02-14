@@ -10,15 +10,15 @@ if timer != 0 {
 		case 1:	var amt = 360;
 		texty = 450;
 		textcol = c_white;
-		textdisplay = "There once lived a race of shadow people." break; //Scene 2 (Scene 1 is set up in the CREATE event)
+		textdisplay = "A man has fallen into the river in Lego City!" break; //Scene 2 (Scene 1 is set up in the CREATE event)
 		
 		case 2:  var amt = 360; 
-		textdisplay = "Then their houses burned down :(" break; //Scene 3
+		textdisplay = "Build the rescue helicopter!" break; //Scene 3
 		
 		case 3:  var amt = 360; 
-		textdisplay = "You must save them!" break; //Scene 4
+		textdisplay = "HEY!" break; //Scene 4
 		
-		case 4: room_goto(testroom) exit; //End of Scene
+		case 4: room_goto(rm_overworld) exit; //End of Scene
 		
 	}
 	
@@ -34,7 +34,7 @@ if timer > 30 {
 }
 
 if mouse_check_button_pressed(mb_right) {
-	room_goto(testroom) //Skip cutscene
+	room_goto(rm_overworld) //Skip cutscene
 }
 
 	

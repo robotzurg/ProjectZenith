@@ -375,6 +375,14 @@
             }
         },
         {
+            "Key": "53aadfe6-5d9a-4405-8c36-87adcae2bb16",
+            "Value": {
+                "id": "c4f9dcf4-c989-4b31-bd89-35a163c3d2d4",
+                "resourcePath": "rooms\\rm_overworld\\rm_overworld.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "5978c0fa-b49e-40ba-a94f-ca4c341fe38f",
             "Value": {
                 "id": "49d79566-83be-48eb-85c1-dd6ed0548233",
@@ -652,6 +660,14 @@
                 "id": "93937554-b9c3-4c77-bec1-789cfbb5176e",
                 "resourcePath": "rooms\\rm_battle\\rm_battle.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "a5397618-4173-4d5b-bc61-5b0ac5da46ea",
+            "Value": {
+                "id": "505a34e9-480b-4148-b471-d18042cc17d7",
+                "resourcePath": "sprites\\ts_redbricks\\ts_redbricks.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1004,6 +1020,14 @@
                 "id": "11c08802-50b2-4891-b7db-5e00a5cb514d",
                 "resourcePath": "objects\\o_iconparent\\o_iconparent.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "f9ae157c-70dd-4de0-a481-df007384df08",
+            "Value": {
+                "id": "fa3ed591-a2f7-4a0d-8d06-2d32305872b0",
+                "resourcePath": "tilesets\\tl_bricks\\tl_bricks.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {
