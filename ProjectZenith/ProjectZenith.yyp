@@ -319,6 +319,14 @@
             }
         },
         {
+            "Key": "480e2ca2-01d6-4077-9d6b-8cc8a7ce8706",
+            "Value": {
+                "id": "50803306-ed49-410a-b04e-75dd9c3bfe62",
+                "resourcePath": "sprites\\ts_grass\\ts_grass.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4846b838-066c-446b-bcc7-24f129cbd588",
             "Value": {
                 "id": "15ca8568-3db3-4beb-88ce-7bd7a4bd38df",
@@ -916,6 +924,14 @@
                 "id": "16a379c9-4f62-49b3-8d4f-c33d77c7bde7",
                 "resourcePath": "objects\\o_townsperson\\o_townsperson.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "db4d25e4-b6dc-4310-b97a-093ae1971678",
+            "Value": {
+                "id": "bae4d32e-cc12-4a49-9fd1-2330daf00dd8",
+                "resourcePath": "tilesets\\tl_grass\\tl_grass.yy",
+                "resourceType": "GMTileSet"
             }
         },
         {

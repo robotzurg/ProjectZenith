@@ -3,7 +3,7 @@ if room != rm_battle {
 #macro RES_H 540
 #macro RES_SCALE 1
 
-#macro CAM_SMOOTH 0.1
+#macro CAM_SMOOTH 0.15
 
 view_enabled = true;
 view_visible[0] = true;
