@@ -16,7 +16,7 @@ switch (global.enemycount) {
 		if pos < 3 {
 			var en_inst = instance_create_layer(ex,ey-65+(111*pos),"Instances",o_enemytemplate); 
 		} else {
-			show_debug_message("outwards");
+			print("outwards");
 			var en_inst = instance_create_layer(ex+100,ey-350+(111*pos),"Instances",o_enemytemplate); 	
 		} break;
 	}

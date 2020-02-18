@@ -6,5 +6,5 @@ if global.currentturn = "Players" {
 		option = 0;	
 	}
 	global.charfocus = option;
-	show_debug_message(string(id) + " Picked: " + string(o_BattleEngine.plrID[option]));
+	print(string(id) + " Picked: " + string(o_BattleEngine.plrID[option]));
 }

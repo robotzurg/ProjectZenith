@@ -34,7 +34,7 @@ if timer > 30 {
 }
 
 if mouse_check_button_pressed(mb_right) {
-	room_goto(testroom) //Skip cutscene
+	room_goto(rm_overworld) //Skip cutscene
 }
 
 	
