@@ -63,7 +63,7 @@ global.enemyparty = ds_list_create();
 global.extraparty= ds_list_create();
 
 //Set up data storage data structures for weapon inventory
-global.wepinv = ds_grid_create(1,2);
+global.wepinv = ds_grid_create(5,5);
 ds_grid_add(global.wepinv,0,0,s_swordicon);
 ds_grid_add(global.wepinv,1,0,0); //Quantity of Weapon
 

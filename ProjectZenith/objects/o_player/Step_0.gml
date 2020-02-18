@@ -6,8 +6,6 @@ if global.state == "platformer" && global.dialogue_disable == false {
 	
 hspd = (key_right - key_left) * maxhspd;
 
-show_debug_message(hspd);
-
 if (key_jump) && (on_ground) {
 	vspd = jump_height;
 	on_ground = false;

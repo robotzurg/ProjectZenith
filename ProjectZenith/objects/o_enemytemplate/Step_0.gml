@@ -3,12 +3,12 @@ if global.currentturn == "Players" {
 }
 
 if turndone == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection == "none" {
-	show_debug_message(string(id) + " Enemy's turn already done, picking next enemy");
+	print(string(id) + " Enemy's turn already done, picking next enemy");
 	pick_next_enemy();
 }
 
 if dead == true && global.enemyfocus == self && global.currentturn == "Enemies" && selection == "none" {
-	show_debug_message(string(id) + " Enemy is dead, picking next enemy");
+	print(string(id) + " Enemy is dead, picking next enemy");
 	pick_next_enemy();
 }
 
@@ -33,7 +33,7 @@ if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,glob
 }
 
 if global.currentturn == "Enemies" && global.enemyfocus == self && selection == "none" && turndone == false  {
-	show_debug_message(string(id) + " I'm Attacking!");
+	print(string(id) + " I'm Attacking!");
 	target = irandom_range(0,global.partycount-1);
 	selection = "attack"
 	delay = 60;
@@ -51,7 +51,7 @@ if delay > 0 {
 			if o_BattleEngine.plrID[target].hp <= 0 {
 				o_BattleEngine.plrID[target].dead = true;
 				o_BattleEngine.playertotaldead += 1;
-				show_debug_message("Player Killed.");
+				print("Player Killed.");
 			}
 			draw_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,str);
 			instance_create_layer(x-32,y,"Instances",o_swordswing);
@@ -63,14 +63,14 @@ if delay > 0 {
 			o_BattleEngine.turnsdone += 1;
 			
 			//Paste info to the console, for debugging
-			show_debug_message("Turns Done: " + string(o_BattleEngine.turnsdone))
-			show_debug_message("Max Turns: " + string(global.enemycount-o_BattleEngine.enemytotaldead));
-			show_debug_message(string(id) +" Attack Finished.");
+			print("Turns Done: " + string(o_BattleEngine.turnsdone))
+			print("Max Turns: " + string(global.enemycount-o_BattleEngine.enemytotaldead));
+			print(string(id) +" Attack Finished.");
 		}
 	} else if selection = "wait" {
 		selection = "none";
 		if o_BattleEngine.turnsdone != global.enemycount-o_BattleEngine.enemytotaldead { 
-			show_debug_message(string(id)  + " Picking next enemy.");
+			print(string(id)  + " Picking next enemy.");
 			pick_next_enemy();
 		} else {
 			o_BattleEngine.turnsdone = 0;

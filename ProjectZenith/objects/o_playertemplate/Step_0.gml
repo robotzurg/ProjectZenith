@@ -1,11 +1,11 @@
 if global.currentturn == "Players" && selection == "none" && global.charfocus == partyID {
 	if turndone == true {
-		show_debug_message(string(id) + " Player's turn already done, picking next player");
+		print(string(id) + " Player's turn already done, picking next player");
 		pick_next_player();
 	}
 	
 	if dead == true {
-		show_debug_message(string(id) + " Player is dead, picking next player");
+		print(string(id) + " Player is dead, picking next player");
 		pick_next_player();
 	}
 }
@@ -43,7 +43,7 @@ switch (selection) {
 		var crit = false;
 		if (chance(crit_chance)) { 
 			damage = str*2; 
-			show_debug_message(damage); 
+			print(damage); 
 			crit = true;
 		}
 		
@@ -68,7 +68,7 @@ switch (selection) {
 		target = "none";
 		if o_BattleEngine.turnsdone != global.partycount {
 			instance_deactivate_object(o_iconparent)
-			show_debug_message(string(id)  + " Picking next player.");
+			print(string(id)  + " Picking next player.");
 			pick_next_player();
 		}
 	}

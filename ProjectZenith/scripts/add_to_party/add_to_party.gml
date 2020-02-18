@@ -12,4 +12,4 @@ ds_list_mark_as_map(global.currentparty,pos);
 
 var newloc = global.currentparty[| pos];
 
-show_debug_message("Added " + string(newloc[? "name"]) + " to team!");
+print("Added " + string(newloc[? "name"]) + " to team!");
