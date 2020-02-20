@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 var click = mouse_check_button_pressed(mb_left);
 
 if keyboard_check_pressed(ord("R")) {

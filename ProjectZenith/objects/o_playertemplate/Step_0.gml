@@ -39,14 +39,14 @@ if selection != "none" and target != "none" and turndone = false {
 switch (selection) {
 	case "attack": 
 	if target != "none" {
-		var damage = str;
+		var damage = str - target.def;
 		var crit = false;
 		if (chance(crit_chance)) { 
 			damage = str*2; 
 			print(damage); 
 			crit = true;
 		}
-		
+		if damage < 0 damage = 0;
 		target.hp -= damage
 		dmgdealt += damage
 		if crit == false { draw_fade_text(target.x-50,target.y,damage); } else { draw_fade_text(target.x-50,target.y,"Critical Hit! " + string(damage)); }
@@ -62,16 +62,24 @@ switch (selection) {
 				}
 			}
 		}
-		turndone = true;
-		o_BattleEngine.turnsdone += 1;
-		selection = "none";
-		target = "none";
-		if o_BattleEngine.turnsdone != global.partycount {
-			instance_deactivate_object(o_iconparent)
-			print(string(id)  + " Picking next player.");
-			pick_next_player();
-		}
+		end_turn()
 	}
+	break;
+	
+	case "glitch":
+	var enemy = irandom_range(0,array_length_1d(o_BattleEngine.enID)-1)
+	target = o_BattleEngine.enID[enemy]
+	if target != "none" {
+		var stat = irandom_range(1,2);
+		print(stat);
+		switch(stat) {
+			case 1: if target.str != 0 {  target.str -= 1 target.strd = true } else if target.def != 0 { target.def -= 1 target.defd = true } break
+			case 2 : if target.def != 0 { target.def -= 1 target.defd = true } else if target.str != 0 { target.str -= 1 target.strd = true } break
+			
+		}
+		end_turn()
+	}
+	
 	break;
 }
 }

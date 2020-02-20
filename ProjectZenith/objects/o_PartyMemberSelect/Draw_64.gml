@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+
 if o_PartyMenu.menufoc == "party" {
 
 if backstock == false {

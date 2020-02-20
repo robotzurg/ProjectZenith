@@ -839,6 +839,14 @@
             }
         },
         {
+            "Key": "c430e29b-d54e-4906-81fd-14617821acde",
+            "Value": {
+                "id": "bfbeabf8-de8d-48ba-8cfe-51d9e1cb9659",
+                "resourcePath": "scripts\\end_turn\\end_turn.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "c4f8525e-e886-4838-b8b6-d1811390a668",
             "Value": {
                 "id": "ee843075-13e9-48a8-9d05-8a33e76b8d38",
@@ -1150,7 +1158,8 @@
         "17a13040-b94b-45a7-b529-1d61382eba55",
         "2e5d0b6a-a404-48b4-8f63-c25e298b9e89",
         "41d7c465-0a50-42be-a6f8-f0d9a8f53934",
-        "77a514ec-34fa-4c15-a4f6-3094dbecfb69"
+        "77a514ec-34fa-4c15-a4f6-3094dbecfb69",
+        "c430e29b-d54e-4906-81fd-14617821acde"
     ],
     "tutorial": ""
 }

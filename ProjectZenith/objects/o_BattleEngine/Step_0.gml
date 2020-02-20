@@ -140,6 +140,7 @@ if enemytotaldead == global.enemycount && global.currentturn != "Victory" && glo
 	for (var enemies = 0; enemies < global.enemycount; enemies++) {
 		global.partygainedxp[ii] += plrID[ii].killedenemy[enemies]*par[? "level"]; //Give XP from enemies that were killed
 	}
+	global.partygainedxp[ii] = 300
 	global.partydisplayxp[ii] = global.partygainedxp[ii];
 	}
 	global.currentturn = "Victory";
