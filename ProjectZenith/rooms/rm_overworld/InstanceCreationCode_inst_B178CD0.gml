@@ -1,1 +1,1 @@
-transitionto = rm_house;
+transitionto = rm_castle

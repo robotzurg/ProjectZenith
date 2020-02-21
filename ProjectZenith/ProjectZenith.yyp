@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "4fc33551-0b24-4c43-8f59-93dfd1efc3f4",
+            "Value": {
+                "id": "9c7ace77-3abf-4eac-822c-b223988dc13a",
+                "resourcePath": "paths\\path_line\\path_line.yy",
+                "resourceType": "GMPath"
+            }
+        },
+        {
             "Key": "50c24ccd-3c3d-4755-8fd6-d5ace56d2b7a",
             "Value": {
                 "id": "2fac8605-2fd2-42ee-9380-acf63e30ec68",
@@ -636,14 +644,6 @@
                 "id": "eb77d646-2715-4e67-9e4c-a733feba98d2",
                 "resourcePath": "objects\\o_dialogue\\o_dialogue.yy",
                 "resourceType": "GMObject"
-            }
-        },
-        {
-            "Key": "88c5d1e3-4fa1-4c10-9c5f-5b58706f3909",
-            "Value": {
-                "id": "5338502f-da85-4917-9758-3f5c6dba3981",
-                "resourcePath": "paths\\path_flyenemy\\path_flyenemy.yy",
-                "resourceType": "GMPath"
             }
         },
         {
@@ -906,7 +906,7 @@
             "Key": "bf587ba6-c984-4648-8391-1f30010c27f1",
             "Value": {
                 "id": "3f69bf7d-562c-4323-b2e9-a23e61c75f16",
-                "resourcePath": "objects\\o_house\\o_house.yy",
+                "resourcePath": "objects\\o_castle\\o_castle.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -1023,6 +1023,14 @@
             }
         },
         {
+            "Key": "d114e624-f212-4850-91a2-a1de5ca204cc",
+            "Value": {
+                "id": "ee4b421c-74fd-4d31-98ce-8bc40d8e26d8",
+                "resourcePath": "rooms\\rm_castle\\rm_castle.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "d1ae8146-7b68-4f39-a517-e435d239d2d3",
             "Value": {
                 "id": "11b61d33-29f5-445a-9b74-f692daefbca8",
@@ -1058,7 +1066,7 @@
             "Key": "d6712f94-6b4f-4cba-afd2-677d84256633",
             "Value": {
                 "id": "51540863-3e63-4067-bca3-f48b3c5e986c",
-                "resourcePath": "sprites\\s_house\\s_house.yy",
+                "resourcePath": "sprites\\s_castle\\s_castle.yy",
                 "resourceType": "GMSprite"
             }
         },

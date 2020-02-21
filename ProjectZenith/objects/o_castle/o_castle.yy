@@ -2,7 +2,7 @@
     "id": "bf587ba6-c984-4648-8391-1f30010c27f1",
     "modelName": "GMObject",
     "mvc": "1.0",
-    "name": "o_house",
+    "name": "o_castle",
     "eventList": [
         
     ],
