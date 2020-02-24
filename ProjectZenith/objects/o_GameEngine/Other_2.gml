@@ -13,6 +13,8 @@ global.d_mouse_x = device_mouse_x_to_gui(0);
 global.d_mouse_y = device_mouse_y_to_gui(0);
 global.window_width = RES_W * RES_SCALE;
 global.window_height = RES_H * RES_SCALE;
+global.exitx = 222
+global.exity = 432
 
 //Victory Screen Variables
 primy = 0;
