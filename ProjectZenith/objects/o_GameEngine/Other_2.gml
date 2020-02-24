@@ -25,7 +25,6 @@ vicfocus = 0;
 xpdelay = 60;
 fillxp = false;
 xpfilled = false;
-newroom = false;
 
 //Set up data storage data structures for party members
 global.party_members = ds_list_create();
@@ -69,6 +68,20 @@ ds_grid_add(global.wepinv,1,0,0); //Quantity of Weapon
 
 ds_grid_add(global.wepinv,0,1,s_bowicon);
 ds_grid_add(global.wepinv,1,1,0); //Quantity of Weapon
+
+//Set up ds_grids for item inventory (3 SEPERATE ONES FOR EACH CATEGORY)
+global.regenitems = ds_grid_create(5,5);
+global.statitems = ds_grid_create(5,5);
+global.atkitems = ds_grid_create(5,5);
+
+/* The grid works as follows:
+			ID	Sprite
+	Item 1	0	s_potion
+	Item 2	1	s_bomb
+*/
+
+ds_grid_add(global.regenitems,0,0,item.potion); //Add potion item_ID into the grid
+ds_grid_add(global.regenitems,1,0,s_potionicon); //Add potion sprite into the grid
 
 //Set up Characters (the crit chance is the % chance of the crit happening)
 setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, -1, 100, 1, 50, 50, 50, 50, s_testportrait,s_9sliceselect, 1) 

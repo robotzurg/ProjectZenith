@@ -21,3 +21,9 @@ enum enemy {
 enum boss {
 	demonboss
 }
+
+enum item {
+	potion,
+	buffpowder,
+	bomb
+}
