@@ -263,14 +263,6 @@
             }
         },
         {
-            "Key": "3997ad93-aa92-4049-8006-4478c90218aa",
-            "Value": {
-                "id": "fc469782-9b2e-4f26-9484-a7dfdff16dca",
-                "resourcePath": "rooms\\rm_opcastle\\rm_opcastle.yy",
-                "resourceType": "GMRoom"
-            }
-        },
-        {
             "Key": "3a34e42d-9055-4bae-a048-59c2e5a20aa5",
             "Value": {
                 "id": "5b1f1794-c01e-4d99-a259-44067fea8a6a",
