@@ -41,6 +41,10 @@ if menu_open = "none" { //Disable these buttons if the menu is open on one
 	}
 }
 
+if menu_open == "item" {
+		
+}
+
 } //End of if global.currentturn = "Players"
 
 //Position handling based on the current open menu (for expanding button menus)

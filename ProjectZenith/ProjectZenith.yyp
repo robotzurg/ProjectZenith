@@ -151,6 +151,14 @@
             }
         },
         {
+            "Key": "1bb37aa2-e48d-455b-9252-9966e202c08b",
+            "Value": {
+                "id": "38a4f223-b34d-40e1-8a94-0fe3c3e27880",
+                "resourcePath": "sprites\\s_buffpowdericon\\s_buffpowdericon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1e522f54-8f0b-4e19-a063-5f4f09346100",
             "Value": {
                 "id": "65159eb6-f92c-4b13-811e-ae66bb901174",
@@ -503,6 +511,14 @@
             }
         },
         {
+            "Key": "5d1126a5-6b75-4c4b-99f1-6199dd72f957",
+            "Value": {
+                "id": "b1604070-e018-47a0-bdec-cbef4799d5d5",
+                "resourcePath": "scripts\\setup_item\\setup_item.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5fd13af0-d50e-4b1b-8c3d-b547cadf3916",
             "Value": {
                 "id": "fe36d199-eee2-4b1a-aec4-ecb3b91704be",
@@ -588,6 +604,14 @@
                 "id": "235a5e54-084b-4d54-81a6-84f2b33dae4e",
                 "resourcePath": "datafiles_yy\\GMLive\\std.ndll.yy",
                 "resourceType": "GMIncludedFile"
+            }
+        },
+        {
+            "Key": "81f7ea5a-4392-4a58-a807-a64df3d6f931",
+            "Value": {
+                "id": "b87d3fc2-c9b7-4aa4-b82c-d4cda0e71bca",
+                "resourcePath": "sprites\\s_bombicon\\s_bombicon.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -1304,7 +1328,8 @@
         "bb3f76da-dcad-46ae-a91c-6182013d9149",
         "9f59f3eb-e8c8-4b43-a168-1f03f8d6df3a",
         "fd91ebdd-3f29-49f7-b653-c90723688b30",
-        "33438de3-e029-46ba-8f5a-4f7be632f410"
+        "33438de3-e029-46ba-8f5a-4f7be632f410",
+        "5d1126a5-6b75-4c4b-99f1-6199dd72f957"
     ],
     "tutorial": ""
 }

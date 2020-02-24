@@ -10,7 +10,8 @@
         "bb3f76da-dcad-46ae-a91c-6182013d9149",
         "9f59f3eb-e8c8-4b43-a168-1f03f8d6df3a",
         "fd91ebdd-3f29-49f7-b653-c90723688b30",
-        "33438de3-e029-46ba-8f5a-4f7be632f410"
+        "33438de3-e029-46ba-8f5a-4f7be632f410",
+        "5d1126a5-6b75-4c4b-99f1-6199dd72f957"
     ],
     "filterType": "GMScript",
     "folderName": "Setup Scripts",

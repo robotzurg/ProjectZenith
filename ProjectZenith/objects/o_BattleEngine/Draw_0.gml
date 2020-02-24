@@ -41,6 +41,11 @@ if menu_open == "item" { //Draw the items contents
 	draw_text(780,430,"Offensive");
 	draw_rectangle(510,430,515,530,false);
 	draw_rectangle(740,430,745,530,false);
+	draw_sprite(global.regenitems[# 1,0],0,315,460); draw_text(350,467,"x" + string(global.regenitems[# 2,0]));
+	draw_sprite(global.statitems[# 1,0],0,540,460); draw_text(575,467,"x" + string(global.statitems[# 2,0]));
+	draw_sprite(global.atkitems[# 1,0],0,765,460); draw_text(800,467,"x" + string(global.atkitems[# 2,0]));
+	draw_rectangle(310,457,380,500,true)
+	draw_rectangle(390,457,460,500,true)
 }
 
 draw_set_halign(fa_center); //Set the Horizontal Alignment to the Middle for everything below this.
