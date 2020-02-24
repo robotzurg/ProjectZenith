@@ -5,4 +5,6 @@ case "run1": global.transition = "run2"; break;
 
 room_goto(room_trans);
 
+
+
 alarm[1] = 45;
