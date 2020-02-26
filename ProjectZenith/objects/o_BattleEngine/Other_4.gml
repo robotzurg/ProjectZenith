@@ -17,6 +17,7 @@ menu_open = "none";
 turnsdone = 0;
 enemytotaldead = 0;
 playertotaldead = 0;
+item_create = true;
 o_GameEngine.vicfocus = 0;
 global.currentturn = "Players";
 for (var plr = 0; plr < global.partycount; plr++) {

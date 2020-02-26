@@ -847,6 +847,14 @@
             }
         },
         {
+            "Key": "b1dbc1e4-32bf-4587-9de0-6215b702923c",
+            "Value": {
+                "id": "b7066ff4-c868-4344-94a5-086634ec421c",
+                "resourcePath": "scripts\\create_item_ui\\create_item_ui.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "b20da0bc-1adf-4404-83d0-528c9cb3386d",
             "Value": {
                 "id": "8f7818d3-727f-4109-af17-64b384672806",
@@ -1031,9 +1039,9 @@
             }
         },
         {
-            "Key": "cceebe22-3623-41c2-af91-13513632b233",
+            "Key": "ccc36bfd-4e24-44c1-84cd-2cc45e7d98a5",
             "Value": {
-                "id": "083ce890-1e44-4ccc-bfbd-a28742a0a454",
+                "id": "9c9ba07d-71a7-4dac-b784-d11d79bf2a00",
                 "resourcePath": "paths\\path_arrow\\path_arrow.yy",
                 "resourceType": "GMPath"
             }
@@ -1132,6 +1140,14 @@
                 "id": "bae4d32e-cc12-4a49-9fd1-2330daf00dd8",
                 "resourcePath": "tilesets\\tl_grass\\tl_grass.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "dbf4bb1a-ccf1-411c-9e47-f3f8c784860a",
+            "Value": {
+                "id": "98f14644-601e-4b9b-8867-ba37aae867f3",
+                "resourcePath": "objects\\o_itemUI\\o_itemUI.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -1312,6 +1328,7 @@
         "d41c4c30-8674-4d71-b8fd-09d2e4bb1359",
         "c430e29b-d54e-4906-81fd-14617821acde",
         "014cf7ab-07bb-43aa-b8fa-5f09bb811c6c",
+        "b1dbc1e4-32bf-4587-9de0-6215b702923c",
         "77a514ec-34fa-4c15-a4f6-3094dbecfb69",
         "2e5d0b6a-a404-48b4-8f63-c25e298b9e89",
         "41d7c465-0a50-42be-a6f8-f0d9a8f53934",

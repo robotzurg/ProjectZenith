@@ -1,4 +1,4 @@
-
+if (live_call()) return live_result;
 //Set data extraction variables
 var foc = global.charfocus;
 var par = global.currentparty[| foc];
@@ -155,4 +155,26 @@ if enemytotaldead == global.enemycount && global.currentturn != "Victory" && glo
 if playertotaldead == global.partycount {
 	trans_to_room(testroom,"run1");
 	global.battledone = true;
+}
+
+
+//Item UI
+	/*draw_sprite(global.regenitems[# 1,0],0,315,460); draw_text(350,467,"x" + string(global.regenitems[# 2,0]));
+	draw_sprite(global.statitems[# 1,0],0,540,460); draw_text(575,467,"x" + string(global.statitems[# 2,0]));
+	draw_sprite(global.atkitems[# 1,0],0,765,460); draw_text(800,467,"x" + string(global.atkitems[# 2,0]));
+	draw_rectangle(310,457,380,500,true)
+	draw_rectangle(390,457,460,500,true)
+*/
+
+if item_create = true {
+	for (var i=0; i<ds_grid_height(global.regenitems);  i++) {
+		var xx = 250 + 64*i	
+		create_item_ui(xx,300,global.regenitems[# 0, i],global.regenitems);
+		if i = ds_grid_height(global.regenitems)-1 { item_create = false; }
+		print(i);
+	}
+}
+
+with o_itemUI {
+	print(type[# 0, 0]);	
 }
