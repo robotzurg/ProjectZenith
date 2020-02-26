@@ -183,6 +183,14 @@
             }
         },
         {
+            "Key": "272e3a3e-bd8a-45a1-8cd4-c8e5f56b7b27",
+            "Value": {
+                "id": "d93953d9-98aa-40e7-af96-6b8ceb5938bc",
+                "resourcePath": "objects\\o_SaveMe\\o_SaveMe.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "290c26d6-3c7f-4a24-bb60-cb95bbe84256",
             "Value": {
                 "id": "7087ab8a-aee8-4936-b77f-f3ab8386cdd8",
@@ -595,6 +603,14 @@
             "Value": {
                 "id": "603fb5ab-0f7b-4da6-8b2b-0b26b1004314",
                 "resourcePath": "objects\\o_swordinrubble\\o_swordinrubble.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "7dab2f17-793a-43a7-a8f2-e0175c1fa68d",
+            "Value": {
+                "id": "fcc851a8-c881-4a73-a36d-42c0464d46c1",
+                "resourcePath": "objects\\o_Save\\o_Save.yy",
                 "resourceType": "GMObject"
             }
         },

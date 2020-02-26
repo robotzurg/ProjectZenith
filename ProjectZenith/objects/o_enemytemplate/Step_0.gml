@@ -47,13 +47,15 @@ if delay > 0 {
 		if roll == false {
 			exit; //If the target we picked is dead, cut back to the start of the code so that we can try again.
 		} else {
-			o_BattleEngine.plrID[target].hp -= str;
+			var damage = str - o_BattleEngine.plrID[target].def
+			if damage < 1 damage = 1;
+			o_BattleEngine.plrID[target].hp -= damage;
 			if o_BattleEngine.plrID[target].hp <= 0 {
 				o_BattleEngine.plrID[target].dead = true;
 				o_BattleEngine.playertotaldead += 1;
 				print("Player Killed.");
 			}
-			draw_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,str);
+			draw_fade_text(o_BattleEngine.plrID[target].x+50,o_BattleEngine.plrID[target].y,damage);
 			instance_create_layer(x-32,y,"Instances",o_swordswing);
 			o_swordswing.user = self;
 			o_swordswing.usertype = "Enemy";

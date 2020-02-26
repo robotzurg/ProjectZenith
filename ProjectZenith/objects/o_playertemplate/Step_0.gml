@@ -46,7 +46,7 @@ switch (selection) {
 			print(damage); 
 			crit = true;
 		}
-		if damage < 0 damage = 0;
+		if damage < 1 damage = 1;
 		target.hp -= damage
 		dmgdealt += damage
 		if crit == false { draw_fade_text(target.x-50,target.y,damage); } else { draw_fade_text(target.x-50,target.y,"Critical Hit! " + string(damage)); }
