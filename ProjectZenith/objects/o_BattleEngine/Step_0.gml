@@ -9,7 +9,7 @@ if global.currentturn = "Players" { //If it's the players turn, enable the butto
 
 //RUN BUTTON
 if click_on_button("run",0,1,80,60) { 
-	trans_to_room(testroom,"run1");
+	trans_to_room(rm_overworld,"run1");
 	global.battledone = true;
 }
 
