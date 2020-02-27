@@ -168,13 +168,8 @@ if playertotaldead == global.partycount {
 
 if item_create = true {
 	for (var i=0; i<ds_grid_height(global.regenitems);  i++) {
-		var xx = 250 + 64*i	
-		create_item_ui(xx,300,global.regenitems[# 0, i],global.regenitems);
+		var xx = 350 + 64*i
+		create_item_ui(xx,435,global.regenitems[# 0, i],global.regenitems);
 		if i = ds_grid_height(global.regenitems)-1 { item_create = false; }
-		print(i);
 	}
-}
-
-with o_itemUI {
-	print(type[# 0, 0]);	
 }
