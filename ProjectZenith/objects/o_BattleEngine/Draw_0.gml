@@ -30,7 +30,7 @@ nine_slice_box_stretch(sklselect,sklx1,skly1,sklx2,skly2); //Skill Button
 if menu_open == "none" or menu_open != "skills" { 
 	nine_slice_box_stretch(itmselect,itmx1,itmy1,itmx2,itmy2); 
 	if !instance_exists(o_potionicon) { //If it doesn't exist, create the potion icon object.
-		instance_create_layer(itmx1+95,itmy1+12,"UI",o_potionicon); 
+		instance_create_layer(820,463,"UI",o_potionicon); 
 	}
 }
 
@@ -56,7 +56,7 @@ if menu_open = "none" {
 	draw_set_valign(fa_center);
 	draw_text(375,atky1+30,"Attack");
 	nine_slice_box_stretch(atkselect,415,atky1,475,atky2);
-	if !instance_exists(par[? "wep_equipped"]) { instance_create_layer(430,atky1+12,"UI",par[? "wep_equipped"]) }
+	if !instance_exists(par[? "wep_equipped"]) { instance_create_layer(430,atky1+15,"UI",par[? "wep_equipped"]) }
 	draw_text(600,skly1+30,"Skills");
 	draw_text(775,itmy1+30,"Items");
 	draw_set_valign(fa_top);

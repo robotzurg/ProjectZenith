@@ -17,8 +17,8 @@ if dead == true {
 
 if turndone == false && dead == false {
 if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) {
-	o_BattleEngine.plrID[global.charfocus].selection = "none";
-	o_BattleEngine.plrID[global.charfocus].target = "none";
+	FOCPLR.selection = "none";
+	FOCPLR.target = "none";
 	global.charfocus = partyID;
 	o_BattleEngine.menu_open = "none";
 }
@@ -79,6 +79,12 @@ switch (selection) {
 		}
 		end_turn()
 	}
+	
+	case "item":
+		if itemselected != -1 {
+			use_item(itemselected, self);
+			end_turn();
+		}
 	
 	break;
 }

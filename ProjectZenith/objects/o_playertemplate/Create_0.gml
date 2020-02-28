@@ -22,6 +22,7 @@ target = "none";
 turndone = false;
 show_details = false;
 dead = false;
+itemselected = -1;
 
 //MVP Calculations
 dmgdealt = 0;

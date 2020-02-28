@@ -18,7 +18,7 @@ if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,x1,y1,x2,y2) {
 	switch (type) {
 		case "attack": atkselect = par[? "textbox_spr_hover"] break;
 		case "skills": sklselect = par[? "textbox_spr_hover"] break;
-		case "items":  itmselect = par[? "textbox_spr_hover"] break;
+		case "item":  itmselect = par[? "textbox_spr_hover"] break;
 		case "glitch":  glitchselect = par[? "textbox_spr_hover"] break;
 		case "run":  runselect = par[? "textbox_spr_hover"] break;
 	}
@@ -35,7 +35,7 @@ if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,x1,y1,x2,y2) {
 	switch (type) {
 		case "attack": atkselect = par[? "textbox_spr"] break;
 		case "skills": sklselect = par[? "textbox_spr"] break;
-		case "items":  itmselect = par[? "textbox_spr"] break;
+		case "item":  itmselect = par[? "textbox_spr"] break;
 		case "glitch":  glitchselect = par[? "textbox_spr"] break;
 		case "run":  runselect = par[? "textbox_spr"] break;
 	}

@@ -1,4 +1,4 @@
-if room = rm_battle {	
+if room = rm_battle {
 
 //Set the character focus to party member 1
 global.charfocus = 0;
@@ -52,5 +52,7 @@ for (var i=0;i<global.enemycount;i++) {
 
 //Set enemy focus
 global.enemyfocus = enID[0];
+
+#macro FOCPLR o_BattleEngine.plrID[global.charfocus]
 
 } //End of if room = rm_battle

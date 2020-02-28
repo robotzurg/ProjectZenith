@@ -19,6 +19,15 @@ var color = argument6;
 var speed_ = argument7;
 var duration = argument8;
 
+if speed_ = -1 { //Set defaults
+	speed_ = 0.5;	
+}
+
+if duration == -1 { //Set defaults
+	duration = 0.02;	
+}
+
+
 var newText = instance_create_depth(xx,yy,-1000,o_fadetext);
 newText.text = txt;
 newText.xscale = xscale;

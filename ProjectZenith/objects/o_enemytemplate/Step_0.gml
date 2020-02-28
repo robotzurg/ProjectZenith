@@ -25,8 +25,8 @@ if mouse_check_button_pressed(mb_left) && !position_meeting(global.d_mouse_x,glo
 }
 
 if mouse_check_button_pressed(mb_left) && position_meeting(global.d_mouse_x,global.d_mouse_y,self) && global.currentturn == "Players" {
-	if o_BattleEngine.plrID[global.charfocus].selection != "none" {
-		o_BattleEngine.plrID[global.charfocus].target = self;
+	if FOCPLR.selection != "none" {
+		FOCPLR.target = self;
 	} else {
 		show_details = !show_details;	
 	}

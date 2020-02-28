@@ -1,1 +1,1 @@
-battle_start(enemy.blueboy,5);
+battle_start(enemy.blueboy,2);
