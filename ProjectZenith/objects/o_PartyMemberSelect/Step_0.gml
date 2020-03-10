@@ -3,7 +3,6 @@ if !instance_exists(o_PartyMenu) {
 	exit;
 }
 
-
 if o_PartyMenu.menufoc == "party" {
 if partyID != -1 {
 	var map_ = global.party_members[| ID];
