@@ -11,7 +11,7 @@ if place_meeting(x - (50 * o_player.flipped),y,o_player) && keyboard_check_press
 if shoot == true {
 	timer-= 1
 	if timer = 0 {
-		instance_create_layer(x,y,layer,o_arrow)
+		//instance_create_layer(x,y,layer,o_arrow)
 		timer = 180
 	}
 }

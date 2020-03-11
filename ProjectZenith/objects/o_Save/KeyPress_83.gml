@@ -8,8 +8,8 @@ with(o_SaveMe)
 	
 	var obj = object_get_name(object_index)
 	ds_map_add(map, "obj" , obj)
-	ds_map_add(map, "y", y)
 	ds_map_add(map, "x", x)
+	ds_map_add(map, "y", y)
 	
 	
 }
