@@ -5,9 +5,9 @@ var key_sprint = keyboard_check(vk_lshift);
 
 if global.state == "platformer" && global.dialogue_disable == false {
 	
-hspd = (key_right - key_left) * maxhspd * ((key_sprint) ? 2 : 1)  ; 
+hspd = (key_right - key_left) * maxhspd * ((key_sprint) ? 5 : 1)  ; 
 
-image_angle = (key_sprint) ? 45*flipped : 0;
+rotate = (key_sprint) ? 45*flipped : 0;
 
 if (key_jump) && (on_ground) {
 	vspd = jump_height;
