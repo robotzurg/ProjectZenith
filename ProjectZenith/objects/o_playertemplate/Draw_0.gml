@@ -14,3 +14,4 @@ if show_details == true {
 	draw_text_transformed(x+105,y+89,"(Test Blurb.)",0.5,0.5,0);
 	draw_set_halign(fa_left);
 }
+

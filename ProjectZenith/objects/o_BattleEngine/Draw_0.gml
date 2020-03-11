@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 ///BATTLE UI///
 //Set data extraction variables
 var foc = global.charfocus;
@@ -23,12 +24,23 @@ Everything in this category changes its size and position dynamically, and becau
 nine_slice_box_stretch(par[? "textbox_spr"],atkx1,atky1,atkx2,atky2); //Attack Button (Not the actual weapon box, but the box behind it)
 nine_slice_box_stretch(sklselect,sklx1,skly1,sklx2,skly2); //Skill Button
 
+
+
 //Because the item button is at a higher depth then the skill button, we have to stop drawing it when skills menu is open, otherwise you'll still see the item when skill is clicked on.
 if menu_open == "none" or menu_open != "skills" { 
 	nine_slice_box_stretch(itmselect,itmx1,itmy1,itmx2,itmy2); 
 	if !instance_exists(o_potionicon) { //If it doesn't exist, create the potion icon object.
-		instance_create_layer(itmx1+95,itmy1+12,"UI",o_potionicon); 
+		instance_create_layer(820,463,"UI",o_potionicon); 
 	}
+}
+
+
+if menu_open == "item" { //Draw the items contents
+	draw_text(320,430,"Healing/Mana");
+	draw_text(545,430,"Buffs/Debuffs");
+	draw_text(780,430,"Offensive");
+	draw_rectangle(510,430,515,530,false);
+	draw_rectangle(740,430,745,530,false);
 }
 
 draw_set_halign(fa_center); //Set the Horizontal Alignment to the Middle for everything below this.
@@ -44,7 +56,7 @@ if menu_open = "none" {
 	draw_set_valign(fa_center);
 	draw_text(375,atky1+30,"Attack");
 	nine_slice_box_stretch(atkselect,415,atky1,475,atky2);
-	if !instance_exists(par[? "wep_equipped"]) { instance_create_layer(430,atky1+12,"UI",par[? "wep_equipped"]) }
+	if !instance_exists(par[? "wep_equipped"]) { instance_create_layer(430,atky1+15,"UI",par[? "wep_equipped"]) }
 	draw_text(600,skly1+30,"Skills");
 	draw_text(775,itmy1+30,"Items");
 	draw_set_valign(fa_top);
@@ -53,4 +65,7 @@ if menu_open = "none" {
 	else if menu_open = "item" {draw_sprite(s_backicon,0,itmx1+10,itmy1+5);}
 }
 
+
+
 draw_set_halign(fa_left); //Set the Horizontal Alignment back to Left.
+

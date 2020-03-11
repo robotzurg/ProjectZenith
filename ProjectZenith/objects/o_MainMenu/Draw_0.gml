@@ -1,5 +1,3 @@
-if (live_call()) return live_result;
-
 draw_set_halign(fa_center);
 draw_text_transformed(room_width/2,50,"Project Zenith",3,3,0);
 

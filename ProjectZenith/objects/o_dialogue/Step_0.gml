@@ -1,4 +1,3 @@
-
 x = focus.x+30;
 y = focus.y-focus.sprite_height
 

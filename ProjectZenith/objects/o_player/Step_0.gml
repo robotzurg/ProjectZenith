@@ -1,28 +1,23 @@
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"))
 var key_jump = keyboard_check(vk_space);
+var key_sprint = keyboard_check(vk_lshift);
 
 if global.state == "platformer" && global.dialogue_disable == false {
-if (key_left) {
-	hspd = -maxhspd;
-} else if (key_right) {
-	hspd = maxhspd;	
-} else if (key_left) && (key_right) {
-	hspd = 0;	
-} else {
-	hspd = 0;	
-}
+	
+hspd = (key_right - key_left) * maxhspd * ((key_sprint) ? 5 : 1)  ; 
 
-if hspd != 0 {
-	flipped = sign(hspd);
-}
+rotate = (key_sprint) ? 45*flipped : 0;
 
 if (key_jump) && (on_ground) {
 	vspd = jump_height;
 	on_ground = false;
 }
 
-vspd = vspd + grav;
+if hspd != 0 {
+	flipped = sign(hspd);
+}
+
 
 if place_meeting(x+hspd,y,o_collision) {
         while !place_meeting(x+sign(hspd),y,o_collision) {
@@ -33,6 +28,7 @@ if place_meeting(x+hspd,y,o_collision) {
 
 x += hspd;
 
+
 if place_meeting(x,y+vspd,o_collision) {
         while !place_meeting(x,y+sign(vspd),o_collision) {
                  y += sign(vspd);
@@ -42,6 +38,8 @@ if place_meeting(x,y+vspd,o_collision) {
 }
 
 y += vspd;
+
+vspd = vspd + grav;
 
 }
 

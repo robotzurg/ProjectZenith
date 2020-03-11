@@ -71,9 +71,9 @@ if global.currentturn == "Victory" {
 			global.currentturn = (global.partycount = 1) ? ("End") : ("Results");
 			if global.partycount = 1 { global.battledone = true; xpdelay = 60; }
 		}
-			show_debug_message("Vicfocus: " + string(vicfocus));
-			show_debug_message("global.partycount: " + string(global.partycount));
-			show_debug_message("global.currentturn: " + string(global.currentturn));
+			print("Vicfocus: " + string(vicfocus));
+			print("global.partycount: " + string(global.partycount));
+			print("global.currentturn: " + string(global.currentturn));
 		}
 		
 

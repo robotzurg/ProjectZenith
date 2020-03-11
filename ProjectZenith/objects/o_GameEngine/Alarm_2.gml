@@ -1,5 +1,5 @@
 finishtrans = true;
-room_goto(testroom);
+room_goto(rm_overworld);
 global.state = "platformer";
 global.currentturn = "Players";
 vicfocus = 0;

@@ -1,8 +1,6 @@
 focus = global.vartoadd[0];
 global.camera_focus = focus;
-for (var i=0; i<global.vartoadd[1];i++) {
-	message[i] = global.vartoadd[i+2];
-}
+message = global.vartoadd[1];
 message_current = 0; //0 is the first number in our array, and the message we are currently at
 message_end = array_length_1d(message)-1;
 message_draw = ""; //this is what we 'write' out. It's blank right now

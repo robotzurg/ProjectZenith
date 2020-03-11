@@ -5,3 +5,5 @@ jump_height = -8;
 grav = 0.35;
 on_ground = false;
 flipped = 1;
+rotate = 0;
+global.state = "platformer";

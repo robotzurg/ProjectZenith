@@ -1,4 +1,4 @@
-if room = rm_battle {	
+if room = rm_battle {
 
 //Set the character focus to party member 1
 global.charfocus = 0;
@@ -17,6 +17,7 @@ menu_open = "none";
 turnsdone = 0;
 enemytotaldead = 0;
 playertotaldead = 0;
+item_create = true;
 o_GameEngine.vicfocus = 0;
 global.currentturn = "Players";
 for (var plr = 0; plr < global.partycount; plr++) {
@@ -51,5 +52,7 @@ for (var i=0;i<global.enemycount;i++) {
 
 //Set enemy focus
 global.enemyfocus = enID[0];
+
+#macro FOCPLR o_BattleEngine.plrID[global.charfocus]
 
 } //End of if room = rm_battle

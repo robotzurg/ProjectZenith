@@ -50,7 +50,7 @@ for (var i=0;i<global.partycount;i++) { //Do the bottom code for every party mem
 					xpdelay -= 1;
 				}
 			} else {
-				par[? "xp"] += global.partydisplayxp[i];
+				par[? "xp"] += global.partygainedxp[i];
 				global.partygainedxp[i] = 0;
 				xpdelay = 0;
 				for (var ii = 0; par[? "xp"] > 100; ii += 100) {

@@ -3,16 +3,19 @@ global.transition = "none";
 global.state = "platformer";
 global.charfocus = char.battleplayer1;
 global.currentturn = "Players";
-global.enemycount = 1;
+global.enemycount = 0;
 global.enemytype = o_enemytemplate;
 global.enemytokill = o_enemy;
-global.battledone = false
+global.battledone = false;
 global.camera_focus = o_player;
 global.dialogue_disable = false;
 global.d_mouse_x = device_mouse_x_to_gui(0);
 global.d_mouse_y = device_mouse_y_to_gui(0);
 global.window_width = RES_W * RES_SCALE;
 global.window_height = RES_H * RES_SCALE;
+global.exitx = 222
+global.exity = 432
+global.typetoinsert = -1;
 
 //Victory Screen Variables
 primy = 0;
@@ -25,7 +28,6 @@ vicfocus = 0;
 xpdelay = 60;
 fillxp = false;
 xpfilled = false;
-newroom = false;
 
 //Set up data storage data structures for party members
 global.party_members = ds_list_create();
@@ -63,12 +65,26 @@ global.enemyparty = ds_list_create();
 global.extraparty= ds_list_create();
 
 //Set up data storage data structures for weapon inventory
-global.wepinv = ds_grid_create(1,2);
+global.wepinv = ds_grid_create(5,5);
 ds_grid_add(global.wepinv,0,0,s_swordicon);
 ds_grid_add(global.wepinv,1,0,0); //Quantity of Weapon
 
 ds_grid_add(global.wepinv,0,1,s_bowicon);
 ds_grid_add(global.wepinv,1,1,0); //Quantity of Weapon
+
+//Set up ds_grids for item inventory (3 SEPERATE ONES FOR EACH CATEGORY)
+/* The grids work as follows:
+			ID	Sprite
+	Item 1	0	s_potion
+	Item 2	1	s_bomb
+*/
+global.regenitems = ds_grid_create(3,0);
+global.statitems = ds_grid_create(3,0);
+global.atkitems = ds_grid_create(3,0);
+
+setup_item(global.regenitems,item.potion,s_potionicon,5);
+setup_item(global.statitems,item.buffpowder,s_buffpowdericon,1);
+setup_item(global.atkitems,item.bomb,s_bombicon,3);
 
 //Set up Characters (the crit chance is the % chance of the crit happening)
 setup_character(char1map,char.battleplayer1,"Battle Player 1", s_player, s_9slice, 2, 2, o_swordicon, -1, 100, 1, 50, 50, 50, 50, s_testportrait,s_9sliceselect, 1) 

@@ -3,14 +3,6 @@ if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,25,365,935,515) && backs
 	
 }
 
-
-
-
-
-
-
-
-
 if room = rm_battle { //Battle code for o_iconparent
 	if point_in_rectangle(global.d_mouse_x,global.d_mouse_y,415,450,475,510) && object_index != o_potionicon {
 		if animate = false && looped = false {
@@ -34,16 +26,16 @@ if room = rm_battle { //Battle code for o_iconparent
 	}
 
 	if object_index != o_potionicon && o_BattleEngine.menu_open = "none" && global.currentturn = "Players" {
-		if object_index = o_BattleEngine.plrID[global.charfocus].wepequipped {
+		if object_index = FOCPLR.wepequipped {
 			image_alpha = 1;	
 		} else {
 			image_alpha = 0;	
 		}
 	} 
-
+	
 	if object_index = o_potionicon {
-	y = o_BattleEngine.itmy1+15;
+		y = o_BattleEngine.itmy1+15;
 	} else {
-	y = o_BattleEngine.atky1+15;
+		y = o_BattleEngine.atky1+15;
 	}
 }

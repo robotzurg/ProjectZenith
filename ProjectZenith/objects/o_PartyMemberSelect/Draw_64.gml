@@ -1,4 +1,4 @@
-if (live_call()) return live_result;
+if instance_exists(o_PartyMenu) {
 if o_PartyMenu.menufoc == "party" {
 
 if backstock == false {
@@ -23,4 +23,6 @@ if popup == true {
 	draw_text_transformed(x+115,y-30,"Speed: " + "N/A",0.5,0.5,0);
 	draw_set_halign(fa_left);
 }
+}
+
 }

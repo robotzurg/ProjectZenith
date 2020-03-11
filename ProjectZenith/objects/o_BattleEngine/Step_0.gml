@@ -1,4 +1,4 @@
-
+if (live_call()) return live_result;
 //Set data extraction variables
 var foc = global.charfocus;
 var par = global.currentparty[| foc];
@@ -9,19 +9,19 @@ if global.currentturn = "Players" { //If it's the players turn, enable the butto
 
 //RUN BUTTON
 if click_on_button("run",0,1,80,60) { 
-	trans_to_room(testroom,"run1");
+	trans_to_room(rm_overworld,"run1");
 	global.battledone = true;
 }
 
 //GLITCH BUTTON
 if click_on_button("glitch",room_width-100,1,room_width,60) {
-	plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("glitch") : ("none") //If selection = none, set to glitch, otherwise set to none
+	FOCPLR.selection = (FOCPLR.selection = "none") ? ("glitch") : ("none") //If selection = none, set to glitch, otherwise set to none
 }
 
 if menu_open = "none" { //Disable these buttons if the menu is open on one
 	//ATTACK BUTTON
 	if click_on_button("attack",415,450,475,510) {
-		plrID[global.charfocus].selection = (plrID[global.charfocus].selection = "none") ? ("attack") : ("none") //See above
+		FOCPLR.selection = (FOCPLR.selection = "none") ? ("attack") : ("none") //See above
 	}
 
 	//SKILLS BUTTON
@@ -30,13 +30,13 @@ if menu_open = "none" { //Disable these buttons if the menu is open on one
 	}
 
 	//ITEMS BUTTON
-	if click_on_button("items",725,450,875,510) {
+	if click_on_button("item",725,450,875,510) {
 		menu_open = "item";
 	}
 
 } else {
 	//BACK BUTTON (if a battle menu is open, you can click it to go back to the main buttons)
-	if click_on_button("N/A",270,425,305,460) {
+	if click_on_button("N/A",270,425,305,460) or keyboard_check_pressed(vk_escape) {
 		menu_open = "none";
 	}
 }
@@ -51,6 +51,7 @@ switch(menu_open) {
 	skly1 = lerp(skly1,420,0.4);
 	sklx2 = lerp(sklx2,955,0.4);
 	skly2 = lerp(skly2,540,0.4);
+	sklselect = par[? "textbox_spr"]
 	break;
 	
 	case "item": 
@@ -58,6 +59,7 @@ switch(menu_open) {
 	itmy1 = lerp(itmy1,420,0.4);
 	itmx2 = lerp(itmx2,955,0.4);
 	itmy2 = lerp(itmy2,540,0.4);
+	itmselect = par[? "textbox_spr"]
 	break;
 	
 	case "none":  //Default
@@ -94,7 +96,7 @@ if global.currentturn = "Players"  && menu_open = "none" {
 //Move up the focused player with a lerp
 for (var plr = 0; plr < global.partycount; plr++) {
 	if global.charfocus == plrID[plr].partyID {
-		plrID[global.charfocus].x = lerp(plrID[global.charfocus].x,200,0.3)
+		FOCPLR.x = lerp(FOCPLR.x,200,0.3)
 	} else {
 		plrID[plr].x = lerp(plrID[plr].x,160,0.3)
 	}
@@ -150,4 +152,12 @@ if enemytotaldead == global.enemycount && global.currentturn != "Victory" && glo
 if playertotaldead == global.partycount {
 	trans_to_room(testroom,"run1");
 	global.battledone = true;
+}
+
+if item_create = true {
+	for (var i=0; i<ds_grid_height(global.regenitems);  i++) {
+		var xx = 320 + 64*i
+		create_item_ui(xx,465,global.regenitems[# 0, i],global.regenitems);
+		if i = ds_grid_height(global.regenitems)-1 { item_create = false; }
+	}
 }

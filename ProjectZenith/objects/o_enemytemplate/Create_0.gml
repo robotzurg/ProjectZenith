@@ -21,3 +21,5 @@ show_details = false;
 delay = -1;
 dead = false;
 xp = 5;
+strd = false;
+defd = false;
