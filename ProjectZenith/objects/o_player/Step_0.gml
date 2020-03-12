@@ -1,3 +1,4 @@
+if (live_call()) return live_result;
 var key_left = keyboard_check(ord("A"));
 var key_right = keyboard_check(ord("D"))
 var key_jump = keyboard_check(vk_space);
@@ -7,7 +8,11 @@ if global.state == "platformer" && global.dialogue_disable == false {
 	
 hspd = (key_right - key_left) * maxhspd * ((key_sprint) ? 5 : 1)  ; 
 
-rotate = (key_sprint) ? 45*flipped : 0;
+if key_sprint {
+	rotate = lerp(rotate,25*flipped,0.15);	
+} else {
+	rotate = lerp(rotate,0,0.2);	
+}
 
 if (key_jump) && (on_ground) {
 	vspd = jump_height;

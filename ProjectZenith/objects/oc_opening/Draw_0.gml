@@ -7,6 +7,6 @@ if display != "N/A" {
 }
 
 if textdisplay != "N/A" {
-	draw_text_transformed_color(textx,texty,textdisplay,1.5,1.5,0,textcol,textcol,textcol,textcol,texta);	
+	draw_text_ext_transformed_color(textx,texty,textdisplay,-1,650,1.5,1.5,0,textcol,textcol,textcol,textcol,texta);	
 }
 draw_set_alpha(1);

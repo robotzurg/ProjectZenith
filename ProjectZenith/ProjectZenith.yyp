@@ -583,6 +583,22 @@
             }
         },
         {
+            "Key": "791ea551-a3ab-4eee-ae07-2ba8744f3573",
+            "Value": {
+                "id": "9f479b19-c3c2-4e68-9c52-4b38fcb15186",
+                "resourcePath": "objects\\o_DemonKing\\o_DemonKing.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "79757e06-6a0e-44f6-8b48-517890c4bd37",
+            "Value": {
+                "id": "10282f7b-498e-42da-a4aa-0ffea8359bba",
+                "resourcePath": "objects\\o_trigger\\o_trigger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "7abaa195-9a36-4c85-afc3-d25b0902d94c",
             "Value": {
                 "id": "e4fe6af9-d816-4160-a091-66d5c0b6d7d1",
@@ -1227,6 +1243,14 @@
             "Value": {
                 "id": "c6c8909a-9600-4bd5-b4d3-bc21debba7ac",
                 "resourcePath": "sprites\\s_doorcollision\\s_doorcollision.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "ef234586-767c-496c-bd76-ce6a446276f8",
+            "Value": {
+                "id": "b3a8d80f-63b5-4256-8c46-32086a6e8d67",
+                "resourcePath": "sprites\\s_trigger\\s_trigger.yy",
                 "resourceType": "GMSprite"
             }
         },

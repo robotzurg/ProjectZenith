@@ -27,3 +27,7 @@ enum item {
 	buffpowder,
 	bomb
 }
+
+enum ev {
+	demonking	
+}

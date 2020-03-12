@@ -17,6 +17,12 @@ else { //if current character is more than the amount in the current message
         else { //if our messages are done
 			global.dialogue_disable = false;
 			global.camera_focus = o_player;
+			if event != "none" {
+				switch event {
+					case ev.demonking: battle_start(enemy.blueboy,1);
+					break;	
+				}
+			}
             instance_destroy(); //destroy the object
         }
     }

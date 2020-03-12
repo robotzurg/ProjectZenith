@@ -10,13 +10,13 @@ if timer != 0 {
 		case 1:	var amt = 360;
 		texty = 450;
 		textcol = c_white;
-		textdisplay = "A man has fallen into the river in Lego City!" break; //Scene 2 (Scene 1 is set up in the CREATE event)
+		textdisplay = "The time is 20XX. The war against the demons has raged on for nearly 10 years now." break; //Scene 2 (Scene 1 is set up in the CREATE event)
 		
 		case 2:  var amt = 360; 
-		textdisplay = "Build the rescue helicopter!" break; //Scene 3
+		textdisplay = "The humans are at a disadvantage, however, they have one last trick up their sleeve." break; //Scene 3
 		
 		case 3:  var amt = 360; 
-		textdisplay = "HEY!" break; //Scene 4
+		textdisplay = "Chad will save the land. If he cannot, the end for the humans will have arrived." break; //Scene 4
 		
 		case 4: room_goto(rm_overworld) exit; //End of Scene
 		
