@@ -1,5 +1,6 @@
+if (live_call()) return live_result;
 x = focus.x+30;
-y = focus.y-focus.sprite_height
+y = focus.y-focus.sprite_height/2
 
 if (characters < message_length) { //if current character count is less than the amount in current message* 
     hold = keyboard_check(ord("Z")); //hold is true or false if we hold 'Z' or not
