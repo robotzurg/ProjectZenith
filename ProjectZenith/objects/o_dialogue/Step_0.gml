@@ -1,6 +1,6 @@
 if (live_call()) return live_result;
 x = focus.x+30;
-y = focus.y-focus.sprite_height/2
+y = focus.y-focus.sprite_height/2-35
 
 if (characters < message_length) { //if current character count is less than the amount in current message* 
     hold = keyboard_check(ord("Z")); //hold is true or false if we hold 'Z' or not
@@ -20,7 +20,7 @@ else { //if current character is more than the amount in the current message
 			global.camera_focus = o_player;
 			if event != "none" {
 				switch event {
-					case ev.demonking: battle_start(enemy.blueboy,1);
+					case ev.demonking: battle_start(enemy.demonking,1);
 					break;	
 				}
 			}

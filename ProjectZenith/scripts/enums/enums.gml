@@ -16,6 +16,7 @@ enum char {
 enum enemy {
 	blueboy,
 	pinkgirl,
+	demonking
 }
 
 enum boss {

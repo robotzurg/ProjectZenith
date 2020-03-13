@@ -81,7 +81,8 @@ switch (selection) {
 	}
 	
 	case "item":
-		if itemselected != -1 {
+		var quantity = global.regenitems[# 2, itemselected];
+		if itemselected != -1 && quantity != 0 {
 			use_item(itemselected, self);
 			end_turn();
 		}

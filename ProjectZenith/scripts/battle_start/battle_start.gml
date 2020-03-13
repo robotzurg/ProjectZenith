@@ -4,6 +4,9 @@
 var enemy = argument0;
 var amount = argument1;
 
+o_GameEngine.prevroom = room;
+o_GameEngine.engagedenemy = enemy;
+
 for (var i = 0;i<amount;i++) {
 	add_to_enemyparty(enemy);
 }

@@ -16,6 +16,8 @@ global.window_height = RES_H * RES_SCALE;
 global.exitx = 222
 global.exity = 432
 global.typetoinsert = -1;
+prevroom = rm_overworld;
+engagedenemy = o_enemy;
 
 //Victory Screen Variables
 primy = 0;
@@ -48,11 +50,13 @@ ds_list_mark_as_map(global.party_members,3);
 global.enemy_list = ds_list_create();
 bbmap = ds_map_create();
 pgmap = ds_map_create();
+dkmap = ds_map_create();
 ds_list_add(global.enemy_list,bbmap);
 ds_list_mark_as_map(global.enemy_list,bbmap)
 ds_list_add(global.enemy_list,pgmap);
 ds_list_mark_as_map(global.enemy_list,pgmap)
-
+ds_list_add(global.enemy_list,dkmap);
+ds_list_mark_as_map(global.enemy_list,dkmap)
 
 //Set up data storage data strcutures for CURRENT party members
 global.currentparty = ds_list_create();
@@ -82,7 +86,7 @@ global.regenitems = ds_grid_create(3,0);
 global.statitems = ds_grid_create(3,0);
 global.atkitems = ds_grid_create(3,0);
 
-setup_item(global.regenitems,item.potion,s_potionicon,5);
+setup_item(global.regenitems,item.potion,s_potionicon,1);
 setup_item(global.statitems,item.buffpowder,s_buffpowdericon,1);
 setup_item(global.atkitems,item.bomb,s_bombicon,3);
 
@@ -95,6 +99,7 @@ setup_character(emptymap,9999,"Nobody.",s_player,s_9slice,0,0,o_swordicon,0,100,
 //Set up enemy data 
 setup_enemy(bbmap, enemy.blueboy, "Blue Boy", s_blueboy, s_9slicep2, 2, 2, 1, 10, 10, 5, 5);
 setup_enemy(pgmap, enemy.pinkgirl, "Pink Girl", s_pinkgirl, s_9slice, 3, 2, 1, 15, 15, 10, 10);
+setup_enemy(dkmap, enemy.demonking, "Demon King", s_demonboss, s_9slice, 10, 8, 5, 1, 1, 50, 50);
 
 //Give us some party members onto our team
 add_to_party(char.battleplayer1,0);
